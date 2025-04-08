@@ -132,7 +132,7 @@ li::marker {
 
 /* cards */
 
-#cardContainer{
+#cardContainer, #projectsContainer{
   max-width: 90%;
   margin: 0 auto;
   text-align: center;
@@ -217,4 +217,26 @@ h2{
 
 .biop1{
   padding-top: 10rem;
+}
+
+/* projects */
+video {
+  height: 35rem;
+  max-width: 95%;
+}
+
+.individualProject{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-title{
+  font-size: 2rem;
+  padding-top: 1.3rem;
+}
+
+.project-description{
+  padding-top: 6rem;
 }

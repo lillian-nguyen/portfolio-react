@@ -4,7 +4,7 @@ export default function Hero(){
     return(
         <>
         <Nav/>
-        <section class="hero">
+        <section className="hero">
         <section id="photoContainer">
         <section className="header-text">
             <h1>Lillian Nguyen</h1>
