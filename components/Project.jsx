@@ -1,4 +1,4 @@
-export function ProjectContent({sectionTitle, projectName, videoSrc, projectBlurb}){
+export function ProjectContent({sectionTitle, projectName, videoSrc, projectBlurb, technologies}){
     return(
         <section className="cards individualProject" id="cocktailDB">
             <h2>{sectionTitle}</h2>
@@ -6,16 +6,26 @@ export function ProjectContent({sectionTitle, projectName, videoSrc, projectBlur
             <span className="project-title">{projectName}</span>
             <p className="project-description">{projectBlurb}</p>
 
-                        {/* <section className="technologies flex justify-center align-center">
-                            <div className="css-icons flex flex-col justify-center align-center">
-                                <img src="assets/css-icon.svg" id="css" alt="css icon" />
-                            <span>CSS</span>
-                            </div>
-                            <div className="javascript-icons flex flex-col justify-center align-center">
-                                <img src="assets/js-icon.svg" id="javascript" alt="javascript icon" />
-                                <span>JavaScript</span>
-                            </div>
-                        </section> */}
+            <section className="technologies">
+                {technologies.map((tech, index) => (
+                    <Technologies
+                        key={index}
+                        techImgSrc={tech.imgSrc}
+                        techName={tech.name}
+                    />
+                ))}
+            </section>
+        </section>
+    )
+}
+
+export function Technologies({techImgSrc, techName}){
+    return(
+        <section className="technologies">
+                <section className="icons">
+                    <img src={techImgSrc} alt={techName} />
+                    <span>{techName}</span>
+                </section>
         </section>
     )
 }
