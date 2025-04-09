@@ -1,6 +1,6 @@
 export function ProjectContent({sectionTitle, projectName, videoSrc, projectBlurb, technologies}){
     return(
-        <section className="cards individualProject" id="cocktailDB">
+        <section className="cards individualProject">
             <h2>{sectionTitle}</h2>
             <video src={videoSrc} autoPlay loop muted></video>
             <span className="project-title">{projectName}</span>

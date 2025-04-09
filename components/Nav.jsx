@@ -3,8 +3,8 @@ export default function Nav(){
         <nav className="myNav">
             <ol>
                 <li><a href="#about-section">About Me</a></li>
-                <li><a href="#projects-section">Projects</a></li>
-                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="#projectsContainer">Projects</a></li>
+                <li><a href="#contactSection">Contact</a></li>
             </ol>
         </nav>
     )
