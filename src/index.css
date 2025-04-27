@@ -57,7 +57,7 @@ li::marker {
 }
 
 #photoContainer{
-  background-image: url('/src/assets/blueflower.jpg');
+  /* background-image: url('/src/assets/blueflower.jpg'); */
   background-position: 33%;
   background-size: cover;
   background-repeat: no-repeat;
