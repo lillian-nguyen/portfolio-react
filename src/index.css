@@ -57,7 +57,7 @@ li::marker {
 }
 
 #photoContainer{
-  /* background-image: url('/src/assets/blueflower.jpg'); */
+  background-image: url('/src/assets/blueflower.jpg');
   background-position: 33%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,6 +68,7 @@ li::marker {
   align-items: center;
   height: 90%;
   width: 92%;
+  opacity: 0.9;
 }
 
 .header-text{
@@ -83,12 +84,16 @@ li::marker {
   font-size: 6rem;
   color: rgb(220, 151, 32);
   text-shadow: 4px 3px 6px whitesmoke;
-  margin-top: 30%;
 }
 
 .hero p{
   margin-top: 2.8rem;
   margin: 0 auto;
+}
+
+#hero-content{
+  display: flex;
+  flex-direction: column;
 }
 
 .scrollArrowContainer {
@@ -173,6 +178,7 @@ h2{
   padding: 1.1rem;
   margin: 0 auto;
   background-color: #E9E4E4;
+  margin-top: 20%;
 }
 
 .active-button {

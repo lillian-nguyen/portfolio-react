@@ -5,7 +5,7 @@ export default function About({sectionTitle, showSelfie, paragraph1, paragraph2,
                 <h2>{sectionTitle}</h2>
             </section>
           {showSelfie &&  <section id="selfie-container">
-                    <img id="selfie" src="src/assets/beach.jpg" alt="Lillian Nguyen selfie"/>
+                    {/* <img id="selfie" src="src/assets/beach.jpg" alt="Lillian Nguyen selfie"/> */}
                     <div className="active-button"><div className="inner-active-button"></div></div>
             </section>}
             <p className="biop1">{paragraph1}</p>
