@@ -30,9 +30,9 @@ nav ol li {
 nav {
   width: 100%;
   position: fixed;
-  background-color: #E9E4E4;
+  /* background-color: #E9E4E4; */
   z-index: 5;
-  border-bottom: 3px solid #B4BBC8;
+  /* border-bottom: 3px solid #B4BBC8; */
   padding: 0.5rem;
 }
 
@@ -54,9 +54,12 @@ li::marker {
   justify-content: center;
   align-items: center;
   height: 100%;
+  background-image: url('/src/assets/blueflower.jpg');
+  background-position: 33%;
+  scale: 0.9
 }
 
-#photoContainer{
+/* #photoContainer{
   background-image: url('/src/assets/blueflower.jpg');
   background-position: 33%;
   background-size: cover;
@@ -69,7 +72,7 @@ li::marker {
   height: 90%;
   width: 92%;
   opacity: 0.9;
-}
+} */
 
 .header-text{
   font-size: 3rem;
