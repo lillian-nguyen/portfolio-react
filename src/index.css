@@ -30,9 +30,9 @@ nav ol li {
 nav {
   width: 100%;
   position: fixed;
-  background-color: #E9E4E4;
+  /* background-color: #E9E4E4; */
   z-index: 5;
-  border-bottom: 3px solid #B4BBC8;
+  /* border-bottom: 3px solid #B4BBC8; */
   padding: 0.5rem;
 }
 
@@ -54,9 +54,12 @@ li::marker {
   justify-content: center;
   align-items: center;
   height: 100%;
+  background-image: url('/src/assets/blueflower.jpg');
+  background-position: 33%;
+  scale: 0.9
 }
 
-#photoContainer{
+/* #photoContainer{
   background-image: url('/src/assets/blueflower.jpg');
   background-position: 33%;
   background-size: cover;
@@ -68,7 +71,8 @@ li::marker {
   align-items: center;
   height: 90%;
   width: 92%;
-}
+  opacity: 0.9;
+} */
 
 .header-text{
   font-size: 3rem;
@@ -83,12 +87,16 @@ li::marker {
   font-size: 6rem;
   color: rgb(220, 151, 32);
   text-shadow: 4px 3px 6px whitesmoke;
-  margin-top: 30%;
 }
 
 .hero p{
   margin-top: 2.8rem;
   margin: 0 auto;
+}
+
+#hero-content{
+  display: flex;
+  flex-direction: column;
 }
 
 .scrollArrowContainer {
@@ -173,6 +181,7 @@ h2{
   padding: 1.1rem;
   margin: 0 auto;
   background-color: #E9E4E4;
+  margin-top: 20%;
 }
 
 .active-button {
