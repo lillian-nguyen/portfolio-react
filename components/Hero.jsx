@@ -1,30 +1,25 @@
-import Nav from "./Nav"
+// import Nav from "./Nav"
+import LocalDate from "./LocalDate"
+import Sidenav from "./Sidenav"
+import UpdateBox from "./UpdateBox"
+import Card from "./Card"
+import CenterCard from "./CenterCard"
 
 export default function Hero(){
     return(
         <>
-        <Nav/>
+        {/* <Nav/> */}
+        <Sidenav/>
+        <LocalDate/>
         <section className="hero">
-        {/* <section id="photoContainer"> */}
-        {/* <section id="hero-content">
-            <img id="selfie" src="src/assets/beach.jpg" alt="Lillian Nguyen selfie"/>
-            <section className="header-text">
-                <h1>Lillian Nguyen</h1>
-                <p>software engineer based in Houston, TX</p>
-            </section>
-        </section> */}
-        
+        <Card/>
         <section className="header-text">
-            {/* <img id="selfie" src="src/assets/beach.jpg" alt="Lillian Nguyen selfie"/> */}
             <h1>Lillian Nguyen</h1>
-            <p>software engineer based in Houston, TX</p>
+            <p>Software engineer based in Houston, TX</p>
         </section>
-
-        <div className="scrollArrowContainer bounce">
-            <span></span>
-        </div>
         </section>
-    {/* </section> */}
+        <UpdateBox/>
+        <CenterCard/>
         </>
     )
 }
