@@ -52,20 +52,6 @@ body {
 
 /* header */
 
-.hero{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 92% 4%;
-  background-position: 90% 13%;
-  background-position: -5% 45%;
-  /* scale: 0.9; */
-}
-
 .header-text{
   position: absolute;
   top: -4%;
@@ -80,15 +66,14 @@ body {
   /* border: 2px double white; */
 }
 
-.hero h1{
+.hero-header{
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  margin-left: -8%;
   font-family: "Playfair Display", serif;
-  font-size: 6.8rem;
-  color: rgb(220, 151, 32);
-}
-
-.hero p{
-  margin-top: 2.8rem;
-  margin: 0 auto;
+  font-size: 6rem;
+  line-height: 0.9;
 }
 
 /* update box */
@@ -118,6 +103,7 @@ body {
 
 .updatebox h3{
   font-family: "Homemade Apple", cursive;
+  color:rgb(220, 151, 32)
 }
 
 .card{
@@ -156,6 +142,7 @@ body {
   user-select: none;
   gap: var(--gap);
   /* border: 2px dashed lightgray; */
+  margin-top: -3rem;
 }
 
 .marquee__content {
@@ -163,7 +150,10 @@ body {
   display: flex;
   justify-content: space-around;
   gap: var(--gap);
-  min-width: 100%;
+  /* min-width: 100%; */
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.4rem;
+  color: #445A29;
 }
 
 .marquee__content > * {

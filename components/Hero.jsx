@@ -29,8 +29,7 @@ import NavBar from "./NavBar"
 const HeroMobile = () => {
     return(
         <>
-        <h1>LILLIAN NGUYEN</h1>
-        {/* <h4 className="marquee-text">SOFTWARE ENGINEER, FREELANCER, BAKER</h4> */}
+        <h1 className="hero-header">LILLIAN NGUYEN</h1>
         <section className="enable-animation">
             <div className="marquee">
                 <ul className="marquee__content">
@@ -64,7 +63,7 @@ const HeroMobile = () => {
             <p>I blend <span>code and creativity</span> to build web experiences that feel as good as they look.</p>
         </section>
 
-        <UpdateBox/>
+        {/* <UpdateBox/> */}
 
         <NavBar/>
         </>
