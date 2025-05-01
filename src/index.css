@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -6,7 +8,10 @@ html {
 body {
   background-color: rgb(168, 183, 162);
   font-family: "Raleway", sans-serif;
+  color: #2C3424;
 }
+
+* { box-sizing: border-box; }
 
 /* sidenav */
 .sidenav{
@@ -25,7 +30,6 @@ body {
   align-items: center;
   margin-top: 1.5rem;
   font-size: 1.8rem;
-  /* padding: 3rem 3rem; */
   padding: 1.5rem 1.5rem;
   border-radius: 25%;
   background-color: rgba(255, 255, 255, 0.5);
@@ -64,13 +68,12 @@ body {
 
 .header-text{
   position: absolute;
-  top: -3%;
+  top: -4%;
   left: 5%;
   font-size: 3rem;
   text-align: center;
   margin: 0 auto;
   padding: 3.5rem 6rem;
-  letter-spacing: 0.3rem;
   /* background-color: rgba(250, 239, 229, 0.46);
   backdrop-filter: blur(3px);
   border-radius: 0.8rem; */
@@ -78,7 +81,7 @@ body {
 }
 
 .hero h1{
-  font-family: "Homemade Apple", cursive;
+  font-family: "Playfair Display", serif;
   font-size: 6.8rem;
   color: rgb(220, 151, 32);
 }
@@ -139,8 +142,52 @@ body {
 }
 
 .card-highlight{
-  color: blue;
   left: 130%;
   width: 85%;
   height: 90%;
+}
+
+/* Marquee styles */
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  /* border: 2px dashed lightgray; */
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+.marquee__content > * {
+  flex: 0 0 auto;
+  /* color: white;
+  background: #e8daef; */
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+/* .marquee__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--gap))); }
+}
+
+/* Enable animation */
+.enable-animation .marquee__content {
+  animation: scroll 20s linear infinite;
 }

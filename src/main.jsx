@@ -2,13 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
-import Hero from '../components/Hero'
+import HeroMobile from '../components/Hero'
 // import About from '../components/About'
 // import { ProjectContent } from '../components/Project'
 
 createRoot(document.getElementById('heroSection')).render(
   <StrictMode>
-    <Hero/>
+    <HeroMobile/>
   </StrictMode>,
 )
 
