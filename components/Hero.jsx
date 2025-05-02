@@ -1,8 +1,8 @@
 import LocalDate from "./LocalDate"
-// import Sidenav from "./Sidenav"
-import UpdateBox from "./UpdateBox"
-import NavBar from "./NavBlock"
 import NavBlock from "./NavBlock"
+import Circles from "./Hero Img/Circle"
+import BlobImage from "./Hero Img/BlobImage"
+import { WhiteOutline } from "./Hero Img/BlobImage"
 // import Card from "./Card"
 // import CenterCard from "./CenterCard"
 
@@ -30,6 +30,7 @@ import NavBlock from "./NavBlock"
 const HeroMobile = () => {
     return(
         <>
+        <NavBlock/>
         <h1 className="hero-header">LILLIAN NGUYEN</h1>
         <section className="marquee enable-animation">
                 <ul className="marquee__content">
@@ -92,9 +93,11 @@ const HeroMobile = () => {
             <p>I blend <span className="italic">code and creativity</span> to build web experiences that feel as good as they look.</p>
         </section>
 
-        {/* <UpdateBox/> */}
-
-        <NavBlock/>
+        <section className="selfie-container">
+            <Circles/>
+            <BlobImage/>
+            <WhiteOutline/>
+        </section>
         </>
     )
 }
