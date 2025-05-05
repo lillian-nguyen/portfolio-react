@@ -1,36 +1,13 @@
-import LocalDate from "./LocalDate"
-import NavBlock from "./NavBlock"
+import LocalDate from "../LocalDate"
 import Circles from "./Hero Img/Circle"
 import BlobImage from "./Hero Img/BlobImage"
 import { WhiteOutline } from "./Hero Img/BlobImage"
-// import Card from "./Card"
-// import CenterCard from "./CenterCard"
-
-// export default function Hero(){
-//     return(
-//         <>
-//         {/* <Nav/> */}
-//         <Sidenav/>
-//         <LocalDate/>
-
-//         <section className="hero">
-//             <Card/>
-//             <section className="header-text">
-//                 <h1>Lillian Nguyen</h1>
-//                 <p>Software engineer based in Houston, TX</p>
-//             </section>
-//         </section>
-
-//         <UpdateBox/>
-//         <CenterCard/>
-//         </>
-//     )
-// }
+import HamburgerMenu from "../Navbar/HamburgerMenu"
 
 const HeroMobile = () => {
     return(
         <>
-        <NavBlock/>
+        <HamburgerMenu/>
         <h1 className="hero-header">LILLIAN NGUYEN</h1>
         <section className="marquee enable-animation">
                 <ul className="marquee__content">

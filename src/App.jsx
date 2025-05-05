@@ -1,12 +1,15 @@
-// import Nav from '../components/Nav'
-// import Hero from '../components/hero'
+import React from 'react';
+import HeroMobile from '/components/Hero/Hero.jsx'
+import MobileMenu from '../components/Navbar/MobileMenu';
 
-// export default function App1() {
-//   return (
-//     <>
-//       <Nav/>
-//       <Hero/>
-//     </>
-//   )
-// }
+const App = () => {
+    return(
+        <>
+            {/* <HeroMobile/> */}
+            <MobileMenu/>
+        </>
+    )
+}
+
+export default App;
 

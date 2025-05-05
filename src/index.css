@@ -15,9 +15,9 @@ body {
 * { box-sizing: border-box; }
 
 /* navblock - mobile */
-.navblock{
+.hamburger-menu{
   position: absolute;
-  top: 3%;
+  top: 10%;
   right: 3%;
   background-color: #445A29;
   padding: 1rem;
@@ -82,7 +82,7 @@ body {
   justify-content: center; */
   text-align: center;
   margin-left: -8%;
-  margin-top: 17%;
+  margin-top: 30%;
   font-family: "Playfair Display", serif;
   font-size: 6rem;
   line-height: 0.9;
