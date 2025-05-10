@@ -251,3 +251,73 @@ body {
 .selfie-container{
   margin-top: 3rem;
 }
+
+/* hamburger menu mobile */
+
+.mobilemenu-hamburger{
+  position: absolute;
+  top: 2%;
+  right: 8%;
+  background-color: #C3CCB8;
+  padding: 1.5rem;
+}
+
+.mobile-links{
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 6rem;
+  color: #C3CCB8;
+  margin-top: -8rem;
+}
+
+.line {
+  z-index: -1;
+  width: 60%; 
+  height: 3px;
+  background-color: white; 
+  opacity: 0.5;
+}
+
+.line1{
+  position: absolute;
+  right: 0;
+  top: 4.5rem;
+}
+
+.line2{
+  position: absolute;
+  left: 0;
+  bottom: 6rem;
+}
+
+.mobile-links a:hover{
+  cursor: pointer;
+  color: white;
+}
+
+.square{
+  background-color: #C8B388;
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: -4rem;
+  right: -3rem;
+}
+
+.flowers{
+  position: absolute;
+  bottom: -12rem;
+  right: -8.5rem;
+  scale: 0.7;
+  transform: rotate(-5deg);
+}
+
+.mobile-initials{
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 5rem;
+  color: #2C3424;
+  position: absolute;
+  bottom: 3.7rem;
+  left: 5rem;
+}
