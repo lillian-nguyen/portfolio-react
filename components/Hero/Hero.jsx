@@ -1,35 +1,15 @@
-import LocalDate from "./LocalDate"
-// import Sidenav from "./Sidenav"
-import UpdateBox from "./UpdateBox"
-import NavBar from "./NavBlock"
-import NavBlock from "./NavBlock"
-// import Card from "./Card"
-// import CenterCard from "./CenterCard"
-
-// export default function Hero(){
-//     return(
-//         <>
-//         {/* <Nav/> */}
-//         <Sidenav/>
-//         <LocalDate/>
-
-//         <section className="hero">
-//             <Card/>
-//             <section className="header-text">
-//                 <h1>Lillian Nguyen</h1>
-//                 <p>Software engineer based in Houston, TX</p>
-//             </section>
-//         </section>
-
-//         <UpdateBox/>
-//         <CenterCard/>
-//         </>
-//     )
-// }
+import LocalDate from "../LocalDate"
+import Circles from "./Hero Img/Circle"
+import BlobImage from "./Hero Img/BlobImage"
+import { WhiteOutline } from "./Hero Img/BlobImage"
+import Button from "../Button"
 
 const HeroMobile = () => {
     return(
         <>
+        <Button
+        style={{backgroundColor: '#445A29'}}
+        />
         <h1 className="hero-header">LILLIAN NGUYEN</h1>
         <section className="marquee enable-animation">
                 <ul className="marquee__content">
@@ -92,9 +72,11 @@ const HeroMobile = () => {
             <p>I blend <span className="italic">code and creativity</span> to build web experiences that feel as good as they look.</p>
         </section>
 
-        {/* <UpdateBox/> */}
-
-        <NavBlock/>
+        <section className="selfie-container">
+            <Circles/>
+            <BlobImage/>
+            <WhiteOutline/>
+        </section>
         </>
     )
 }

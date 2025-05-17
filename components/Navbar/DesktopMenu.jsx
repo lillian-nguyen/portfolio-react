@@ -1,6 +1,6 @@
-import Button from './Button'
+import Button from '../Button'
 
-export default function Sidenav(){
+const DesktopMenu = () => {
     return(
         <div className="sidenav">
         <Button>
@@ -15,3 +15,5 @@ export default function Sidenav(){
         </div>
     )
 }
+
+export default DesktopMenu;

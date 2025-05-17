@@ -11,7 +11,7 @@ const UpdateBox = () => {
     return(
         <section className="updatebox">
         <h3 id="update-header">life lately</h3>
-        <hr />
+        <hr /> 
         <section className="update-content">
             <UpdateItem
                 imgSrc={"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAYNJREFUWEftVsFRw0AMlDogHVACVEBSCpUAlVBKQgWhBDqADoRlfDc6RTpLNjNmmPjpOWtXu9KeETZ+cGN8uBL4HwoQ0Z5nCRFP2Zn6FQWIiCbgEyIeMiRWExiwnwHgqYAiYqpm6rDVmSLwMuAzofAzS2Dyd+8VFvIzaCXA30VmoktAdXfQBSdyR9HueCajiktAeyu7K4Ce/5Fv68w4vnJX42r1ptvr1FCmsUdiXihARCFwLuL5LxSardUQIKIzANzNdT6Bs0LVf2/9jIY+AOCxzFMlMMjGKfYgwLsrpeTvBpAxE1+IuBvTU8j1CQA3CQJS3gxZhngbFPiJb0GAX7wCwG3QghK/fPxiRTtz8I6I9+4WRIYwGr+RWmYOGJ41XUaCJgLeWKDzwCBRZQ6sX3NBWSHWDSIn6cZB8+JXNqDOdAd09jIqO1/2NuE/q8Dr2f1JCRFQ3Ul509evtnoJAbl+mxCoAZT9+7EuvrQC4h5Y9BO62gKrizXvFimwBvCqwJ9T4BuslvAhaJSZlQAAAABJRU5ErkJggg=="}
