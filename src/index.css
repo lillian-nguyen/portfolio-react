@@ -242,10 +242,10 @@ body {
   top: 34rem;
   left: 3rem; */
   position: relative;
-  bottom: 33rem;
-  left: 3rem;
+  bottom: 29rem;
+  left: 1rem;
   z-index: -1;
-  transform: rotate(-3deg);
+  transform: rotate(-1deg);
 }
 
 .selfie-container{

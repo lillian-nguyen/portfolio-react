@@ -12,19 +12,19 @@ const Circles = () => {
     <Circle
       circleColor="rgba(68, 90, 41, 0.6)"
       topPos="7rem"
-      leftPos="12rem"
+      leftPos="12.5rem"
       // circleOrder="first"
     />
     <Circle
       circleColor="rgba(210, 133, 26, 0.6)"
-      topPos="9rem"
-      leftPos="8.5rem"
+      topPos="10.5rem"
+      leftPos="10rem"
       // circleOrder="first"
     />
     <Circle
       circleColor="rgba(81, 68, 57, 0.9)"
-      topPos="5rem"
-      leftPos="16rem"
+      topPos="3.3rem"
+      leftPos="14.6rem"
       // circleOrder="first"
     />
   </section>
