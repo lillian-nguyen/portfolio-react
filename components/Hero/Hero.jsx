@@ -2,12 +2,14 @@ import LocalDate from "../LocalDate"
 import Circles from "./Hero Img/Circle"
 import BlobImage from "./Hero Img/BlobImage"
 import { WhiteOutline } from "./Hero Img/BlobImage"
-import HamburgerMenu from "../Navbar/HamburgerMenu"
+import Button from "../Button"
 
 const HeroMobile = () => {
     return(
         <>
-        <HamburgerMenu/>
+        <Button
+        style={{backgroundColor: '#445A29'}}
+        />
         <h1 className="hero-header">LILLIAN NGUYEN</h1>
         <section className="marquee enable-animation">
                 <ul className="marquee__content">

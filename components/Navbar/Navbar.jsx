@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HamburgerMenu from './HamburgerMenu';
+import Button from '../Button';
 import MobileMenu from './MobileMenu';
 import DesktopMenu from './DesktopMenu'
 
@@ -17,7 +17,7 @@ const Navbar = () => {
 
             {/* hamburger menu (mobile) */}
             <div className="md:hidden">
-                <HamburgerMenu variant={menuOpen ? "close" : "hamburger"} onClick={toggleMobileMenu}/>
+                <Button variant={menuOpen ? "close" : "hamburger"} onClick={toggleMobileMenu}/>
             </div>
 
             {/* mobile links */}

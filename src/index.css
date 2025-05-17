@@ -254,7 +254,7 @@ body {
 
 /* hamburger menu mobile */
 
-.mobilemenu-hamburger{
+.hamburger, .close{
   position: absolute;
   top: 2%;
   right: 8%;

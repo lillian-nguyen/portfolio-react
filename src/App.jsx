@@ -5,8 +5,8 @@ import MobileMenu from '../components/Navbar/MobileMenu';
 const App = () => {
     return(
         <>
-            {/* <HeroMobile/> */}
-            <MobileMenu/>
+            <HeroMobile/>
+            {/* <MobileMenu/> */}
         </>
     )
 }
