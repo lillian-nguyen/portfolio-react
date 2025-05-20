@@ -5,14 +5,14 @@ const iconUrl = {
     close: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMjEyNjNCIiBkPSJtMTIgMTAuNTg3bDQuOTUtNC45NWwxLjQxNCAxLjQxNGwtNC45NSA0Ljk1bDQuOTUgNC45NWwtMS40MTUgMS40MTRsLTQuOTUtNC45NWwtNC45NDkgNC45NWwtMS40MTQtMS40MTVsNC45NS00Ljk1bC00Ljk1LTQuOTVMNy4wNSA1LjYzOHoiLz48L3N2Zz4='
 };
 
-const Button = ({ variant = 'hamburger', style, onClick, className }) => {
+const Button = ({ variant = 'hamburger', style, onClick, className = '' }) => {
 
     return(
         <button 
         variant = {variant}
         style={style} 
         onClick={onClick} 
-        className={`${className} ${variant}`}
+        className={`${className || ''} ${variant}`}
         >
             <img src={iconUrl[variant]} alt={`${variant} icon`} />
        </button>

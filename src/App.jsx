@@ -1,12 +1,14 @@
 import React from 'react';
-import HeroMobile from '/components/Hero/Hero.jsx'
+import Hero from '/components/Hero/Hero.jsx'
 import MobileMenu from '../components/Navbar/MobileMenu';
+import { About } from '../components/About/About';
 
 const App = () => {
     return(
         <>
-            <HeroMobile/>
+            {/* <Hero /> */}
             {/* <MobileMenu/> */}
+            <About />
         </>
     )
 }

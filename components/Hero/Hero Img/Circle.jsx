@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from "../Hero.module.css"
 
 const Circle = ({ circleColor, topPos, leftPos }) => {
     return(
@@ -8,15 +9,15 @@ const Circle = ({ circleColor, topPos, leftPos }) => {
 
 const Circles = () => {
   return(
-  <section className="circle-container">
+  <section className={styles.circleContainer}>
     <Circle
-      circleColor="rgba(68, 90, 41, 0.6)"
+      circleColor="rgba(68, 90, 41, 0.9)"
       topPos="7rem"
       leftPos="12.5rem"
       // circleOrder="first"
     />
     <Circle
-      circleColor="rgba(210, 133, 26, 0.6)"
+      circleColor="rgba(210, 133, 26, 0.9)"
       topPos="10.5rem"
       leftPos="10rem"
       // circleOrder="first"

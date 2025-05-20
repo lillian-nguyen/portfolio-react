@@ -1,0 +1,82 @@
+/* .topRow{
+    display: flex;
+    border: 2px solid white;
+} */
+
+.AboutSection{
+    height: 100vh;
+    background-color: #78866B; 
+    background-image:
+      repeating-linear-gradient(
+        0deg,         /* Horizontal lines */
+        transparent,
+        transparent 80px,
+        rgba(255, 255, 255, 0.3) 83px
+      ),
+      repeating-linear-gradient(
+        90deg,        /* Vertical lines */
+        transparent,
+        transparent 80px,
+        rgba(255, 255, 255, 0.3) 83px
+      );
+}
+
+.aboutHeader{
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 1.4rem 1rem;
+    border: 2px solid #2C3424;
+    border-radius: 0.4rem;
+    width: 63%;
+    background-color: #2C3424;
+    color: white;
+    text-align: center;
+    margin-top: -3rem;
+}
+
+.themeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: rgba(217,217,217, 0.8);
+    text-align: center;
+    width: 80%;
+    font-family: "Barlow Condensed", sans-serif;
+    border-radius: 1rem;
+}
+
+.themeContainer h4{
+    margin-top: 1.3rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.6rem;
+}
+
+.themeOptions{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 1rem;
+}
+
+.themeOptions button{
+    background-color: #78866B;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.aboutImg{
+    scale: 0.7;
+    border-radius: 2rem;
+}
+
+.imgCurrently{
+    display: flex;
+}
+
+.imgCurrently h4{
+    font-family: "Barlow Condensed", sans-serif;
+}
