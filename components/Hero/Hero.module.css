@@ -1,0 +1,108 @@
+/* hero section */
+
+.heroHeader{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15%;
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+    line-height: 0.9;
+  }
+  
+  .heroBio{
+    margin-left: 15%;
+    margin-top: 2%;
+  }
+  
+  .heroBio h4{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    color: #514439;
+  }
+  
+  .heroBio p{
+    font-family: "Merriweather", serif;
+    font-size: 1.7rem;
+    color: #2C3424;
+    width: 90%;
+    margin-top: 3%;
+  }
+  
+  .heroBio span{
+    font-weight: bold;
+    color: #445A29;
+  }
+
+  /* Marquee styles */
+.marquee {
+    display: flex;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  
+  .marqueeContent {
+    flex-shrink: 0;
+    display: flex;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.7rem;
+    color: #445A29;
+  }
+  
+  .marqueeContent > * {
+    flex: 0 0 auto;
+    padding: 1rem 0.8rem;
+    border-radius: 0.25rem;
+    text-align: center;
+  }
+  
+  .marqueeItem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sparkle{
+    scale: 0.8;
+    animation: spin 8s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%) }
+  }
+  
+    /* Enable animation */
+  .enableAnimation .marqueeContent {
+    animation: scroll 20s linear infinite;
+  }
+  
+  /* hero section - bottom img */
+  .circleContainer{
+    position: relative;
+    margin-top: -3rem;
+    margin-left: -5rem;
+  }
+  
+  .blob {
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+    z-index: -1;
+    scale: 0.7;
+  }
+  
+  .BlobOutline{
+    position: relative;
+    bottom: 29rem;
+    left: 1rem;
+    z-index: -1;
+    transform: rotate(-1deg);
+  }
+  
+  .selfieContainer{
+    margin-top: 4rem;
+  }

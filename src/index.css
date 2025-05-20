@@ -9,116 +9,27 @@ body {
   background-color: rgb(168, 183, 162);
   font-family: "Raleway", sans-serif;
   color: #2C3424;
-  overflow: hidden;
 }
 
 * { box-sizing: border-box; }
 
 /* navblock - mobile */
-.hamburger-menu{
-  position: absolute;
-  top: 10%;
-  right: 3%;
+.hamburger, .closed, .aboutNavButton{
+  /* position: absolute; */
+  /* top: 10%;
+  right: 3%; */
+  position: relative;
+  bottom: -3rem;
+  left: 22rem;
   background-color: #445A29;
   padding: 1rem;
   border-radius: 0.5rem;
 }
 
-/* sidenav */
-/* .sidenav{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 12rem;
-  height: 100vh;
-  background-color: rgb(96, 113, 97);
-} */
-
-/* .button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.5rem;
-  font-size: 1.8rem;
-  padding: 1.5rem 1.5rem;
-  border-radius: 25%;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: white;
-  border: 3px solid whitesmoke;
-} */
-
-/* .button:hover{
-  cursor: pointer;
-  border: 3px solid rgb(220, 151, 32);
-}
-
-.date{
-  position: absolute;
-  top: 10%;
-  right: 12%;
-  font-size: 2.4rem;
-  letter-spacing: 0.3rem;
-} */
-
-/* hero section */
-
-.header-text{
-  position: absolute;
-  /* top: -1%; */
-  left: 5%;
-  font-size: 3rem;
-  text-align: center;
-  margin: 0 auto;
-  padding: 3.5rem 6rem;
-  /* background-color: rgba(250, 239, 229, 0.46);
-  backdrop-filter: blur(3px);
-  border-radius: 0.8rem; */
-  /* border: 2px double white; */
-}
-
-.hero-header{
-  /* display: flex;
-  justify-content: center; */
-  text-align: center;
-  margin-left: -8%;
-  margin-top: 30%;
-  font-family: "Playfair Display", serif;
-  font-size: 6rem;
-  line-height: 0.9;
-}
-
-.hero-bio{
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  margin-left: 15%;
-  margin-top: 2%;
-}
-
-.hero-bio h4{
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  color: #514439;
-}
-
-.hero-bio p{
-  font-family: "Merriweather", serif;
-  font-size: 1.7rem;
-  color: #2C3424;
-  width: 90%;
-  margin-top: 3%;
-}
-
-.hero-bio span{
-  font-weight: bold;
-  color: #445A29;
-}
-
 /* update box */
 
 .updatebox, .centercard, .card-highlight{
-  position: absolute;
+  /* position: absolute; */
   top: 18%;
   right: 13%;
   background-color: rgba(255, 255, 255, 0.5);
@@ -153,14 +64,14 @@ body {
   width: 55rem;
   height: 53rem;
   border-radius: 3%;
-  position: absolute;
+  /* position: absolute; */
   top: 25%;
   left: 25%;
   border: 6px solid rgb(96, 113, 97);
 }
 
 .centercard, .card-highlight{
-  position: absolute;
+  /* position: absolute; */
   top: 38%;
   left: 20%;
   width: 15%;
@@ -174,93 +85,20 @@ body {
   height: 90%;
 }
 
-/* Marquee styles */
-.marquee {
-  display: flex;
-  flex-shrink: 0;
-  overflow: hidden;
-  margin-top: -3rem;
-}
-
-.marquee__content {
-  flex-shrink: 0;
-  display: flex;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 1.7rem;
-  color: #445A29;
-}
-
-.marquee__content > * {
-  flex: 0 0 auto;
-  padding: 1rem 0.8rem;
-  border-radius: 0.25rem;
-  text-align: center;
-}
-
-.marquee__item {
-  display: flex;
-  align-items: center;
-}
-
-.sparkle{
-  scale: 0.8;
-  animation: spin 8s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%) }
-}
-
-    /* Enable animation */
-.enable-animation .marquee__content {
-  animation: scroll 20s linear infinite;
-}
-
-/* hero section - bottom img */
-.circle-container{
-  position: relative;
-  margin-top: -3rem;
-  margin-left: -5rem;
-}
-
-.blob {
-  position: relative;
-  top: -1rem;
-  left: -1rem;
-  z-index: -1;
-  scale: 0.7;
-}
-
-.BlobOutline{
-  /* position: absolute;
-  top: 34rem;
-  left: 3rem; */
-  position: relative;
-  bottom: 33rem;
-  left: 3rem;
-  z-index: -1;
-  transform: rotate(-3deg);
-}
-
-.selfie-container{
-  margin-top: 3rem;
-}
-
 /* hamburger menu mobile */
 
-.hamburger, .close{
-  position: absolute;
-  top: 2%;
-  right: 8%;
+.hamburger, .close, .aboutNavButton {
+  /* position: fixed; */
+  position: relative;
+  /* top: 2%;
+  right: 8%; */
+  left: 75%;
+  bottom: -1.5rem;
   background-color: #C3CCB8;
   padding: 1.5rem;
 }
+
+/* mobile links page */
 
 .mobile-links{
   font-family: "Barlow Condensed", sans-serif;
@@ -278,15 +116,19 @@ body {
 }
 
 .line1{
-  position: absolute;
-  right: 0;
-  top: 4.5rem;
+  position: relative;
+  /* right: 0;
+  top: 4.5rem; */
+  top: -40rem;
+  right: -7rem;
 }
 
 .line2{
-  position: absolute;
-  left: 0;
-  bottom: 6rem;
+  position: relative;
+  /* left: 0;
+  bottom: 6rem; */
+  bottom: -14.5rem;
+  right: 6rem;
 }
 
 .mobile-links a:hover{

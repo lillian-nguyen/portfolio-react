@@ -1,4 +1,4 @@
-export default function About({sectionTitle, showSelfie, paragraph1, paragraph2, buttonText, classification}){
+export default function AboutDesktop({sectionTitle, showSelfie, paragraph1, paragraph2, buttonText, classification}){
     return (
         <section className="cards about-container" id="about-section" style={{backgroundColor: classification === 'about' ? '#A1ADB3' :  '#CDD3C9'}}>
             <section className="card">
