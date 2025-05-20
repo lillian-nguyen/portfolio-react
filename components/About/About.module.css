@@ -19,6 +19,8 @@
         transparent 80px,
         rgba(255, 255, 255, 0.3) 83px
       );
+
+    overflow-y: auto;
 }
 
 .aboutHeader{
@@ -35,7 +37,7 @@
     margin-top: -3rem;
 }
 
-.themeContainer{
+.aboutContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,21 +45,39 @@
     margin-top: 2rem;
     background-color: rgba(217,217,217, 0.8);
     text-align: center;
-    width: 80%;
+    width: 88%;
     font-family: "Barlow Condensed", sans-serif;
     border-radius: 1rem;
 }
 
 .themeContainer h4{
+    font-size: 2rem;
+    color: #2C3424;
+    margin: 0 auto;
     margin-top: 1.3rem;
     padding-bottom: 1.2rem;
-    font-size: 1.6rem;
+    width: 80%;
 }
 
-.themeOptions{
+.activeAboutText{
+    font-size: 2rem;
+    color: #445A29;
+    margin: 0 auto;
+    border-bottom: 2px solid white;
+    width: 48%;
+}
+
+/* .themeOptions{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     padding: 3rem 1rem;
+} */
+
+.inactiveAboutButtons{
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    margin-top: 2rem;
 }
 
 .themeOptions button{
@@ -65,18 +85,66 @@
     padding: 0.3rem 0.5rem;
     border-radius: 0.3rem;
     color: white;
-    font-size: 1.4rem;
+    /* color: #2C3424; */
+    font-size: 1.8rem;
+}
+
+.themeOptions button:hover{
+    cursor: pointer;
+}
+
+/* image/polaroid */
+
+.polaroidWrapper{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+}
+
+.smiski{
+    position: absolute;
+    z-index: 3;
+    top: -3%;
+    top: 20%;
+    left: 13%;
+    scale: 0.6;
 }
 
 .aboutImg{
-    scale: 0.7;
-    border-radius: 2rem;
+    position: absolute;
+    top: 8%;
+    left: 19.2%;
+    width: 60%;
+    height: 50%;
+    object-fit: cover;
 }
 
-.imgCurrently{
+.polaroid{
+    position: absolute;
+    z-index: 1;
+}
+
+.currently{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 85%;
+    position: relative;
+    top: -7rem;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
 }
 
-.imgCurrently h4{
+.currently h4{
     font-family: "Barlow Condensed", sans-serif;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+
+.currently span{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
 }
