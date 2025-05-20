@@ -1,9 +1,5 @@
 /* hero section */
 
-.heroSection{
-    min-height: 100vh;
-}
-
 .heroHeader{
     text-align: center;
     margin: 0 auto;
@@ -108,5 +104,5 @@
   }
   
   .selfieContainer{
-    margin-top: 3rem;
+    margin-top: 4rem;
   }

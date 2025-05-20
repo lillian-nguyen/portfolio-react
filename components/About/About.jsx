@@ -7,7 +7,7 @@ return(
         <section className={styles.topRow}>
             <Button
             style={{backgroundColor: '#445A29'}}
-            className={styles.aboutNavButton}
+            className="aboutNavButton"
             />
             <h2 className={styles.aboutHeader}>ABOUT ME</h2>
         </section>
@@ -42,8 +42,6 @@ return(
                     <span>Counting down days until CYC Conference</span>
                 </section>
         
-        
-        {/* <section>bio blurb</section> */}
     </section>
     </section>
     );

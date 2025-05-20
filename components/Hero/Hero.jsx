@@ -10,6 +10,7 @@ const HeroMobile = () => {
     return(
         <section className={styles.heroContainer}>
         <Button
+        variant="hamburger"
         style={{backgroundColor: '#445A29'}}
         />
         <h1 className={styles.heroHeader}>LILLIAN NGUYEN</h1>

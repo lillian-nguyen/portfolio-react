@@ -6,7 +6,7 @@ import { About } from '../components/About/About';
 const App = () => {
     return(
         <>
-            {/* <Hero /> */}
+            <Hero />
             {/* <MobileMenu/> */}
             <About />
         </>

@@ -34,7 +34,7 @@
     background-color: #2C3424;
     color: white;
     text-align: center;
-    margin-top: -3rem;
+    margin-top: -4.5rem;
 }
 
 .aboutContainer{
@@ -144,7 +144,8 @@
 }
 
 .currently span{
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     padding-bottom: 1rem;
+    font-size: 1.6rem;
 }
