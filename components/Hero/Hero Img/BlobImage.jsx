@@ -24,7 +24,7 @@ const BlobImage = () => {
           </defs>
   
           <image
-            href="src/assets/beach.jpg"
+            href="/beach.jpg"
             width="621"
             height="615"
             clipPath="url(#blobClip)"
