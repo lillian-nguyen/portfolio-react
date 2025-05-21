@@ -18,7 +18,7 @@ const MobileMenu = () => {
             <Line className="line1"/>
             <Line className="line2"/>
             <Square/>
-            <img src="src/assets/flowerbg-removed.png" className="flowers"></img>
+            <img src="/flowerbg-removed.png" className="flowers"></img>
             <h3 className="mobile-initials">LN</h3>
         </div>
     )
