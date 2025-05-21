@@ -116,19 +116,19 @@ body {
 }
 
 .line1{
-  position: relative;
-  /* right: 0;
-  top: 4.5rem; */
-  top: -40rem;
-  right: -7rem;
+  position: absolute;
+  right: 0;
+  top: 4.5rem;
+  /* top: -40rem;
+  right: -7rem; */
 }
 
 .line2{
-  position: relative;
-  /* left: 0;
-  bottom: 6rem; */
-  bottom: -14.5rem;
-  right: 6rem;
+  position: absolute;
+  left: 0;
+  bottom: 6rem;
+  /* bottom: -14.5rem;
+  right: 6rem; */
 }
 
 .mobile-links a:hover{
@@ -138,17 +138,17 @@ body {
 
 .square{
   background-color: #C8B388;
-  width: 20rem;
-  height: 20rem;
+  width: 18rem;
+  height: 18rem;
   transform: rotate(45deg);
   position: absolute;
-  bottom: -4rem;
+  bottom: -3rem;
   right: -3rem;
 }
 
 .flowers{
   position: absolute;
-  bottom: -12rem;
+  bottom: -11rem;
   right: -8.5rem;
   scale: 0.7;
   transform: rotate(-5deg);
@@ -161,5 +161,5 @@ body {
   color: #2C3424;
   position: absolute;
   bottom: 3.7rem;
-  left: 5rem;
+  left: 4.5rem;
 }
