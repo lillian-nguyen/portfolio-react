@@ -1,10 +1,4 @@
-/* .topRow{
-    display: flex;
-    border: 2px solid white;
-} */
-
 .AboutSection{
-    height: 100vh;
     background-color: #78866B; 
     background-image:
       repeating-linear-gradient(
@@ -21,6 +15,7 @@
       );
 
     overflow-y: auto;
+    padding-bottom: 3rem;
 }
 
 .aboutHeader{
@@ -48,6 +43,7 @@
     width: 88%;
     font-family: "Barlow Condensed", sans-serif;
     border-radius: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 .themeContainer h4{
@@ -55,7 +51,7 @@
     font-size: 2rem;
     color: #2C3424;
     margin: 0 auto;
-    margin-top: 1.3rem;
+    margin-top: 1.8rem;
     padding-bottom: 1.2rem;
     width: 80%;
 }
@@ -131,10 +127,10 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    margin-top: -7.5rem;
     background-color: rgba(255, 255, 255, 0.8);
     width: 85%;
     position: relative;
-    top: -7rem;
     border-radius: 0.3rem;
     font-size: 1.4rem;
 }
