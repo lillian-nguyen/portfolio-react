@@ -15,14 +15,14 @@ return(
        <section className={styles.aboutContainer}>
 
         <section className={styles.themeContainer}>
-            <h4>CREATING MY SPACE THROUGH:</h4>
+            <h4>Hi, I'm Lillian - your friendly neighborhood </h4>
 
             <div className={styles.themeOptions}>
-                <p className={styles.activeAboutText}>PROGRAMMING</p>
+                <p className={styles.activeAboutText}>SOFTWARE ENGINEER</p>
 
                 <div className={styles.inactiveAboutButtons}>
-                    <button>SIDE QUESTS</button>
-                    <button>EXPLORING</button>
+                    <button>EXPLORER</button>
+                    <button>SIDE QUEST ENTHUSIAST</button>
                 </div>
             </div>
         </section>
@@ -38,8 +38,8 @@ return(
                     <img src="#" alt="" />
                     <span>Coding @ Gridiron Survivor</span>
                     <img src="#" alt="" />
-                    <span>Develping an app to connect long distance friends</span>
-                    <span>Counting down days until CYC Conference</span>
+                    <span>Develping an app for long distance friendships</span>
+                    <span>Counting down the days until CYC Conference</span>
                 </section>
         
     </section>

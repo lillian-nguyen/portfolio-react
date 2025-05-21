@@ -51,6 +51,7 @@
 }
 
 .themeContainer h4{
+    font-family: "Playfair Display", serif;
     font-size: 2rem;
     color: #2C3424;
     margin: 0 auto;
@@ -125,6 +126,7 @@
 }
 
 .currently{
+    font-family: "Playfair Display", serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
