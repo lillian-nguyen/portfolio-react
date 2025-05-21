@@ -59,7 +59,7 @@ body {
 }
 
 .card{
-  background-image: url(assets/blueflower.jpg);
+  background-image: url(/blueflower.jpg);
   background-position: 70% 30%;
   width: 55rem;
   height: 53rem;
