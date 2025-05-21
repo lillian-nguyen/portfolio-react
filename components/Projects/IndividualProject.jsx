@@ -1,17 +1,24 @@
 import React from "react";
+import styles from "./Projects.module.css"
 
-const IndividualProject = () => {
+const IndividualProject = ({imgSrc, projectName, projectBio, tech = []}) => {
     return (
         <div>
-           <img src="" alt="" /> 
+           <video 
+           autoPlay
+           muted
+           loop
+           className={styles.projectMedia}
+           src={imgSrc} alt={`${projectName} preview`} /> 
 
            <div>
-            <h4>Title</h4>
-            <p>project bio</p>
+            <h4>{projectName}</h4>
+            <p className={styles.projectBio}>{projectBio}</p>
 
-            <div>
-                <span>tech</span>
-                <span></span>
+            <div className={styles.techTagContainer}>
+                {tech.map((element, index) => (
+                    <span className={styles.techTag} key={index}>{element}</span>
+                ))}
             </div>
            </div>
 
