@@ -67,8 +67,24 @@
     font-size: 2rem;
     color: #445A29;
     margin: 0 auto;
+    padding-bottom: 0.3rem;
     border-bottom: 2px solid white;
-    width: 48%;
+    width: fit-content;
+}
+
+/* arrows */
+.titleAndArrow{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.showBioArrow{
+    position: absolute;
+    top: -40%;
+    left: calc(55% + 9rem)
 }
 
 .inactiveAboutButtons{
@@ -92,7 +108,7 @@
     font-size: 1.6rem;
 }
 
-.themeOptions button:hover{
+.themeOptions button:hover, .showBioArrow:hover{
     cursor: pointer;
 }
 
