@@ -7,10 +7,10 @@ import { Projects } from '../components/Projects/Projects';
 const App = () => {
     return(
         <>
-            {/* <Hero /> */}
-            <MobileMenu/>
-            {/* <About />
-            <Projects /> */}
+            <Hero />
+            {/* <MobileMenu/> */}
+            <About />
+            <Projects />
         </>
     )
 }

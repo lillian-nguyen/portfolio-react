@@ -26,63 +26,58 @@ body {
   border-radius: 0.5rem;
 }
 
-/* update box */
-
-.updatebox, .centercard, .card-highlight{
-  /* position: absolute; */
-  top: 18%;
-  right: 13%;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(234, 226, 217, 0.8);
-  backdrop-filter: blur(2px);
-  padding: 1.5rem 2rem;
-  border-radius: 2rem;
+/* Marquee styles */
+.marquee {
+  display: flex;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
-.update-item {
+.marqueeContent {
+  flex-shrink: 0;
+  display: flex;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.7rem;
+  color: #445A29;
+}
+
+.marqueeContent > * {
+  flex: 0 0 auto;
+  padding: 1rem 0.8rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.marqueeItem {
   display: flex;
   align-items: center;
-  gap: 1.3rem; /* space between icon and text */
-  margin-bottom: 1rem;
 }
 
-.update-item img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+.sparkle{
+  scale: 0.8;
+  animation: spin 8s linear infinite;
 }
 
-
-.updatebox h3{
-  font-family: "Homemade Apple", cursive;
-  color:rgb(220, 151, 32)
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.card{
-  background-image: url(/blueflower.jpg);
-  background-position: 70% 30%;
-  width: 55rem;
-  height: 53rem;
-  border-radius: 3%;
-  /* position: absolute; */
-  top: 25%;
-  left: 25%;
-  border: 6px solid rgb(96, 113, 97);
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%) }
 }
 
-.centercard, .card-highlight{
-  /* position: absolute; */
-  top: 38%;
-  left: 20%;
-  width: 15%;
-  height: 33%;
-  backdrop-filter: blur(8px);
+  /* Enable animation */
+.enableAnimation .marqueeContent {
+  animation: scroll 20s linear infinite;
 }
 
-.card-highlight{
-  left: 130%;
-  width: 85%;
-  height: 90%;
+.aboutMarquee{
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+  width: 80%;
 }
 
 /* hamburger menu mobile */
