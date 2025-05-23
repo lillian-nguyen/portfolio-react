@@ -139,8 +139,9 @@
 }
 
 .smiskiReading{
-    top: 28%;
-    left: -10%;
+    scale: 0.9;
+    top: 35%;
+    left: -13%;
 }
 
 .aboutImg{
