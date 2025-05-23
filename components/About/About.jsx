@@ -22,14 +22,33 @@ const foodieCurrents = [
 ];
 
 const sqeCurrents = [
-    {text: 'Reading "Before the Coffee Gets Cold"', iconSrc: smileIcon, iconClass: 'explorerIcons'}, 
+    {text: 'Reading Romantasy novels', iconSrc: smileIcon, iconClass: 'explorerIcons'}, 
     {text: 'Learning Spanish & Vietnamese', iconSrc: smileIcon, iconClass: 'explorerIcons'},
     {text: 'Entering my running era', iconSrc: smileIcon, iconClass: 'explorerIcons'}
 ];
 
+const smiskiImages = {
+    'SOFTWARE ENGINEER': {
+        imgSrc:'smiski_researching.png',
+        alt: 'Smiski figurine looking at a laptop',
+        className: 'smiskiResearching'
+    },
+    'FOODIE': {
+        imgSrc: 'smiski_peek.png',
+        alt: 'Smiski figurine looking below',
+        className: 'smiskiPeeking'
+    }, 
+    'SIDE QUEST ENTHUSIAST':{
+        imgSrc: 'smiski_reading.png',
+        alt: 'Smiski figurine reading a book',
+        className: 'smiskiReading'
+    }
+}
+
 const About = () => {
     const [currentItems, setCurrentItems] = useState(sweCurrents);
     const [activeTitle, setActiveTitle] = useState('SOFTWARE ENGINEER');
+    const [activeSmiskiImages, setActiveSmiskiImages] = useState(smiskiImages['SOFTWARE ENGINEER']);
 
 return(
     <section className={styles.AboutSection}>
@@ -63,18 +82,20 @@ return(
 
                 <div className={styles.inactiveAboutButtons}>
                     <button id="theme1" onClick={() => {
-                        setCurrentItems(foodieCurrents);setActiveTitle('FOODIE');    
+                        setCurrentItems(foodieCurrents);setActiveTitle('FOODIE');
+                        setActiveSmiskiImages(smiskiImages['FOODIE']);    
                     }}>FOODIE</button>
                     <button id="theme2" onClick={() => {
                         setCurrentItems(sqeCurrents);
                         setActiveTitle('SIDE QUEST ENTHUSIAST');
+                        setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
                         }}>SIDE QUEST ENTHUSIAST</button>
                 </div>
             </div>
         </section>
 
         <div className={styles.polaroidWrapper}>
-            <img className={styles.smiski} src="/smiski_researching.png" alt="smiski" />
+            <img className={`${styles.smiski} ${styles[activeSmiskiImages.className]}`} src={activeSmiskiImages.imgSrc} alt={activeSmiskiImages.alt} />
             <img className={styles.aboutImg} src="https://images.unsplash.com/photo-1656680632373-e2aec264296b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
             <img className={styles.polaroid} src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2dzZWp0YzlnemV2bTVtdG55Mjkxa3Vrd3h1dHE5bWtkbDV3OWtxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t8nUMbu4NHNFQUKTq5/giphy.gif" alt="" />
         </div>

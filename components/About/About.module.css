@@ -116,17 +116,31 @@
 
 .polaroidWrapper{
     position: relative;
+    top: 3rem;
     width: 100%;
     aspect-ratio: 3/4;
 }
 
 .smiski{
     position: absolute;
-    z-index: 3;
+    z-index: 2;
+}
+
+.smiskiResearching {
     top: -3%;
     top: 20%;
     left: 13%;
     scale: 0.6;
+}
+
+.smiskiPeeking{
+    scale: 0.7;
+    top: -33%;
+}
+
+.smiskiReading{
+    top: 28%;
+    left: -10%;
 }
 
 .aboutImg{
