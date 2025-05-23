@@ -1,6 +1,7 @@
 import styles from "./About.module.css"
 import Button from "../Button";
 import { Marquee } from "../Marquee";
+import {useState} from "react";
 
 const codeIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNEMjg1MUEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik04Ljc1IDYuNUwzLjI1IDEybDUuNSA1LjVtNi41LTExbDUuNSA1LjVsLTUuNSA1LjUiLz48L3N2Zz4='
 
@@ -27,6 +28,9 @@ const sqeCurrents = [
 ];
 
 const About = () => {
+    const [currentItems, setCurrentItems] = useState(sweCurrents);
+    const [activeTitle, setActiveTitle] = useState('SOFTWARE ENGINEER');
+
 return(
     <section className={styles.AboutSection}>
         <section>
@@ -43,7 +47,7 @@ return(
                 <div>
                     <h4>CURRENTLY</h4>
                     <Marquee
-                    className="aboutMarquee" items={sweCurrents}/>
+                    className="aboutMarquee" items={currentItems}/>
                 </div>
                 
             </section>
@@ -53,13 +57,18 @@ return(
 
             <div className={styles.themeOptions}>
                 <div className={styles.titleAndArrow}>
-                    <p className={styles.activeAboutText}>SOFTWARE ENGINEER</p>
-                    <img className={styles.showBioArrow}src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiM0NDNCMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik00IDEyaDE1Ljg3OW0tNi4xMjkgNi43NWw1LjY5LTUuNjljLjI5Mi0uMjkyLjQzOS0uNjc2LjQzOS0xLjA2TTEzLjc1IDUuMjVsNS42OSA1LjY5Yy4yOTIuMjkyLjQzOS42NzYuNDM5IDEuMDYiLz48L3N2Zz4=" alt="right arrow" />
+                    <p id="activeTheme" className={styles.activeAboutText}>{activeTitle}</p>
+                    <img id="rightArrow" className={styles.showBioArrow}src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiM0NDNCMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik00IDEyaDE1Ljg3OW0tNi4xMjkgNi43NWw1LjY5LTUuNjljLjI5Mi0uMjkyLjQzOS0uNjc2LjQzOS0xLjA2TTEzLjc1IDUuMjVsNS42OSA1LjY5Yy4yOTIuMjkyLjQzOS42NzYuNDM5IDEuMDYiLz48L3N2Zz4=" alt="right arrow" />
                 </div>
 
                 <div className={styles.inactiveAboutButtons}>
-                    <button>FOODIE</button>
-                    <button>SIDE QUEST ENTHUSIAST</button>
+                    <button id="theme1" onClick={() => {
+                        setCurrentItems(foodieCurrents);setActiveTitle('FOODIE');    
+                    }}>FOODIE</button>
+                    <button id="theme2" onClick={() => {
+                        setCurrentItems(sqeCurrents);
+                        setActiveTitle('SIDE QUEST ENTHUSIAST');
+                        }}>SIDE QUEST ENTHUSIAST</button>
                 </div>
             </div>
         </section>
