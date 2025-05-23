@@ -22,7 +22,7 @@ const foodieCurrents = [
 ];
 
 const sqeCurrents = [
-    {text: 'Reading Romantasy novels', iconSrc: smileIcon, iconClass: 'explorerIcons'}, 
+    {text: 'Reading "Before the Coffee Gets Cold', iconSrc: smileIcon, iconClass: 'explorerIcons'}, 
     {text: 'Learning Spanish & Vietnamese', iconSrc: smileIcon, iconClass: 'explorerIcons'},
     {text: 'Entering my running era', iconSrc: smileIcon, iconClass: 'explorerIcons'}
 ];
