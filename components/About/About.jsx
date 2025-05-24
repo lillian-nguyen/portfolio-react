@@ -81,17 +81,23 @@ return(
                 </div>
 
                 <div className={styles.inactiveAboutButtons}>
-                    <button id="theme0" onClick={() => {
+                    <button id="theme0" 
+                    className={activeTitle === 'SOFTWARE ENGINEER' ? `${styles.hideThemeButton}` : ''}
+                    onClick={() => {
                         setCurrentItems(sweCurrents);
                         setActiveTitle('SOFTWARE ENGINEER');
-                        setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER'])
+                        setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER']);
                     }}>SOFTWARE ENGINEER</button>
-                    <button id="theme1" onClick={() => {
+                    <button id="theme1" 
+                    className={activeTitle === 'FOODIE' ? `${styles.hideThemeButton}` : ''}
+                    onClick={() => {
                         setCurrentItems(foodieCurrents);
                         setActiveTitle('FOODIE');
                         setActiveSmiskiImages(smiskiImages['FOODIE']);    
                     }}>FOODIE</button>
-                    <button id="theme2" onClick={() => {
+                    <button id="theme2" 
+                    className={activeTitle === 'SIDE QUEST ENTHUSIAST' ? `${styles.hideThemeButton}` : ''}
+                    onClick={() => {
                         setCurrentItems(sqeCurrents);
                         setActiveTitle('SIDE QUEST ENTHUSIAST');
                         setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
