@@ -18,7 +18,7 @@ const sweCurrents = [
 const foodieCurrents = [
     {text: 'Researching pizza tour stops', iconSrc: foodIcon, iconClass: 'foodieIcons'}, 
     {text: 'Contributing to the matcha shortage', iconSrc: foodIcon, iconClass: 'foodieIcons'},
-    {text: 'Baking choco chip toffee cookies', iconSrc: foodIcon, foodClass: 'foodieIcons'}
+    {text: 'Baking choco chip toffee cookies', iconSrc: foodIcon, iconClass: 'foodieIcons'}
 ];
 
 const sqeCurrents = [
@@ -81,11 +81,23 @@ return(
                 </div>
 
                 <div className={styles.inactiveAboutButtons}>
-                    <button id="theme1" onClick={() => {
-                        setCurrentItems(foodieCurrents);setActiveTitle('FOODIE');
+                    <button id="theme0" 
+                    className={activeTitle === 'SOFTWARE ENGINEER' ? `${styles.hideThemeButton}` : ''}
+                    onClick={() => {
+                        setCurrentItems(sweCurrents);
+                        setActiveTitle('SOFTWARE ENGINEER');
+                        setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER']);
+                    }}>SOFTWARE ENGINEER</button>
+                    <button id="theme1" 
+                    className={activeTitle === 'FOODIE' ? `${styles.hideThemeButton}` : ''}
+                    onClick={() => {
+                        setCurrentItems(foodieCurrents);
+                        setActiveTitle('FOODIE');
                         setActiveSmiskiImages(smiskiImages['FOODIE']);    
                     }}>FOODIE</button>
-                    <button id="theme2" onClick={() => {
+                    <button id="theme2" 
+                    className={activeTitle === 'SIDE QUEST ENTHUSIAST' ? `${styles.hideThemeButton}` : ''}
+                    onClick={() => {
                         setCurrentItems(sqeCurrents);
                         setActiveTitle('SIDE QUEST ENTHUSIAST');
                         setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
@@ -99,7 +111,6 @@ return(
             <img className={styles.aboutImg} src="https://images.unsplash.com/photo-1656680632373-e2aec264296b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
             <img className={styles.polaroid} src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2dzZWp0YzlnemV2bTVtdG55Mjkxa3Vrd3h1dHE5bWtkbDV3OWtxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t8nUMbu4NHNFQUKTq5/giphy.gif" alt="" />
         </div>
-        
         
     </section>
     </section>

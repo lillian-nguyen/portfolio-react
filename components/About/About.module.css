@@ -116,7 +116,7 @@
 
 .polaroidWrapper{
     position: relative;
-    top: 6.5rem;
+    top: 3.8rem;
     width: 100%;
     aspect-ratio: 3/4;
 }
@@ -134,7 +134,7 @@
 }
 
 .smiskiPeeking{
-    scale: 0.7;
+    scale: 0.6;
     top: -33%;
 }
 
@@ -142,6 +142,10 @@
     scale: 0.9;
     top: 35%;
     left: -13%;
+}
+
+.hideThemeButton{
+    display: none;
 }
 
 .aboutImg{
