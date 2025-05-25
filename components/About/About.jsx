@@ -45,10 +45,26 @@ const smiskiImages = {
     }
 }
 
+const polaroidPics = {
+    'SOFTWARE ENGINEER': {
+        polaroidImgSrc: 'https://images.unsplash.com/photo-1656680632373-e2aec264296b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        alt: 'computer screens'
+    }, 
+    'FOODIE': {
+        polaroidImgSrc: '/caolau.jpg',
+        alt: 'Vietnamese Cao Lau dish'
+    }, 
+    'SIDE QUEST ENTHUSIAST': {
+        polaroidImgSrc: '/lanterns.jpg',
+        alt: 'multiple lines of lanterns'
+    }
+}
+
 const About = () => {
     const [currentItems, setCurrentItems] = useState(sweCurrents);
     const [activeTitle, setActiveTitle] = useState('SOFTWARE ENGINEER');
     const [activeSmiskiImages, setActiveSmiskiImages] = useState(smiskiImages['SOFTWARE ENGINEER']);
+    const [activePolaroidPic, setActivePolaroidPic] = useState(polaroidPics['SOFTWARE ENGINEER']);
 
 return(
     <section className={styles.AboutSection}>
@@ -87,6 +103,7 @@ return(
                         setCurrentItems(sweCurrents);
                         setActiveTitle('SOFTWARE ENGINEER');
                         setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER']);
+                        setActivePolaroidPic(polaroidPics['SOFTWARE ENGINEER'])
                     }}>SOFTWARE ENGINEER</button>
                     <button id="theme1" 
                     className={activeTitle === 'FOODIE' ? `${styles.hideThemeButton}` : ''}
@@ -94,6 +111,7 @@ return(
                         setCurrentItems(foodieCurrents);
                         setActiveTitle('FOODIE');
                         setActiveSmiskiImages(smiskiImages['FOODIE']);    
+                        setActivePolaroidPic(polaroidPics['FOODIE'])
                     }}>FOODIE</button>
                     <button id="theme2" 
                     className={activeTitle === 'SIDE QUEST ENTHUSIAST' ? `${styles.hideThemeButton}` : ''}
@@ -101,6 +119,7 @@ return(
                         setCurrentItems(sqeCurrents);
                         setActiveTitle('SIDE QUEST ENTHUSIAST');
                         setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
+                        setActivePolaroidPic(polaroidPics['SIDE QUEST ENTHUSIAST']);
                         }}>SIDE QUEST ENTHUSIAST</button>
                 </div>
             </div>
@@ -108,7 +127,7 @@ return(
 
         <div className={styles.polaroidWrapper}>
             <img className={`${styles.smiski} ${styles[activeSmiskiImages.className]}`} src={activeSmiskiImages.imgSrc} alt={activeSmiskiImages.alt} />
-            <img className={styles.aboutImg} src="https://images.unsplash.com/photo-1656680632373-e2aec264296b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            <img className={styles.aboutImg} src={activePolaroidPic.polaroidImgSrc} alt="" />
             <img className={styles.polaroid} src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2dzZWp0YzlnemV2bTVtdG55Mjkxa3Vrd3h1dHE5bWtkbDV3OWtxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t8nUMbu4NHNFQUKTq5/giphy.gif" alt="" />
         </div>
         
