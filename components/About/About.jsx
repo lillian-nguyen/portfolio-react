@@ -60,11 +60,39 @@ const polaroidPics = {
     }
 }
 
+// const aboutThemeTexts = {
+//     'SOFTWARE ENGINEER': {
+//         bioText: 'I am a software engineer'
+//     },
+//     'FOODIE': {
+//         bioText: 'I am a foodie'
+//     },
+//     'SIDE QUEST ENTHUSIAST': {
+//         bioText: 'I am a side quest enthusiast'
+//     }
+// }
+
+// function ArrowVisibility(){
+//     const [isRightArrowShown, setIsRightArrowShown] = useState(true);
+// }
+
+// const toggleArrow = () => {
+//     setIsRightArrowShown(!isRightArrowShown)
+// }
+
 const About = () => {
     const [currentItems, setCurrentItems] = useState(sweCurrents);
     const [activeTitle, setActiveTitle] = useState('SOFTWARE ENGINEER');
     const [activeSmiskiImages, setActiveSmiskiImages] = useState(smiskiImages['SOFTWARE ENGINEER']);
     const [activePolaroidPic, setActivePolaroidPic] = useState(polaroidPics['SOFTWARE ENGINEER']);
+
+    // const [isBioVisible, setIsBioVisible] = useState(aboutThemeTexts['SOFTWARE ENGINEER']);
+    const [isRightArrowShown, setIsRightArrowShown] = useState(true);
+
+    
+    const toggleArrow = () => {
+        setIsRightArrowShown(!isRightArrowShown)
+    }
 
 return(
     <section className={styles.AboutSection}>
@@ -87,43 +115,60 @@ return(
                 
             </section>
 
+        <section className={styles.themeContainerWrapper}>
         <section className={styles.themeContainer}>
-            <h4>Hi, I'm Lillian - your friendly neighborhood </h4>
+                <h4>Hi, I'm Lillian - your friendly neighborhood </h4>
 
-            <div className={styles.themeOptions}>
-                <div className={styles.titleAndArrow}>
-                    <p id="activeTheme" className={styles.activeAboutText}>{activeTitle}</p>
-                    <img id="rightArrow" className={styles.showBioArrow}src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiM0NDNCMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik00IDEyaDE1Ljg3OW0tNi4xMjkgNi43NWw1LjY5LTUuNjljLjI5Mi0uMjkyLjQzOS0uNjc2LjQzOS0xLjA2TTEzLjc1IDUuMjVsNS42OSA1LjY5Yy4yOTIuMjkyLjQzOS42NzYuNDM5IDEuMDYiLz48L3N2Zz4=" alt="right arrow" />
-                </div>
+                <div className={styles.themeOptions}>
+                    <div className={styles.titleAndArrow}
+                    onClick={toggleArrow}>
+                        <p id="activeTheme" className={styles.activeAboutText}>{activeTitle}</p>
+                        <img id="rightArrow" className={`${styles.rightArrow} ${isRightArrowShown ? '' : styles.hideVisibility}`}
+                        
 
-                <div className={styles.inactiveAboutButtons}>
-                    <button id="theme0" 
-                    className={activeTitle === 'SOFTWARE ENGINEER' ? `${styles.hideThemeButton}` : ''}
-                    onClick={() => {
-                        setCurrentItems(sweCurrents);
-                        setActiveTitle('SOFTWARE ENGINEER');
-                        setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER']);
-                        setActivePolaroidPic(polaroidPics['SOFTWARE ENGINEER'])
-                    }}>SOFTWARE ENGINEER</button>
-                    <button id="theme1" 
-                    className={activeTitle === 'FOODIE' ? `${styles.hideThemeButton}` : ''}
-                    onClick={() => {
-                        setCurrentItems(foodieCurrents);
-                        setActiveTitle('FOODIE');
-                        setActiveSmiskiImages(smiskiImages['FOODIE']);    
-                        setActivePolaroidPic(polaroidPics['FOODIE'])
-                    }}>FOODIE</button>
-                    <button id="theme2" 
-                    className={activeTitle === 'SIDE QUEST ENTHUSIAST' ? `${styles.hideThemeButton}` : ''}
-                    onClick={() => {
-                        setCurrentItems(sqeCurrents);
-                        setActiveTitle('SIDE QUEST ENTHUSIAST');
-                        setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
-                        setActivePolaroidPic(polaroidPics['SIDE QUEST ENTHUSIAST']);
-                        }}>SIDE QUEST ENTHUSIAST</button>
+                        onClick={() => {
+                            // setIsBioVisible(aboutThemeTexts[activeTitle]);
+                            
+                        }}
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiM0NDNCMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik00IDEyaDE1Ljg3OW0tNi4xMjkgNi43NWw1LjY5LTUuNjljLjI5Mi0uMjkyLjQzOS0uNjc2LjQzOS0xLjA2TTEzLjc1IDUuMjVsNS42OSA1LjY5Yy4yOTIuMjkyLjQzOS42NzYuNDM5IDEuMDYiLz48L3N2Zz4=" alt="right arrow" />
+
+                        <img className={`${styles.leftArrow} ${isRightArrowShown ? styles.hideVisibility : ''}`} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzUzNGE0MSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTIwIDEySDQuMTIxbTYuMTI5IDYuNzVsLTUuNjktNS42OUExLjUgMS41IDAgMCAxIDQuMTIyIDEybTYuMTI5LTYuNzVsLTUuNjkgNS42OUExLjUgMS41IDAgMCAwIDQuMTIyIDEyIiAvPgo8L3N2Zz4=" alt="left arrow" />
+                    </div>
+
+                    <div className={`${styles.overlayContainer}`}>
+                        <p>testing 1,2,3</p>
+                    </div>
+
+                    <div className={styles.inactiveAboutButtons}>
+                        <button id={styles.theme0} 
+                        className={activeTitle === 'SOFTWARE ENGINEER' ? `${styles.hideThemeButton}` : ''}
+                        onClick={() => {
+                            setCurrentItems(sweCurrents);
+                            setActiveTitle('SOFTWARE ENGINEER');
+                            setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER']);
+                            setActivePolaroidPic(polaroidPics['SOFTWARE ENGINEER'])
+                        }}>SOFTWARE ENGINEER</button>
+                        <button id={styles.theme1}  
+                        className={activeTitle === 'FOODIE' ? `${styles.hideThemeButton}` : ''}
+                        onClick={() => {
+                            setCurrentItems(foodieCurrents);
+                            setActiveTitle('FOODIE');
+                            setActiveSmiskiImages(smiskiImages['FOODIE']);    
+                            setActivePolaroidPic(polaroidPics['FOODIE'])
+                        }}>FOODIE</button>
+                        <button id={styles.theme2}
+                        className={activeTitle === 'SIDE QUEST ENTHUSIAST' ? `${styles.hideThemeButton}` : ''}
+                        onClick={() => {
+                            setCurrentItems(sqeCurrents);
+                            setActiveTitle('SIDE QUEST ENTHUSIAST');
+                            setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
+                            setActivePolaroidPic(polaroidPics['SIDE QUEST ENTHUSIAST']);
+                            }}>SIDE QUEST ENTHUSIAST</button>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
+        
 
         <div className={styles.polaroidWrapper}>
             <img className={`${styles.smiski} ${styles[activeSmiskiImages.className]}`} src={activeSmiskiImages.imgSrc} alt={activeSmiskiImages.alt} />
