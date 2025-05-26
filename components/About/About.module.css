@@ -45,12 +45,19 @@
     border-radius: 1rem;
 }
 
-.themeContainer{
-    background-color: rgba(217,217,217, 0.75);
+.themeContainerWrapper{
     width: 88%;
-    border-radius: 1rem;
     margin: 0 auto;
+}
+
+.themeContainer{
+    position: relative;
+    background-color: rgba(217,217,217, 0.75);
+    /* width: 88%; */
+    border-radius: 1rem;
+    /* margin: 0 auto; */
     margin-top: 2rem;
+    padding-top: 1.4rem;
 }
 
 .themeContainer h4{
@@ -58,9 +65,32 @@
     font-size: 2rem;
     color: #2C3424;
     margin: 0 auto;
-    margin-top: 1.3rem;
+    /* margin-top: 1.8rem; */
     padding-bottom: 1.2rem;
     width: 80%;
+}
+
+.overlayContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    background-color: pink;
+    height: 100%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.makeVisible{
+    visibility: visible;
+}
+
+.hideVisibility{
+    visibility: hidden;
 }
 
 .activeAboutText{
@@ -81,10 +111,16 @@
     /* border: 1px solid red; */
 }
 
-.showBioArrow{
+.rightArrow, .leftArrow{
     position: absolute;
     top: -40%;
-    left: calc(55% + 9rem)
+    left: calc(55% + 9rem);
+    z-index: 2;
+}
+
+.leftArrow{
+    left: calc(25.5% - 9rem);
+    top: -38%;
 }
 
 .inactiveAboutButtons{
@@ -98,17 +134,20 @@
     width: 65%;
 }
 
+#theme0, #theme1, #theme2{
+    box-shadow: 3px 4px 2px white;
+}
+
 .themeOptions button{
     background-color: #2C3424;
     background-color: #534a41;
     padding: 0.8rem 0.7rem;
     border-radius: 0.3rem;
     color: white;
-    /* color: #2C3424; */
     font-size: 1.6rem;
 }
 
-.themeOptions button:hover, .showBioArrow:hover{
+.themeOptions button:hover, .rightArrow:hover, .leftArrow:hover{
     cursor: pointer;
 }
 
