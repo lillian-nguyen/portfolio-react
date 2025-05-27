@@ -62,10 +62,10 @@ const polaroidPics = {
 
 const aboutThemeTexts = {
     'SOFTWARE ENGINEER': {
-        bioText: "I'm a software engineer with a background in healthcare and soft spot for human-centered design. My goal is to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
+        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. My goal is to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
     },
     'FOODIE': {
-        bioText: "Food is one of my favorite ways to explore culture and connection - both of which hold a special place in my heart as a Vietnamese American. I love exploring everything from hole-in-the-wall gems to trendy hotspots. While I'm a (self-proclaimed) star baker, learning how to cook has been more of a slow burn. Regardless, I've found a lot of happiness in the creativity and comfort that comes from playing with food."
+        bioText: "Food is one of my favorite ways to explore culture and connection - both of which hold a special place in my heart as a Vietnamese American. Although I'm a (self-proclaimed) star baker, learning to cook has been more of a slow burn. Regardless, the creativity and comfort that comes from playing with food makes me happy."
     },
     'SIDE QUEST ENTHUSIAST': {
         bioText: "I'm all about finding joy in everyday things. Reading, writing, and running keep me grounded, while other hobbies keep life interesting. I enjoy collecting Smiskis, crocheting projects with varying success, and learning Vietnamese and Spanish. There's so much more out there to explore - and I'm probably already curious about what I'll take on next."
@@ -77,9 +77,9 @@ const About = () => {
     const [activeTitle, setActiveTitle] = useState('SOFTWARE ENGINEER');
     const [activeSmiskiImages, setActiveSmiskiImages] = useState(smiskiImages['SOFTWARE ENGINEER']);
     const [activePolaroidPic, setActivePolaroidPic] = useState(polaroidPics['SOFTWARE ENGINEER']);
-
-    // const [isBioVisible, setIsBioVisible] = useState(aboutThemeTexts['SOFTWARE ENGINEER']);
     const [isRightArrowShown, setIsRightArrowShown] = useState(true);
+    const [overlayVisible, setOverlayVisible] = useState(false);
+   
 
     
     const toggleArrow = () => {
@@ -119,16 +119,24 @@ return(
                         
 
                         onClick={() => {
-                            // setIsBioVisible(aboutThemeTexts[activeTitle]);
+                           setOverlayVisible(true);
+                           setIsRightArrowShown(false);
                             
                         }}
                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiM0NDNCMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik00IDEyaDE1Ljg3OW0tNi4xMjkgNi43NWw1LjY5LTUuNjljLjI5Mi0uMjkyLjQzOS0uNjc2LjQzOS0xLjA2TTEzLjc1IDUuMjVsNS42OSA1LjY5Yy4yOTIuMjkyLjQzOS42NzYuNDM5IDEuMDYiLz48L3N2Zz4=" alt="right arrow" />
 
-                        <img className={`${styles.leftArrow} ${isRightArrowShown ? styles.hideVisibility : ''}`} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzUzNGE0MSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTIwIDEySDQuMTIxbTYuMTI5IDYuNzVsLTUuNjktNS42OUExLjUgMS41IDAgMCAxIDQuMTIyIDEybTYuMTI5LTYuNzVsLTUuNjkgNS42OUExLjUgMS41IDAgMCAwIDQuMTIyIDEyIiAvPgo8L3N2Zz4=" alt="left arrow" />
+                        <img className={`${styles.leftArrow} ${isRightArrowShown ? styles.hideVisibility : ''}`} 
+                        
+                        onClick={() => {
+                            setOverlayVisible(false);
+                            setIsRightArrowShown(true);
+                        }}
+
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzUzNGE0MSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTIwIDEySDQuMTIxbTYuMTI5IDYuNzVsLTUuNjktNS42OUExLjUgMS41IDAgMCAxIDQuMTIyIDEybTYuMTI5LTYuNzVsLTUuNjkgNS42OUExLjUgMS41IDAgMCAwIDQuMTIyIDEyIiAvPgo8L3N2Zz4=" alt="left arrow" />
                     </div>
 
-                    <div className={`${styles.overlayContainer}`}>
-                        <p>testing 1,2,3</p>
+                    <div className={`${styles.overlayContainer} ${overlayVisible ? styles.makeVisible : ''}`}>
+                        <p>{aboutThemeTexts[activeTitle]?.bioText}</p>
                     </div>
 
                     <div className={styles.inactiveAboutButtons}>
