@@ -4,7 +4,7 @@ import styles from "./Projects.module.css"
 
 const Projects = () => {
     return (
-        <div>
+        <div className={styles.projectSection}>
             <h2 className={styles.projectsHeader}>PROJECTS</h2>
             <div className={styles.projectsContainer}>
             <h4>VENTURE WEAVERS</h4>
