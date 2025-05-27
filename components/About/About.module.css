@@ -53,9 +53,8 @@
 .themeContainer{
     position: relative;
     background-color: rgba(217,217,217, 0.75);
-    /* width: 88%; */
+    border: 2px ridge white;
     border-radius: 1rem;
-    /* margin: 0 auto; */
     margin-top: 2rem;
     padding-top: 1.4rem;
 }
@@ -77,12 +76,18 @@
     position: absolute;
     top: 0;
     width: 100%;
-    font-size: 1.8rem;
     border-radius: 1rem;
-    background-color: pink;
+    background-color: rgba(217,217,217, 1);
+    border: 2px ridge white;
     height: 100%;
     z-index: 1;
     visibility: hidden;
+}
+
+.overlayContainer p{
+    font-size: 1.6rem;
+    color: #2C3424;
+    width: 80%;
 }
 
 .makeVisible{
