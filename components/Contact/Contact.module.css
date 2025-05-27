@@ -1,0 +1,305 @@
+.projectSection{
+    height: 100vh;
+    /* background: linear-gradient(190deg, rgba(168, 183, 162, 1) 0%, rgba(68, 90, 41, 1) 100%); */
+    overflow-y: auto;
+}
+
+.projectHeader{
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 1.4rem 1rem;
+    border: 2px solid #2C3424;
+    border-radius: 0.4rem;
+    width: 63%;
+    background-color: #2C3424;
+    color: white;
+    text-align: center;
+    margin-top: -4.5rem;
+}
+
+.messageContainer{
+    margin: 0 auto;
+    margin-top: 2%;
+    /* max-width: 600px; */
+    padding: 1rem;
+    background-color: rgba(168, 183, 162, 1);
+}
+
+.imessage {
+    /* background-color: #fff; */
+    /* border: 1px solid #e5e5ea; */
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "SanFrancisco";
+    font-size: 1.25rem;
+    margin: 0 auto 1rem;
+    /* max-width: 600px; */
+    padding: 0.5rem 1.5rem;
+  }
+
+  .imessage p {
+    border-radius: 1.15rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 0.5rem .875rem;
+    position: relative;
+    word-wrap: break-word;
+  }
+
+  .imessage p::before,
+    .imessage p::after {
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+p.fromMe {
+    align-self: flex-end;
+    background-color: #248bf5;
+    color: #fff; 
+  }
+
+  p.fromMe::before {
+    border-bottom-left-radius: 0.8rem 0.7rem;
+    border-right: 1rem solid #248bf5;
+    right: -0.35rem;
+    transform: translate(0, -0.1rem);
+  }
+
+  p.fromMe::after {
+    background-color: rgba(168, 183, 162, 1);
+    border-bottom-left-radius: 0.5rem;
+    right: -40px;
+    transform:translate(-30px, -2px);
+    width: 10px;
+  }
+
+  p[class^="from-"] {
+    margin: 0.5rem 0;
+    width: fit-content;
+  }
+  
+  p.fromMe ~ p.fromMe {
+    margin: 0.25rem 0 0;
+  }
+
+  p.fromMe ~ p.fromMe:not(:last-child) {
+    margin: 0.25rem 0 0;
+  }
+
+  p.fromMe ~ p.fromMe:last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  p.fromThem {
+    align-items: flex-start;
+    background-color: #e5e5ea;
+    color: #000;
+  }
+  
+  p.fromThem:before {
+    border-bottom-right-radius: 0.8rem 0.7rem;
+    border-left: 1rem solid #e5e5ea;
+    left: -0.35rem;
+    transform: translate(0, -0.1rem);
+  }
+  
+  p.fromThem::after {
+    background-color: rgba(168, 183, 162, 1);
+    border-bottom-right-radius: 0.5rem;
+    left: 20px;
+    transform: translate(-30px, -2px);
+    width: 10px;
+  }
+  
+  p[class^="from-"].emoji {
+    background: none;
+    font-size: 2.5rem;
+  }
+  
+  p[class^="from-"].emoji::before {
+    content: none;
+  }
+  
+  .noTail::before {
+    display: none;
+  }
+  
+  .noBottomMargin {
+    margin-bottom: 0 !important;
+  }
+  
+  .marginBottom1 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .marginTop1{
+    margin-top: 1rem !important;
+  }
+
+  /* Make div.from-them behave like a message bubble */
+div.fromThem.bubbleForm {
+    align-self: flex-start;
+    background-color: #e5e5ea;
+    color: #000;
+    border-radius: 1.15rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 0.75rem 1rem;
+    position: relative;
+    word-wrap: break-word;
+    font-size: 1.25rem;
+  }
+  
+  /* Add a chat tail to the div version */
+  div.fromThem.bubbleForm::before {
+    content: "";
+    position: absolute;
+    bottom: -0.1rem;
+    left: -0.35rem;
+    height: 1rem;
+    border-bottom-right-radius: 0.8rem 0.7rem;
+    border-left: 1rem solid #e5e5ea;
+    transform: translate(0, -0.1rem);
+  }
+  
+  div.fromThem.bubbleForm::after {
+    content: "";
+    position: absolute;
+    bottom: -0.1rem;
+    left: 20px;
+    height: 1rem;
+    width: 10px;
+    background-color: rgba(168, 183, 162, 1);
+    border-bottom-right-radius: 0.5rem;
+    transform: translate(-30px, -2px);
+  }
+  
+  /* general styling */
+@font-face {
+    font-family: "SanFrancisco";
+    src:
+      url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2") format("woff2"),
+      url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
+  }
+  
+  body {  
+    font-family: -apple-system, 
+      BlinkMacSystemFont, 
+      "Segoe UI", 
+      Roboto, 
+      Oxygen-Sans, 
+      Ubuntu, 
+      Cantarell, 
+      "Helvetica Neue", 
+      sans-serif;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    border-bottom: 1px solid #e5e5ea;
+    color: #666;
+    font-weight: normal;
+    margin-top: 0;
+    padding-bottom: 1.5rem;
+  }
+  
+  @media screen and (max-width: 800px) {
+    body {
+      margin: 0 0.5rem;
+    }
+  
+    .container {
+      padding: 0.5rem;
+    }
+  
+    .imessage {
+      font-size: 1.5rem;
+      margin: 0 auto 1rem;
+      max-width: 600px;
+      padding: 0.25rem 0.875rem;
+    }
+  
+    .imessage p {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  /* .messageContainer{
+    background-color: rgba(168, 183, 162, 1);
+  } */
+  
+  /* form */
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contactForm input[type="text"],
+  .contactForm input[type="email"] {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    font-family: inherit;
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+    box-sizing: border-box;
+  }
+  
+  .contactForm label {
+    font-weight: 600;
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .imessage div.fromThem.bubbleForm:last-child {
+    max-width: 80%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Match the chat bubble's softness */
+  .contactForm textarea {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .contactForm button {
+    align-self: flex-end;
+    background-color: #248bf5;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    border-radius: 1.4rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
