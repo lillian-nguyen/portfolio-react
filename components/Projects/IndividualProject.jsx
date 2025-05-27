@@ -13,13 +13,16 @@ const IndividualProject = ({imgSrc, projectName, projectBio, tech = []}) => {
 
            <div>
             <h4>{projectName}</h4>
-            <p className={styles.projectBio}>{projectBio}</p>
+            <div className={styles.bioAndTags}>
+                <p className={styles.projectBio}>{projectBio}</p>
 
-            <div className={styles.techTagContainer}>
-                {tech.map((element, index) => (
-                    <span className={styles.techTag} key={index}>{element}</span>
-                ))}
+                <div className={styles.techTagContainer}>
+                    {tech.map((element, index) => (
+                        <span className={styles.techTag} key={index}>{element}</span>
+                    ))}
+                </div>
             </div>
+            
            </div>
 
         </div>

@@ -20,13 +20,11 @@ const Circles = () => {
       circleColor="rgba(210, 133, 26, 0.9)"
       topPos="10.5rem"
       leftPos="10rem"
-      // circleOrder="first"
     />
     <Circle
       circleColor="rgba(81, 68, 57, 0.9)"
       topPos="3.3rem"
       leftPos="14.6rem"
-      // circleOrder="first"
     />
   </section>
   )

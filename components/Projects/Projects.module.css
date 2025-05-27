@@ -33,6 +33,14 @@
     margin-top: 2rem;
 }
 
+.bioAndTags{
+    margin: 0 auto;
+    background-color: rgba(245, 241, 241, 0.3);
+    border-radius: 1rem;
+    width: 88%;
+    padding-bottom: 1rem;
+}
+
 .techTag{
     font-size: 1.3rem;
     padding: 0.3rem 0.5rem;
