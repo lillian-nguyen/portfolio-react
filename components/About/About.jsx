@@ -60,25 +60,17 @@ const polaroidPics = {
     }
 }
 
-// const aboutThemeTexts = {
-//     'SOFTWARE ENGINEER': {
-//         bioText: 'I am a software engineer'
-//     },
-//     'FOODIE': {
-//         bioText: 'I am a foodie'
-//     },
-//     'SIDE QUEST ENTHUSIAST': {
-//         bioText: 'I am a side quest enthusiast'
-//     }
-// }
-
-// function ArrowVisibility(){
-//     const [isRightArrowShown, setIsRightArrowShown] = useState(true);
-// }
-
-// const toggleArrow = () => {
-//     setIsRightArrowShown(!isRightArrowShown)
-// }
+const aboutThemeTexts = {
+    'SOFTWARE ENGINEER': {
+        bioText: "I'm a software engineer with a background in healthcare and soft spot for human-centered design. My goal is to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
+    },
+    'FOODIE': {
+        bioText: "Food is one of my favorite ways to explore culture and connection - both of which hold a special place in my heart as a Vietnamese American. I love exploring everything from hole-in-the-wall gems to trendy hotspots. While I'm a (self-proclaimed) star baker, learning how to cook has been more of a slow burn. Regardless, I've found a lot of happiness in the creativity and comfort that comes from playing with food."
+    },
+    'SIDE QUEST ENTHUSIAST': {
+        bioText: "I'm all about finding joy in everyday things. Reading, writing, and running keep me grounded, while other hobbies keep life interesting. I enjoy collecting Smiskis, crocheting projects with varying success, and learning Vietnamese and Spanish. There's so much more out there to explore - and I'm probably already curious about what I'll take on next."
+    }
+}
 
 const About = () => {
     const [currentItems, setCurrentItems] = useState(sweCurrents);
