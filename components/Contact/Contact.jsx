@@ -3,12 +3,12 @@ import Button from "../Button"
 
 const Contact = () => {
     return(
-        <section className={styles.projectSection}>
+        <section className={styles.contactSection}>
             <Button 
             style={{backgroundColor: '#445A29'}}
             className="aboutNavButton"
             />
-            <h2 className={styles.projectHeader}>CONTACT</h2>
+            <h2 className={styles.contactHeader}>CONTACT</h2>
 
             <div className={styles.messageContainer}>
                 <div className={styles.imessage}>
