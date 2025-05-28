@@ -1,5 +1,4 @@
 .AboutSection{
-    height: 100vh;
     background-color: #78866B; 
     background-image:
       repeating-linear-gradient(
@@ -14,8 +13,6 @@
         transparent 80px,
         rgba(255, 255, 255, 0.3) 83px
       );
-
-    overflow-y: auto;
 }
 
 .aboutHeader{
@@ -75,10 +72,10 @@
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
     border-radius: 1rem;
     background-color: rgba(217,217,217, 1);
     border: 2px ridge white;
-    height: 100%;
     z-index: 1;
     visibility: hidden;
 }

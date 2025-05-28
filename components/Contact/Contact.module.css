@@ -1,9 +1,3 @@
-.projectSection{
-    height: 100vh;
-    /* background: linear-gradient(190deg, rgba(168, 183, 162, 1) 0%, rgba(68, 90, 41, 1) 100%); */
-    overflow-y: auto;
-}
-
 .projectHeader{
     font-family: "Playfair Display", serif;
     font-weight: bold;
