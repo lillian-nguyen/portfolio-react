@@ -52,15 +52,13 @@
 
 p.fromMe {
     align-self: flex-end;
-    /* background-color: rgba(210, 133, 26, 0.9); */
-    background-color: #534a41;
+    background-color: rgba(210, 133, 26, 0.9);
     color: #fff; 
   }
 
   p.fromMe::before {
     border-bottom-left-radius: 0.8rem 0.7rem;
-    /* border-right: 1rem solid rgba(210, 133, 26, 0.9); */
-    border-right: 1rem solid #534a41;
+    border-right: 1rem solid rgba(210, 133, 26, 0.9);
     right: -0.35rem;
     transform: translate(0, -0.1rem);
   }
