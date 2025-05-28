@@ -14,7 +14,7 @@ const Contact = () => {
                 <div className={styles.imessage}>
                     <p className={`${styles.fromMe} ${styles.noBottomMargin}`}>Thanks for stopping by! Anything on your mind?</p>
                     
-                    <p className={`${styles.fromThem} ${styles.marginBottom1} ${styles.marginTop1}`}>Where can we connect with you on socials?</p>
+                    <p className={`${styles.fromThem} ${styles.marginBottom1} ${styles.marginTop1}`}>Where can we find you on socials?</p>
                     
                     <p className={`${styles.fromMe} ${styles.noBottomMargin}`}>I'd love to connect! Click on the icon of interest below to be redirected.</p>
                     <p className={`${styles.fromMe} ${styles.noTail}`}>LinkedIn</p>
