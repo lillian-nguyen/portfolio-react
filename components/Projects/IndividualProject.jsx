@@ -1,15 +1,22 @@
 import React from "react";
 import styles from "./Projects.module.css"
 
-const IndividualProject = ({imgSrc, projectName, projectBio, tech = []}) => {
+const IndividualProject = ({imgSrc, projectName, projectBio, tech = [], customClass}) => {
+
+    const isVideo = imgSrc.endsWith('.mp4');
     return (
-        <div>
-           <video 
-           autoPlay
-           muted
-           loop
-           className={styles.projectMedia}
-           src={imgSrc} alt={`${projectName} preview`} /> 
+        <div className={`${styles.projectInfo} ${customClass}`}>
+            {isVideo ? (
+                <video 
+                autoPlay
+                muted
+                loop
+                className={styles.projectMedia}
+                src={imgSrc} alt={`${projectName} preview`} /> 
+            ) : (
+                <img src={imgSrc} alt={`${projectName} preview`} className={styles.projectMedia} />
+            )}
+           
 
            <div>
             <h4>{projectName}</h4>

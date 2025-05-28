@@ -35,7 +35,7 @@
 
 .bioAndTags{
     margin: 0 auto;
-    background-color: rgba(245, 241, 241, 0.3);
+    background-color: rgba(217,217,217, 0.5);
     border-radius: 1rem;
     width: 88%;
     padding-bottom: 1rem;
@@ -43,14 +43,19 @@
 
 .techTag{
     font-size: 1.3rem;
-    padding: 0.3rem 0.5rem;
-    border: 1px solid green;
+    padding: 0.8rem 0.9rem;
+    border-radius: 1.5rem;
+    color: white;
+    background-color: #514439;
 }
 
 .techTagContainer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin: 0 auto;
     gap: 1rem;
+    width: 90%;
 }
 
 .projectBio{
@@ -59,4 +64,13 @@
     width: 80%;
     margin: 0 auto;
     padding: 1.5rem 0;
+}
+
+/* individual projects */
+.ventureWeavers{
+    padding-bottom: 1rem;
+}
+
+.hideProjectInfo{
+    display: none;
 }
