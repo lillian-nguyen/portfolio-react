@@ -2,6 +2,14 @@
     background: linear-gradient(190deg, rgba(168, 183, 162, 1) 0%, rgba(68, 90, 41, 1) 100%);
 }
 
+.projectSection h3{
+   margin: 0 auto;
+   margin-top: 3%;
+   text-align: center;
+   font-size: 1.4rem;
+   width: 90%;
+}
+
 .projectsHeader{
     font-family: "Playfair Display", serif;
     font-weight: bold;
