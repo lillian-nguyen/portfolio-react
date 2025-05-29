@@ -5,7 +5,7 @@ import Button from '../Button';
 
 const MobileMenu = () => {
     return(
-        <div className="fixed inset-0 bg-[#445A29] flex flex-col justify-center items-center">
+        <div className="fixed inset-0 bg-[#445A29] flex flex-col justify-center items-center mainButton">
             <Button
             variant = 'close'
             />

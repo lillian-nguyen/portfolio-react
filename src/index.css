@@ -13,6 +13,10 @@ body {
 
 * { box-sizing: border-box; }
 
+.mainButton{
+  z-index: 7;
+}
+
 /* navblock - mobile... delete? */
 .hamburger, .closed, .aboutNavButton, .projectsNavButton{
   /* position: absolute; */

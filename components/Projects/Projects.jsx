@@ -1,5 +1,6 @@
 import {React, useState} from "react";
 import { IndividualProject } from "./IndividualProject";
+import { useMenu } from "../Navbar/MenuContext";
 import Button from "../Button"
 import styles from "./Projects.module.css"
 
@@ -16,12 +17,15 @@ const Projects = () => {
         }))
     };
 
+    const {toggleMenu} = useMenu();
+
     return (
         <div className={styles.projectSection}
        >
         <Button 
             style={{backgroundColor: '#445A29'}}
             className="projectsNavButton"
+            onClick={toggleMenu}
             />
             <h2 className={styles.projectsHeader}
             >PROJECTS</h2>
