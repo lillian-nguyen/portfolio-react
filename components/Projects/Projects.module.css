@@ -1,5 +1,6 @@
 .projectSection{
     background: linear-gradient(190deg, rgba(168, 183, 162, 1) 0%, rgba(68, 90, 41, 1) 100%);
+    color: #2C3424;
 }
 
 .projectSection h3{
@@ -19,7 +20,7 @@
     border-radius: 0.4rem;
     width: 63%;
     background-color: #2C3424;
-    color: white;
+    color: #D7B95A;
     text-align: center;
     margin-top: 2rem;
 }
@@ -37,14 +38,21 @@
 .projectsContainer h4{
     font-family: "Playfair Display", serif;
     font-size: 2.3rem;
-    color: #514439;
+    color: #D7B95A;
     text-align: center;
     margin-top: 2rem;
+}
+
+/* Add spacing eblow last header if project collapsed */
+.lastHeaderPadding{
+    padding-bottom: 6rem;
+    /* transition: padding-bottom 0.3s ease; */
 }
 
 .bioAndTags{
     margin: 0 auto;
     background-color: rgba(217,217,217, 0.5);
+    border: 1px solid rgba(228, 222, 222, 0.3);
     border-radius: 1rem;
     width: 88%;
     padding-bottom: 1rem;
@@ -54,8 +62,9 @@
     font-size: 1.3rem;
     padding: 0.8rem 0.9rem;
     border-radius: 1.5rem;
-    color: white;
-    background-color: rgba(210, 133, 26, 0.9);
+    color: #514439;
+    background-color: #8b8179;
+    border: 1px solid #514439;
 }
 
 .techTagContainer{

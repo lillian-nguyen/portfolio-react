@@ -38,8 +38,9 @@ const Projects = () => {
             />
             
             <h4
+            className={`${!isHeaderClicked['VENTURE WEAVERS'] ? styles.lastHeaderPadding : ''}`}
             onClick={() => {
-                toggleProjectVisibility('VENTURE WEAVERS')
+                toggleProjectVisibility('VENTURE WEAVERS');
             }}
             >VENTURE WEAVERS</h4>
             <IndividualProject
