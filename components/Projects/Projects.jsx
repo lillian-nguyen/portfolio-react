@@ -1,5 +1,6 @@
 import {React, useState} from "react";
 import { IndividualProject } from "./IndividualProject";
+import Button from "../Button"
 import styles from "./Projects.module.css"
 
 const Projects = () => {
@@ -18,6 +19,10 @@ const Projects = () => {
     return (
         <div className={styles.projectSection}
        >
+        <Button 
+            style={{backgroundColor: '#445A29'}}
+            className="projectsNavButton"
+            />
             <h2 className={styles.projectsHeader}
             >PROJECTS</h2>
 

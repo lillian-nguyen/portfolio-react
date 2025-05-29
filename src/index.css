@@ -13,8 +13,8 @@ body {
 
 * { box-sizing: border-box; }
 
-/* navblock - mobile */
-.hamburger, .closed, .aboutNavButton{
+/* navblock - mobile... delete? */
+.hamburger, .closed, .aboutNavButton, .projectsNavButton{
   /* position: absolute; */
   /* top: 10%;
   right: 3%; */
@@ -82,7 +82,7 @@ body {
 
 /* hamburger menu mobile */
 
-.hamburger, .close, .aboutNavButton {
+.hamburger, .close, .aboutNavButton, .projectsNavButton {
   /* position: fixed; */
   position: relative;
   /* top: 2%;

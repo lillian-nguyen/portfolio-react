@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import Hero from '/components/Hero/Hero.jsx'
 import MobileMenu from '../components/Navbar/MobileMenu';
 import { About } from '../components/About/About';
