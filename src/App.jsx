@@ -4,15 +4,23 @@ import MobileMenu from '../components/Navbar/MobileMenu';
 import { About } from '../components/About/About';
 import { Projects } from '../components/Projects/Projects';
 import { Contact } from '../components/Contact/Contact';
+import Success from './pages/Success';
 import Button from '../components/Button';
 import { MenuProvider, useMenu } from '../components/Navbar/MenuContext';
 
 const App = () => {
+    
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(prev => !prev);
     };
+
+    const path = window.location.pathname;
+
+    if (path === '/success'){
+        return <Success/>
+    }
 
     return(
         <MenuProvider>
