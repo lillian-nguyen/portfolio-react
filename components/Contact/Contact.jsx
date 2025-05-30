@@ -43,10 +43,13 @@ const Contact = () => {
                     <p className={`${styles.fromMe}`}>Feel free to leave a note below - whether it's feedback, a freelance inquiry, or a quick hello, I'd love to hear from you!</p>
 
                     <div className={`${styles.fromThem} ${styles.bubbleForm} ${styles.marginBottom1} ${styles.marginTop1}`}>
-                        <form name="contact" method="POST" data-netlify="true" 
+                        <form name="contact" 
+                         method="POST"
+                        //  data-netlify="true" 
                         data-netlify-honeypot="bot-field"
                         action="/success"
-                        className={styles.contactForm}>
+                        className={styles.contactForm}
+                        netlify>
 
                             <input type="hidden" name="form-name" value="contact" />
 
