@@ -44,7 +44,6 @@ const Contact = () => {
 
                     <div className={`${styles.fromThem} ${styles.bubbleForm} ${styles.marginBottom1} ${styles.marginTop1}`}>
                         <form name="contact"
-                        action="/pages/success" 
                          method="POST"
                          data-netlify="true" 
                         data-netlify-honeypot="bot-field"
