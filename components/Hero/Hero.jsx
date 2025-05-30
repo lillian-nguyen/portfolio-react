@@ -21,11 +21,6 @@ const HeroMobile = () => {
 
     return(
         <section className={`${styles.heroContainer} scroll-mt-20`} id="hero">
-        {/* <Button
-        variant="hamburger"
-        style={{backgroundColor: '#445A29'}}
-        onClick={toggleMenu}
-        /> */}
         <h1 className={styles.heroHeader}>LILLIAN NGUYEN</h1>
         <Marquee className="heroMarquee" items={elements}/>
 

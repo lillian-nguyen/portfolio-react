@@ -1,5 +1,6 @@
 .projectSection{
-    background: linear-gradient(190deg, rgba(168, 183, 162, 1) 0%, rgba(68, 90, 41, 1) 100%);
+    background: linear-gradient(190deg, rgba(168, 183, 162, 1) 0%, #ACB087 100%);
+    /* background-color: #ACB087; */
     color: #2C3424;
 }
 
@@ -7,9 +8,10 @@
    margin: 0 auto;
    margin-top: 9%;
    text-align: center;
-   font-family: "Open Sans", sans-serif;
+   font-family: "Merriweather", serif;
    font-size: 1.4rem;
    width: 90%;
+   color: #2C3424;
 }
 
 .projectsHeader{
@@ -21,7 +23,7 @@
     border-radius: 0.4rem;
     width: 63%;
     background-color: #2C3424;
-    color: #D7B95A;
+    color: white;
     text-align: center;
     margin-top: -4.5rem;
 }
@@ -38,8 +40,9 @@
 
 .projectsContainer h4{
     font-family: "Playfair Display", serif;
+    letter-spacing: 0.3rem;
     font-size: 2.3rem;
-    color: #D7B95A;
+    color: #473c32;
     text-align: center;
     margin-top: 2rem;
 }
@@ -53,9 +56,9 @@
 .bioAndTags{
     margin: 0 auto;
     background-color: rgba(217,217,217, 0.5);
-    /* background-color: #a49b94; */
     border: 1px solid rgba(228, 222, 222, 0.3);
     border-radius: 1rem;
+    box-shadow: 2px 2px 2px #EADED0;
     width: 88%;
     padding-bottom: 1rem;
 }
@@ -65,7 +68,7 @@
     padding: 0.8rem 0.9rem;
     border-radius: 1.5rem;
     color: #514439;
-    background-color: #8b8179;
+    background-color: #EADED0;
     border: 1px solid #514439;
 }
 

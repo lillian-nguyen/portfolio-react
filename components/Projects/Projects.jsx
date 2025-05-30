@@ -30,7 +30,7 @@ const Projects = () => {
             <h2 className={styles.projectsHeader}
             >PROJECTS</h2>
 
-            <h3>A collection of web applications I've built or contributed to. Each project highlights different aspects of my development skills: from front-end design to full stack functionality. Click a project title for more details.</h3>
+            <h3>A collection of web applications I've built or contributed to. Click a project title for more details.</h3>
 
             <div className={styles.projectsContainer}>
 

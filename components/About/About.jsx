@@ -69,7 +69,7 @@ const aboutThemeTexts = {
         bioText: "Food is one of my favorite ways to explore culture and connection - both of which hold a special place in my heart as a Vietnamese American. Although I'm a (self-proclaimed) star baker, learning to cook has been more of a slow burn. Regardless, the creativity and comfort that comes from playing with food makes me happy."
     },
     'SIDE QUEST ENTHUSIAST': {
-        bioText: "I'm all about finding joy in everyday things. Reading, writing, and running keep me grounded, while other hobbies keep life interesting. I enjoy collecting Smiskis, crocheting projects with varying success, and learning Vietnamese and Spanish. There's so much more out there to explore - and I'm probably already curious about what I'll take on next."
+        bioText: "I find joy in everyday things. Reading, writing, and running keep me grounded, while other hobbies keep life interesting. I love collecting Smiskis, crocheting, and learning languages. There's so much more to explore - and I'm probably already curious about it!"
     }
 }
 
