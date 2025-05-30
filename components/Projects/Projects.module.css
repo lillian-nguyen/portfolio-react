@@ -7,6 +7,7 @@
    margin: 0 auto;
    margin-top: 9%;
    text-align: center;
+   font-family: "Open Sans", sans-serif;
    font-size: 1.4rem;
    width: 90%;
 }
@@ -52,6 +53,7 @@
 .bioAndTags{
     margin: 0 auto;
     background-color: rgba(217,217,217, 0.5);
+    /* background-color: #a49b94; */
     border: 1px solid rgba(228, 222, 222, 0.3);
     border-radius: 1rem;
     width: 88%;

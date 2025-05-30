@@ -81,7 +81,8 @@
 }
 
 .overlayContainer p{
-    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
     color: #2C3424;
     width: 80%;
 }
