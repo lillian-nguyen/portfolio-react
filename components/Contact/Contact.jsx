@@ -45,11 +45,11 @@ const Contact = () => {
                     <div className={`${styles.fromThem} ${styles.bubbleForm} ${styles.marginBottom1} ${styles.marginTop1}`}>
                         <form name="contact" 
                          method="POST"
-                        //  data-netlify="true" 
+                         data-netlify="true" 
                         data-netlify-honeypot="bot-field"
                         action="/Success"
                         className={styles.contactForm}
-                        netlify>
+                        >
 
                             <input type="hidden" name="form-name" value="contact" />
 
