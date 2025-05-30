@@ -1,16 +1,16 @@
-import React from 'react';
-import DesktopMenu from './DesktopMenu'
+// import React from 'react';
+// import DesktopMenu from './DesktopMenu'
 
-const Navbar = () => {
+// const Navbar = () => {
 
-    return(
-        <nav>
-            {/* desktop menu */}
-            <div>
-                <DesktopMenu/>
-            </div>
-        </nav>
-    )
-}
+//     return(
+//         <nav>
+//             {/* desktop menu */}
+//             <div>
+//                 <DesktopMenu/>
+//             </div>
+//         </nav>
+//     )
+// }
 
-export default Navbar; 
+// export default Navbar; 

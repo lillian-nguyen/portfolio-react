@@ -13,19 +13,6 @@ body {
 
 * { box-sizing: border-box; }
 
-/* navblock - mobile */
-.hamburger, .closed, .aboutNavButton{
-  /* position: absolute; */
-  /* top: 10%;
-  right: 3%; */
-  position: relative;
-  bottom: -3rem;
-  left: 22rem;
-  background-color: #445A29;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
 /* Marquee styles */
 .marquee {
   display: flex;
@@ -82,15 +69,33 @@ body {
 
 /* hamburger menu mobile */
 
-.hamburger, .close, .aboutNavButton {
-  /* position: fixed; */
+.mainButton{
+  z-index: 7;
+  flex-direction: column;
+}
+
+/* navblock - mobile */
+.hamburger, .close, .aboutNavButton, .projectsNavButton{
+  /* position: absolute; */
+  /* top: 10%;
+  right: 3%; */
   position: relative;
-  /* top: 2%;
-  right: 8%; */
-  left: 75%;
+  /* bottom: -3rem; */
   bottom: -1.5rem;
-  background-color: #C3CCB8;
+  /* left: 22rem; */
+  left: 75%;
+  background-color: #445A29;
   padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.close{
+  background-color: #C3CCB8;
+  position: fixed;
+  top: 2.5%;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
 }
 
 /* mobile links page */
