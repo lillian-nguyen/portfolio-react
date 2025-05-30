@@ -1,9 +1,8 @@
 // import React, {useState} from "react"
-import LocalDate from "../LocalDate"
 import { Marquee } from "../Marquee"
 import Circles from "./Hero Img/Circle"
 import { BlobImage, WhiteOutline } from "./Hero Img/BlobImage"
-import Button from "../Button"
+// import Button from "../Button"
 import styles from "./Hero.module.css"
 import { useMenu } from "../Navbar/MenuContext"
 
@@ -21,7 +20,7 @@ const HeroMobile = () => {
     const {toggleMenu} = useMenu();
 
     return(
-        <section className={styles.heroContainer}>
+        <section className={`${styles.heroContainer} scroll-mt-20`} id="hero">
         {/* <Button
         variant="hamburger"
         style={{backgroundColor: '#445A29'}}

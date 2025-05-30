@@ -90,7 +90,7 @@ const About = () => {
     const {toggleMenu} = useMenu();
 
 return(
-    <section className={styles.AboutSection}>
+    <section className={styles.AboutSection} id="about">
         <section>
             <Button
             style={{backgroundColor: '#445A29'}}

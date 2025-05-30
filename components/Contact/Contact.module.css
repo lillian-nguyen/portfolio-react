@@ -1,3 +1,7 @@
+.contactSection{
+  background-color: #A3B18A;
+}
+
 .contactHeader{
     font-family: "Playfair Display", serif;
     font-weight: bold;
@@ -17,7 +21,7 @@
     margin-top: 2%;
     /* max-width: 600px; */
     padding: 1rem;
-    background-color: rgba(168, 183, 162, 1);
+    /* background-color: rgba(168, 183, 162, 1); */
 }
 
 .imessage {
@@ -64,7 +68,8 @@ p.fromMe {
   }
 
   p.fromMe::after {
-    background-color: rgba(168, 183, 162, 1);
+    /* background-color: rgba(168, 183, 162, 1); */
+    background-color: #A3B18A;
     border-bottom-left-radius: 0.5rem;
     right: -40px;
     transform:translate(-30px, -2px);

@@ -10,10 +10,10 @@ const MobileMenu = () => {
             variant = 'close'
             />
             <div className="flex flex-col items-center mobile-links">
-                <a>HOME</a>
-                <a>ABOUT</a>
-                <a>PROJECTS</a>
-                <a>CONTACT</a>
+                <a href="#hero">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
             </div>
             <Line className="line1"/>
             <Line className="line2"/>

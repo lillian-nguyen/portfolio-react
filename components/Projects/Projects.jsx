@@ -20,7 +20,7 @@ const Projects = () => {
     const {toggleMenu} = useMenu();
 
     return (
-        <div className={styles.projectSection}
+        <div className={styles.projectSection} id="projects"
        >
         <Button 
             style={{backgroundColor: '#445A29'}}
