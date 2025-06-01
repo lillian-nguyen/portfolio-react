@@ -35,27 +35,42 @@
   
   /* hero section - bottom img */
   .circleContainer{
-    position: relative;
-    margin-top: -3rem;
-    margin-left: -5rem;
+    position: absolute;
+    top: 0;
+    left: -14%;
+    /* margin-top: -3rem;
+    margin-left: -5rem; */
   }
   
   .blob {
     position: relative;
-    top: -1rem;
-    left: -1rem;
+    top: 0.2rem;
+    left: 0.2rem;
     z-index: -1;
-    scale: 0.7;
+    width: 2rem;
+    /* background-color: red; */
   }
-  
+
+  /* position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto; */
+
   .BlobOutline{
-    position: relative;
-    bottom: 29rem;
-    left: 1rem;
+    position: absolute;
+    /* bottom: 29rem;
+    left: 1rem; */
+    top: 3rem;
+    left: 1.5rem;
     z-index: -1;
     transform: rotate(-1deg);
   }
   
   .selfieContainer{
+    position: relative;
     margin-top: 4rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }

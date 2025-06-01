@@ -61,7 +61,7 @@ const Contact = () => {
                             type="text"
                             id="name"
                             name="name"
-                            placeholder="your name"
+                            placeholder="Your name"
                             required />
 
                             <label htmlFor="email">Email *</label>
