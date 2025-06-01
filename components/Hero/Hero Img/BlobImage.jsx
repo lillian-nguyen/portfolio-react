@@ -10,28 +10,33 @@ const WhiteOutline = () => {
 
 const BlobImage = () => {
     return (
-      <div style={{ width: '100%', maxWidth: '400px' }}>
-        <svg
-          className={styles.blob}
-          viewBox="0 0 621 615"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ width: '100%', height: 'auto' }}
-        >
-          <defs>
-            <clipPath id="blobClip" clipPathUnits="userSpaceOnUse">
-              <path d="M330.569 15.0301C408.989 5.65442 497.803 -19.2764 557.851 32.0242C619.694 84.8577 626.168 178.545 616.499 259.307C607.915 331.008 554.857 381.997 509.249 437.986C454.92 504.681 415.158 594.684 330.569 610.318C236.765 627.655 135.619 589.059 70.8656 519.01C7.90608 450.902 -10.7524 350.514 6.09034 259.307C20.6026 180.719 87.9832 128.633 151.83 80.5672C204.533 40.8903 265.066 22.8615 330.569 15.0301Z" />
-            </clipPath>
-          </defs>
-  
+      <div className={styles.blobWrapper}>
+      <svg
+        viewBox="0 0 621 615"
+        className={styles.blob}
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <defs>
+          <clipPath id="blobClip">
+            <path d="M330.569 15.03C408.989 5.65 497.803 -19.27 557.851 32.02C619.694 84.85 626.168 178.54 616.499 259.307C607.915 331.008 554.857 381.997 509.249 437.986C454.92 504.681 415.158 594.684 330.569 610.318C236.765 627.655 135.619 589.059 70.8656 519.01C7.90608 450.902 -10.7524 350.514 6.09034 259.307C20.6026 180.719 87.9832 128.633 151.83 80.5672C204.533 40.8903 265.066 22.8615 330.569 15.0301Z" />
+          </clipPath>
+        </defs>
+
+        <g clipPath="url(#blobClip)">
           <image
             href="/beach.jpg"
-            width="621"
-            height="615"
-            clipPath="url(#blobClip)"
+            x="-60"
+            y="-30"
+            width="680"
+            height="680"
             preserveAspectRatio="xMidYMid slice"
           />
-        </svg>
-      </div>
+        </g>
+      </svg>
+    </div>
+    
+
     );
   };
   
