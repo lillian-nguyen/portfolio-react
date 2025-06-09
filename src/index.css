@@ -163,3 +163,14 @@ body {
   bottom: 3.7rem;
   left: 4.5rem;
 }
+
+@media (min-width: 441px){
+
+  .marqueeItem{
+    margin-top: 1rem;
+  }
+
+  .marqueeItem p{
+    font-size: 1.9rem;
+  }
+}

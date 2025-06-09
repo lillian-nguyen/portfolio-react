@@ -60,6 +60,9 @@
     position: absolute;
     /* bottom: 29rem;
     left: 1rem; */
+    /* width="280" height="250" */
+    width: 28rem;
+    height: 25rem;
     top: 3rem;
     left: 1rem;
     z-index: -1;
@@ -74,3 +77,98 @@
     flex-direction: column;
     align-items: center;
   }
+
+  @media (min-width: 356px){
+    .BlobOutline{
+      width: 28rem;
+      height: 25.5rem;
+      top: 3rem;
+      left: 3rem;
+    }
+
+    .circleContainer{
+      top: 2rem;
+      left: -12%;
+    }
+  }
+
+  @media (min-width: 381px){
+    .BlobOutline{
+      width: 28rem;
+      height: 27rem;
+      top: 4rem;
+      left: 4.6rem;
+    }
+
+    .circleContainer{
+      left: -8%;
+    }
+  }
+
+  @media (min-width: 401px){
+    .BlobOutline{
+      width: 29rem;
+      height: 30rem;
+      top: 4rem;
+      left: 4.6rem;
+    }
+
+    .circleContainer{
+      top: 3rem;
+      left: -6%;
+    }
+  }
+
+  @media (min-width: 441px){
+    .BlobOutline{
+      width: 30rem;
+      height: 33rem;
+      top: 4rem;
+      left: 6.5rem;
+    }
+
+    .circleContainer{
+      top: 6rem;
+      left: -5.8%;
+    }
+
+    .heroBio h4{
+      font-size: 2rem;
+    }
+
+    .heroBio p{
+      font-size: 2.1rem;
+    }
+
+    .selfieContainer{
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 501px){
+    .BlobOutline{
+      width: 31rem;
+      height: 69rem;
+      top: -13rem;
+      left: 8rem;
+    }
+
+    .circleContainer{
+      top: 6rem;
+      left: -2%;
+    }
+  }
+
+  /* @media (min-width: 551px){
+    .BlobOutline{
+      width: 31rem;
+      height: 69rem;
+      top: -13rem;
+      left: 8rem;
+    }
+
+    .circleContainer{
+      top: 6rem;
+      left: -2%;
+    }
+  } */
