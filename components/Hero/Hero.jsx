@@ -1,4 +1,4 @@
-// import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { Marquee } from "../Marquee"
 import Circles from "./Hero Img/Circle"
 import { BlobImage, WhiteOutline } from "./Hero Img/BlobImage"
@@ -14,6 +14,29 @@ const elements = [
     {text: 'BAKER', iconSrc: sparkleIcon, iconClass: 'sparkle'},
     {text: 'SMISKI COLLECTOR', iconSrc: sparkleIcon, iconClass: 'sparkle'}
 ]
+
+const CircleParent = () => {
+    const [circlePositions, setCirclePositions] = useState(null);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 356){
+                setCirclePositions([
+                    { circleColor: "rgba(68, 90, 41, 0.9)", topPos: "2rem", leftPos: "3rem" },
+                    { circleColor: "rgba(210, 133, 26, 0.9)", topPos: "4rem", leftPos: "1rem" },
+                    { circleColor: "rgba(81, 68, 57, 0.9)", topPos: "1rem",   leftPos: "5rem" }
+                ]);
+            } else {
+                setCirclePositions(null);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    return <Circles circleData={circlePositions} />
+}
 
 const HeroMobile = () => {
 

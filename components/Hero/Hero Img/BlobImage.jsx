@@ -2,7 +2,7 @@ import styles from "../Hero.module.css"
 
 const WhiteOutline = () => {
     return (
-    <svg className={styles.BlobOutline} width="280" height="250" viewBox="0 0 555 623" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={styles.BlobOutline} viewBox="0 0 555 623" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M269.73 3.75233C352.656 -7.70146 434.782 38.0637 488.261 109.733C543.147 183.289 564.993 281.313 546.613 374.819C528.04 469.3 471.804 549.747 393.585 591.37C315.744 632.792 224.798 630.254 147.725 587.079C72.1902 544.766 10.9343 466.217 2.58127 372.339C-4.93536 287.861 62.0678 227.99 109.902 161.992C157.027 96.9744 195.376 14.0221 269.73 3.75233Z" stroke="white" strokeWidth="4"/>
 </svg>
     )
