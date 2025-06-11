@@ -159,16 +159,127 @@
     }
   }
 
-  /* @media (min-width: 551px){
+  @media (min-width: 551px){
     .BlobOutline{
-      width: 31rem;
-      height: 69rem;
-      top: -13rem;
-      left: 8rem;
+      left: 8.8rem;
     }
 
     .circleContainer{
       top: 6rem;
-      left: -2%;
+      left: 0.8%;
     }
-  } */
+  }
+
+  @media (min-width: 601px){
+    .BlobOutline{
+      width: 31rem;
+      height: 75rem;
+      top: -16rem;
+      left: 12.8rem;
+    }
+
+    .circleContainer{
+      top: 4rem;
+      left: 8.5%;
+    }
+  }
+
+  @media (min-width: 676px){
+    .BlobOutline{
+      /* width: 31rem;
+      height: 75rem; */
+      top: -16.5rem;
+      left: 17.5rem;
+    }
+
+    .circleContainer{
+      top: 4.8rem;
+      left: 13%;
+    }
+  }
+
+  @media (min-width: 786px){
+    .BlobOutline{
+      /* width: 31rem;
+      height: 75rem; */
+      /* top: -16.5rem; */
+      left: 22.5rem;
+    }
+
+    .circleContainer{
+      top: 4.8rem;
+      left: 17%;
+    }
+  }
+
+    @media (min-width: 786px){
+    .BlobOutline{
+      /* width: 31rem;
+      height: 75rem; */
+      /* top: -16.5rem; */
+      left: 22.5rem;
+    }
+
+    .circleContainer{
+      top: 4.8rem;
+      left: 17%;
+    }
+  }
+
+  @media (min-width: 906px){
+    .BlobOutline{
+      left: 30rem;
+    }
+
+    .circleContainer{
+      top: 4.8rem;
+      left: 23.5%;
+    }
+  }
+
+  @media (min-width: 961px){
+    .BlobOutline{
+      left: 32rem;
+    }
+
+    .circleContainer{
+      top: 5rem;
+      left: 24%;
+    }
+  }
+
+  @media (min-width: 1026px){
+    .circleContainer{
+      left: 22%;
+    }
+  }
+
+  @media (min-width: 1076px){
+    .BlobOutline{
+      left: 38.5rem;
+    }
+
+    .circleContainer{
+      left: 27.5%;
+    }
+  }
+
+  @media (min-width: 1126px){
+    .BlobOutline{
+      left: 40.5rem;
+    }
+
+    .circleContainer{
+      left: 28%;
+    }
+  }
+
+  @media (min-width: 1171px){
+    .BlobOutline{
+      left: 42.5rem;
+    }
+
+    .circleContainer{
+      left: 29%;
+    }
+  }
