@@ -174,3 +174,9 @@ body {
     font-size: 1.9rem;
   }
 }
+
+@media (min-width: 551px){
+  .marqueeItem p {
+    font-size: 2.1rem;
+  }
+}
