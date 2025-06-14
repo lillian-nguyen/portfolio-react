@@ -229,3 +229,251 @@
     padding-bottom: 1rem;
     font-size: 1.3rem;
 }
+
+@media (min-width: 376px){
+    .leftArrow{
+        left: calc(25.5% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(55% + 11.3rem); 
+    }
+}
+
+@media (min-width: 407px){
+    .leftArrow{
+        left: calc(20% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(58% + 11.3rem); 
+    }
+}
+
+@media (min-width: 431px){
+    .leftArrow{
+        left: calc(19% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(63% + 11.3rem); 
+    }
+
+    .themeContainer h4{
+        margin-top: 1.5rem;
+    }
+
+    .themeContainer{
+        border-radius: 1rem;
+        margin-top: 5rem;
+        padding-top: 1.4rem;
+        height: 28rem;
+    }
+
+    .overlayContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .overlayContainer p{
+        font-size: 1.5rem;
+    }
+
+    .smiskiResearching {
+        top: 22%;
+        left: 18%;
+        scale: 0.5;
+    }
+    
+    .smiskiPeeking{
+        scale: 0.5;
+    }
+    
+    .smiskiReading{
+        scale: 0.8;
+        top: 36%;
+        left: -16%;
+    }
+
+    .polaroidWrapper{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 491px){
+    .leftArrow{
+        left: calc(15.5% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(69% + 11.3rem); 
+    }
+}
+
+@media (min-width: 576px){
+    .leftArrow{
+        left: calc(13.5% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(72.5% + 11.3rem); 
+    }
+}
+
+@media (min-width: 656px){
+    .leftArrow{
+        left: calc(13.5% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(72.5% + 11.3rem); 
+    }
+
+    .themeContainer h4{
+        font-size: 2.3rem;
+        width: 80%;
+    }
+
+    .activeAboutText{
+        font-size: 2.5rem;
+    }
+
+    .themeOptions button{
+        padding: 0.8rem 0.7rem;
+        font-size: 1.8rem;
+    }
+
+    .polaroidWrapper{
+        top: 9rem;
+    }
+}
+
+@media (min-width: 675px){
+    .leftArrow{
+        left: calc(12% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(77% + 11.3rem); 
+    }
+
+    .themeContainer h4{
+        font-size: 2.3rem;
+        width: 80%;
+    }
+
+    .activeAboutText{
+        font-size: 2.5rem;
+    }
+
+    .themeOptions button{
+        padding: 0.8rem 0.7rem;
+        font-size: 1.8rem;
+    }
+
+    .polaroidWrapper{
+        top: 9rem;
+    }
+
+    .aboutImg{
+        top: 8%;
+        left: 18%;
+        width: 59%;
+        height: 41.5%;
+    }
+
+    .smiskiPeeking{
+        top: -30%;
+    }
+}
+
+@media (min-width: 696px){
+    .leftArrow{
+        left: calc(10.8% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(78% + 11.3rem); 
+    }
+
+    .themeContainer h4{
+        font-size: 2.3rem;
+        width: 80%;
+    }
+
+    .activeAboutText{
+        font-size: 2.5rem;
+    }
+
+    .aboutImg{
+        top: 7.8%;
+        left: 17.7%;
+        width: 56.7%;
+        height: 41%;
+    }
+
+    .smiskiReading{
+        scale: 0.7;
+        top: 33%;
+        left: -18%;
+    }
+}
+
+@media (min-width: 721px){
+    .aboutImg{
+        top: 8.1%;
+        left: 16%;
+        width: 56%;
+        height: 38%;
+    }
+
+    .polaroidWrapper{
+        margin: 0 auto;
+        margin-left: 4rem;
+    }
+
+    .smiskiResearching {
+        top: 20%;
+    }
+
+    .smiskiReading{
+        top: 29%;
+        left: -18%;
+    }
+}
+
+@media (min-width: 743px){
+    .aboutImg{
+        top: 7.5%;
+        left: 15.7%;
+        width: 54%;
+        height: 37%;
+    }
+
+    .smiskiPeeking{
+        top: -28%;
+    }
+
+    .smiskiReading{
+        top: 28%;
+    }
+}
+
+@media (min-width: 768px){
+    .aboutImg{
+        top: 7.5%;
+        left: 15.7%;
+        width: 51.6%;
+        height: 35.7%;
+    }
+
+    .smiskiReading{
+        top: 25%;
+    }
+}
