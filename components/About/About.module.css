@@ -466,6 +466,10 @@
 }
 
 @media (min-width: 768px){
+    .rightArrow{
+        left: calc(80% + 11.3rem); 
+    }
+    
     .aboutImg{
         top: 7.5%;
         left: 15.7%;
@@ -475,5 +479,257 @@
 
     .smiskiReading{
         top: 25%;
+    }
+
+    .polaroidWrapper{
+        margin-left: 6.5rem;
+    }
+}
+
+@media (min-width: 796px){
+    .leftArrow{
+        left: calc(10% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(80% + 11.3rem); 
+    }
+    
+    .aboutImg{
+        top: 7.1%;
+        left: 14.3%;
+        width: 50.5%;
+        height: 34.5%;
+    }
+
+    .smiskiReading{
+        top: 26%;
+        scale: 0.6;
+    }
+
+    .smiskiPeeking{
+        top: -26%;
+    }
+
+    .polaroidWrapper{
+        margin-left: 7.5rem;
+    }
+}
+
+@media (min-width: 816px){
+    .aboutImg{
+        top: 7.1%;
+        left: 14.4%;
+        width: 48.2%;
+        height: 34.5%;
+    }
+
+    .smiskiResearching {
+        top: 18%;
+    }
+}
+
+@media (min-width: 845px){
+    .leftArrow{
+        left: calc(9% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(82% + 11.3rem); 
+    }
+    
+    .aboutImg{
+        top: 6.8%;
+        left: 13.5%;
+        width: 47%;
+        height: 32%;
+    }
+
+    .smiskiPeeking{
+        top: -24%;
+    }
+
+    .smiskiReading{
+        top: 24.5%;
+    }
+}
+
+@media (min-width: 873px){
+    .aboutImg{
+        top: 6.3%;
+        left: 13%;
+        width: 45.5%;
+        height: 31.4%;
+    }
+    
+    .polaroidWrapper{
+        margin-left: 12rem;
+    }
+}
+
+@media (min-width: 903px){
+    .aboutImg{
+        top: 5.5%;
+        left: 13.5%;
+        width: 43%;
+        height: 31%;
+    }
+
+    .polaroidWrapper{
+        margin-left: 15rem;
+    }
+
+    .smiskiReading{
+        top: 22.5%;
+    }
+
+    .smiskiPeeking{
+        top: -23%;
+    }
+
+    .smiskiResearching {
+        top: 16%;
+    }
+}
+
+@media (min-width: 936px){
+    .aboutImg{
+        top: 5.1%;
+        left: 13.1%;
+        width: 41.4%;
+        height: 29.8%;
+    }
+
+    .smiskiPeeking{
+        top: -22%;
+    }
+}
+
+@media (min-width: 968px){
+    .leftArrow{
+        left: calc(8% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(84% + 11.3rem); 
+    }
+    
+    .aboutImg{
+        top: 4.8%;
+        left: 12.5%;
+        width: 40.3%;
+        height: 28.9%;
+    }
+
+    .smiskiReading{
+        top: 21%;
+    }
+
+    .smiskiResearching {
+        top: 15%;
+        left: 15%;
+    }
+}
+
+@media (min-width: 1001px){
+    .aboutImg{
+        left: 11.5%;
+        width: 39.6%;
+        height: 28%;
+    }
+
+    .smiskiReading{
+        top: 20%;
+    }
+
+    .smiskiResearching {
+        top: 14%;
+        left: 14%;
+    }
+
+    .smiskiPeeking{
+        top: -20%;
+    }
+}
+
+@media (min-width: 1034px){
+    .aboutImg{
+        top: 4.7%;
+        left: 11.4%;
+        width: 38%;
+        height: 27%;
+    }
+}
+
+@media (min-width: 1070px){
+    .leftArrow{
+        left: calc(7.5% - 10rem);
+    }
+
+    .rightArrow{
+        left: calc(86% + 11.3rem); 
+    }
+    
+    .aboutImg{
+        top: 4.5%;
+        left: 10.6%;
+        width: 37.2%;
+        height: 26.5%;
+    }
+
+    .smiskiReading{
+        top: 19%;
+    }
+
+    .smiskiPeeking{
+        top: -19%;
+    }
+
+    .polaroidWrapper{
+        margin-left: 18rem;
+    }
+}
+
+@media (min-width: 1105px){
+    .aboutImg{
+        top: 4.2%;
+        left: 10%;
+        width: 36.2%;
+        height: 26%;
+    }
+
+    .polaroidWrapper{
+        margin-left: 20rem;
+    }
+}
+
+@media (min-width: 1145px){
+    .aboutImg{
+        top: 4.1%;
+        left: 10.1%;
+        width: 34.5%;
+        height: 24.6%;
+    }
+
+    .smiskiPeeking{
+        top: -18%;
+    }
+
+    .smiskiReading{
+        top: 18%;
+    }
+
+    .smiskiResearching {
+        top: 12.8%;
+        left: 12%;
+    }
+}
+
+@media (min-width: 1183px){
+    .aboutImg{
+        top: 4%;
+        left: 9.5%;
+        width: 33.7%;
+        height: 24%;
     }
 }
