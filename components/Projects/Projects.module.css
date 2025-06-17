@@ -63,7 +63,7 @@
     padding-bottom: 1rem;
 }
 
-.techTag{
+.techTag, .sourceTag{
     font-size: 1.3rem;
     padding: 0.8rem 0.9rem;
     border-radius: 1.5rem;
@@ -72,13 +72,22 @@
     border: 1px solid #514439;
 }
 
-.techTagContainer{
+.sourceTag{
+    background-color: #473c32;
+    color: white;
+}
+
+.techTagContainer, .siteLinks{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     gap: 1rem;
     width: 90%;
+}
+
+.siteLinks{
+    margin-top: 2rem;
 }
 
 .projectBio{
