@@ -55,10 +55,8 @@
 
 p.fromMe {
     align-self: flex-end;
-    /* background-color: rgba(210, 133, 26, 0.9); */
     background-color: #5F6F52;
     color: #ffffff;
-    /* color: white;  */
   }
 
   p.fromMe::before {
@@ -69,7 +67,6 @@ p.fromMe {
   }
 
   p.fromMe::after {
-    /* background-color: rgba(168, 183, 162, 1); */
     background-color: #A8B7A2;
     border-bottom-left-radius: 0.5rem;
     right: -40px;
@@ -99,6 +96,10 @@ p.fromMe {
     background-color: #F9EBC7;
     color: #473c32;
   }
+
+  p.fromThem {
+    width: fit-content;
+  }
   
   p.fromThem:before {
     border-bottom-right-radius: 0.8rem 0.7rem;
@@ -115,14 +116,14 @@ p.fromMe {
     width: 10px;
   }
   
-  p[class^="from-"].emoji {
+  /* p[class^="from-"].emoji {
     background: none;
     font-size: 2.5rem;
   }
   
   p[class^="from-"].emoji::before {
     content: none;
-  }
+  } */
   
   .noTail::before {
     display: none;
@@ -274,10 +275,10 @@ div.fromThem.bubbleForm {
     font-size: 1.4rem;
   }
   
-  @media screen and (max-width: 800px) {
-    /* body {
+  @media (min-width: 320px) {
+    body {
       margin: 0 0.5rem;
-    } */
+    }
   
     .container {
       padding: 0.5rem;
@@ -293,5 +294,24 @@ div.fromThem.bubbleForm {
   
     .imessage p {
       margin: 0.5rem 0;
+    }
+
+    .contactForm input[type="text"],
+    .contactForm input[type="email"] {
+      padding: 0.8rem 0.75rem;
+      font-size: 1.5rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  @media (min-width: 451px){
+    .imessage {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (min-width: 625px){
+    .imessage{
+      width: 100%;
     }
   }
