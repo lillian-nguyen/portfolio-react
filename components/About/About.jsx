@@ -1,5 +1,5 @@
 import styles from "./About.module.css"
-import Button from "../Button";
+// import Button from "../Button";
 import { Marquee } from "../Marquee";
 import {useState} from "react";
 import { useMenu } from "../Navbar/MenuContext";
@@ -91,14 +91,14 @@ const About = () => {
 
 return(
     <section className={styles.AboutSection} id="about">
-        <section>
+        {/* <section>
             <Button
             style={{backgroundColor: '#445A29'}}
             className="aboutNavButton"
             onClick={toggleMenu}
             />
             <h2 className={styles.aboutHeader}>ABOUT ME</h2>
-        </section>
+        </section> */}
        
        <section className={styles.aboutContainer}>
 

@@ -1,26 +1,34 @@
-import React from 'react';
-import Line from '../Line';
-import Square from '../Square';
-import Button from '../Button';
+import React, {useState} from 'react';
 
 const MobileMenu = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return(
-        <div className="fixed inset-0 bg-[#445A29] flex flex-col justify-center items-center mainButton">
-            <Button
-            variant = 'close'
-            />
-            <div className="flex flex-col items-center mobile-links">
-                <a href="#hero">HOME</a>
-                <a href="#about">ABOUT</a>
-                <a href="#projects">PROJECTS</a>
-                <a href="#contact">CONTACT</a>
-            </div>
-            <Line className="line1"/>
-            <Line className="line2"/>
-            <Square/>
-            <img src="/flowerbg-removed.png" className="flowers"></img>
-            <h3 className="mobile-initials">LN</h3>
-        </div>
+        // fixed inset-0 bg-[#445A29] flex flex-col justify-center items-center
+        // <div className="mainButton">
+        //     <button>
+        //         <img src="dist/hamburgerMenu.png" 
+        //         className="hamburgerMenu" alt="" />
+        //     </button>
+        // </div>
+
+        <div className="mobileMenu">
+        <button className="menuButton" onClick={() => setIsOpen(!isOpen)}>
+          <img
+            src={isOpen ? 'dist/xIcon.png' : 'dist/hamburgerMenu.png'}
+            alt="Menu Toggle"
+            className={`menuIcon ${isOpen ? 'rotate' : ''}`}
+          />
+        </button>
+  
+        <nav className={`nav ${isOpen ? 'open' : ''}`}>
+          <ul>
+            <li><a href="#home"><img src="dist/homeIcon.png" alt="" /></a></li>
+            <li><a href="#about"><img src="dist/personIcon.png" alt="" /></a></li>
+          </ul>
+        </nav>
+      </div>
+
+
     )
 }
 

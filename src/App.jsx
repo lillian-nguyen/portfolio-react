@@ -4,7 +4,7 @@ import MobileMenu from '../components/Navbar/MobileMenu';
 import { About } from '../components/About/About';
 import { Projects } from '../components/Projects/Projects';
 import { Contact } from '../components/Contact/Contact';
-import Button from '../components/Button';
+// import Button from '../components/Button';
 import { MenuProvider, useMenu } from '../components/Navbar/MenuContext';
 
 const App = () => {
@@ -26,16 +26,16 @@ const MainLayout = () => {
     const { isMenuOpen, toggleMenu } = useMenu();;
     return (
         <>
+        <MobileMenu/>
            {/* Floating Menu Button (visible on all pages) */}
-           <Button
+           {/* <Button
            variant={isMenuOpen ? 'close' : 'hamburger'}
            onClick={toggleMenu}
            className="fixed top-4 right-4 z-50"
-       />
+       /> */}
 
        {/* Mobile menu rendered conditionally */}
-       {isMenuOpen && <MobileMenu onClose={toggleMenu} />}
-
+       {/* {isMenuOpen && <MobileMenu onClose={toggleMenu} />} */}
        <Hero />
        <About />
        <Projects />
