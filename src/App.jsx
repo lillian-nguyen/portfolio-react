@@ -1,4 +1,5 @@
 import {React, useState} from 'react';
+import Header from '../components/Header/Header';
 import Hero from '/components/Hero/Hero.jsx'
 import MobileMenu from '../components/Navbar/MobileMenu';
 import { About } from '../components/About/About';
@@ -26,7 +27,8 @@ const MainLayout = () => {
     const { isMenuOpen, toggleMenu } = useMenu();;
     return (
         <>
-        <MobileMenu/>
+        <Header/>
+        {/* <MobileMenu/> */}
            {/* Floating Menu Button (visible on all pages) */}
            {/* <Button
            variant={isMenuOpen ? 'close' : 'hamburger'}
