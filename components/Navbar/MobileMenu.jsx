@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
-const NavItem = ({sectionRedirect, imgSrc, altText, specificNavSpan, navItemText}) => {
+const NavItem = ({sectionRedirect, imgSrc, altText, specificNavSpan, navItemText, onClick}) => {
   return (
     <li>
       <div className="navLinkRow">
       <span className={`navItemLabel ${specificNavSpan}`}>{navItemText}</span>
-      <a href={sectionRedirect}><img src={imgSrc} alt={altText} /></a>
+      <a href={sectionRedirect} onClick={onClick}><img className="navIcon" src={imgSrc} alt={altText} /></a>
       </div>
     </li>
   )
@@ -13,6 +13,13 @@ const NavItem = ({sectionRedirect, imgSrc, altText, specificNavSpan, navItemText
 
 const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    // const toggleMenu = () => setIsOpen(prev => !prev);
+    const closeMenu = () => {
+      document.body.style.overflow = "auto";
+      setIsOpen(false);
+    }
+
     return(
 
         <div className="mobileMenu">
@@ -26,9 +33,9 @@ const MobileMenu = () => {
   
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <ul className="navUl">
-            <NavItem navItemText="About" sectionRedirect="#about" imgSrc="dist/personIcon.png" altText="person icon"/>
-            <NavItem navItemText="Projects" sectionRedirect="#projects" imgSrc="dist/star.png" altText="star icon" specificNavSpan="projectSpan"/>
-            <NavItem navItemText="Contact" sectionRedirect="#contact" imgSrc="dist/mail.png" altText="envelope icon" specificNavSpan="contactSpan"/>
+            <NavItem navItemText="About" sectionRedirect="#about" imgSrc="dist/personIcon.png" altText="person icon" onClick={closeMenu}/>
+            <NavItem navItemText="Projects" sectionRedirect="#projects" imgSrc="dist/star.png" altText="star icon" specificNavSpan="projectSpan" onClick={closeMenu}/>
+            <NavItem navItemText="Contact" sectionRedirect="#contact" imgSrc="dist/mail.png" altText="envelope icon" specificNavSpan="contactSpan" onClick={closeMenu}/>
           </ul>
         </nav>
       </div>
