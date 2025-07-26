@@ -6,10 +6,11 @@ html {
 }
 
 body {
-  background-color: #A8B7A2;
+  /* background-color: #A8B7A2; */
   background-color: #DFDDD1;
   font-family: "Raleway", sans-serif;
   color: #2C3424;
+  width: 100%;
 }
 
 * { box-sizing: border-box; }
@@ -39,6 +40,7 @@ body {
 .marqueeItem {
   display: flex;
   align-items: center;
+  font-size: 2.2rem;
 }
 
 .sparkle{
@@ -69,20 +71,6 @@ body {
 }
 
 /* hamburger menu mobile */
-
-/* .mainButton{
-  z-index: 7;
-} */
-
-
-/* .hamburgerMenu{
-  height: 5rem;
-  padding: 0.9rem;
-  border-radius: 1rem;
-  background-color: #445A29;
-} */
-
-/* edits start here */
 
 header{
   position: sticky;
@@ -187,11 +175,26 @@ a {
   font-size: 20px;
   text-decoration: none;
   transition: all 0.5s linear;
-/* 
-  &:hover {
-    color: white;
-    background: #445A29;
-  } */
+}
+ 
+.navLinkRow{
+  display: flex;
+  align-items: center;
+}
+
+.navItemLabel{
+  position: absolute;
+  background-color: #D2851AE6;
+  color: white;
+  z-index: 3;
+  left: -5.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+}
+
+.projectSpan, .contactSpan{
+  left: -7.5rem;
 }
 
 @keyframes navItemIn {

@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 
-const navItem = () => {
+const NavItem = ({sectionRedirect, imgSrc, altText, specificNavSpan, navItemText}) => {
   return (
-    
+    <li>
+      <div className="navLinkRow">
+      <span className={`navItemLabel ${specificNavSpan}`}>{navItemText}</span>
+      <a href={sectionRedirect}><img src={imgSrc} alt={altText} /></a>
+      </div>
+    </li>
   )
 }
 
@@ -21,9 +26,9 @@ const MobileMenu = () => {
   
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <ul className="navUl">
-            <li><a href="#about"><img src="dist/personIcon.png" alt="" /></a></li>
-            <li><a href="#projects"><img src="dist/star.png" alt="" /></a></li>
-            <li><a href="#contact"><img src="dist/mail.png" alt="" /></a></li>
+            <NavItem navItemText="About" sectionRedirect="#about" imgSrc="dist/personIcon.png" altText="person icon"/>
+            <NavItem navItemText="Projects" sectionRedirect="#projects" imgSrc="dist/star.png" altText="star icon" specificNavSpan="projectSpan"/>
+            <NavItem navItemText="Contact" sectionRedirect="#contact" imgSrc="dist/mail.png" altText="envelope icon" specificNavSpan="contactSpan"/>
           </ul>
         </nav>
       </div>
