@@ -62,13 +62,13 @@ const polaroidPics = {
 
 const aboutThemeTexts = {
     'SOFTWARE ENGINEER': {
-        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. My goal is to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
+        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. I strive to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
     },
     'FOODIE': {
         bioText: "Food is one of my favorite ways to explore culture and connection - both of which hold a special place in my heart as a Vietnamese American. Although I'm a (self-proclaimed) star baker, learning to cook has been more of a slow burn. Regardless, the creativity and comfort that comes from playing with food makes me happy."
     },
     'SIDE QUEST ENTHUSIAST': {
-        bioText: "I find joy in everyday things. Reading, writing, and running keep me grounded, while other hobbies keep life interesting. I love collecting Smiskis, crocheting, and learning languages. There's so much more to explore - and I'm probably already curious about it!"
+        bioText: "Reading, writing, and running keep me grounded, while other hobbies (collecting Smiskis, learning languages, and traveling) keep life interesting. There's so much more to explore - and I'm probably already curious about it!"
     }
 }
 
