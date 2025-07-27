@@ -75,6 +75,7 @@
     /* background-color: rgba(217,217,217, 0.97); */
     background-color: #afa39d;
     background-color: rgb(233,223,209);
+    /* background-color: rgb(110,88,69); */
     border: 2px ridge #322d26;
     z-index: 1;
     visibility: hidden;
@@ -143,8 +144,6 @@
 }
 
 .themeOptions button{
-    /* background-color: #534a41; */
-    background-color: #4B3935;
     background-color: rgb(110,88,69);
     padding: 0.8rem 0.7rem;
     border-radius: 0.3rem;
