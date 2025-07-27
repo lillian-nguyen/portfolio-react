@@ -23,7 +23,7 @@ const MobileMenu = () => {
         <div className="mobileMenu">
         <button className="menuButton" onClick={() => setIsOpen(!isOpen)}>
           <img
-            src={isOpen ? 'dist/xIcon.png' : 'dist/hamburgerMenu.png'}
+            src={isOpen ? 'public/xIcon.png' : 'public/hamburgerMenu.png'}
             alt="Menu Toggle"
             className={`menuIcon ${isOpen ? 'rotate' : ''}`}
           />
@@ -31,9 +31,9 @@ const MobileMenu = () => {
   
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <ul className="navUl">
-            <NavItem navItemText="About" sectionRedirect="#about" imgSrc="dist/personIcon.png" altText="person icon" onClick={closeMenu}/>
-            <NavItem navItemText="Projects" sectionRedirect="#projects" imgSrc="dist/star.png" altText="star icon" specificNavSpan="projectSpan" onClick={closeMenu}/>
-            <NavItem navItemText="Contact" sectionRedirect="#contact" imgSrc="dist/mail.png" altText="envelope icon" specificNavSpan="contactSpan" onClick={closeMenu}/>
+            <NavItem navItemText="About" sectionRedirect="#about" imgSrc="public/personIcon.png" altText="person icon" onClick={closeMenu}/>
+            <NavItem navItemText="Projects" sectionRedirect="#projects" imgSrc="public/star.png" altText="star icon" specificNavSpan="projectSpan" onClick={closeMenu}/>
+            <NavItem navItemText="Contact" sectionRedirect="#contact" imgSrc="public/mail.png" altText="envelope icon" specificNavSpan="contactSpan" onClick={closeMenu}/>
           </ul>
         </nav>
       </div>
