@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react"
 import { Marquee } from "../Marquee"
 import Circles from "./Hero Img/Circle"
 import { BlobImage, WhiteOutline } from "./Hero Img/BlobImage"
-// import Button from "../Button"
 import styles from "./Hero.module.css"
 import { useMenu } from "../Navbar/MenuContext"
 

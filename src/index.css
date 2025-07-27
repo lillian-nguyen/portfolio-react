@@ -125,10 +125,11 @@ header{
   width: 5.2rem;
 
   &.open {
-    /* opacity: 1; */
-    transform: translateY(3.8rem);
-    height: 20rem;
+    transform: translateY(-0.3rem) translateX(-22.6rem);
+    height: 22rem;
+    width: 28rem;
     pointer-events: auto;
+    border: 2px double white;
   
     li:nth-child(1) {
       animation: navItemIn 300ms 300ms forwards;
@@ -150,11 +151,11 @@ ul {
   display: flex;
   gap: 1.5rem;
   scale: 0.85;
-  /* margin-left: 5.5rem; */
 }
 
 .navUl{
   flex-direction: column;
+  position: relative;
 }
 
 .nav li {
@@ -179,21 +180,14 @@ a {
 .navLinkRow{
   display: flex;
   align-items: center;
+  column-gap: 2.5rem;
 }
 
 .navItemLabel{
   position: absolute;
-  background-color: #D2851AE6;
   color: white;
   z-index: 3;
-  left: -5.5rem;
-  font-size: 1.5rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: 1rem;
-}
-
-.projectSpan, .contactSpan{
-  left: -7.5rem;
+  font-size: 1.6rem;
 }
 
 @keyframes navItemIn {

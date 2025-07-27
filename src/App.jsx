@@ -5,7 +5,6 @@ import MobileMenu from '../components/Navbar/MobileMenu';
 import { About } from '../components/About/About';
 import { Projects } from '../components/Projects/Projects';
 import { Contact } from '../components/Contact/Contact';
-// import Button from '../components/Button';
 import { MenuProvider, useMenu } from '../components/Navbar/MenuContext';
 
 const App = () => {

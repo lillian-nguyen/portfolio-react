@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 const NavItem = ({sectionRedirect, imgSrc, altText, specificNavSpan, navItemText, onClick}) => {
   return (
     <li>
       <div className="navLinkRow">
-      <span className={`navItemLabel ${specificNavSpan}`}>{navItemText}</span>
+      <a href={sectionRedirect}><span className={`navItemLabel ${specificNavSpan}`} onClick={onClick}>{navItemText}</span></a>
       <a href={sectionRedirect} onClick={onClick}><img className="navIcon" src={imgSrc} alt={altText} /></a>
       </div>
     </li>
@@ -13,8 +13,6 @@ const NavItem = ({sectionRedirect, imgSrc, altText, specificNavSpan, navItemText
 
 const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
-
-    // const toggleMenu = () => setIsOpen(prev => !prev);
     const closeMenu = () => {
       document.body.style.overflow = "auto";
       setIsOpen(false);
