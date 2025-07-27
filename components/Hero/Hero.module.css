@@ -69,7 +69,7 @@
   
   .selfieContainer{
     position: relative;
-    margin-top: 4rem;
+    margin-top: 1rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
