@@ -1,26 +1,44 @@
-import React from 'react';
-import Line from '../Line';
-import Square from '../Square';
-import Button from '../Button';
+import React, {useState} from 'react';
+
+const NavItem = ({sectionRedirect, imgSrc, altText, specificNavSpan, navItemText, onClick}) => {
+  return (
+    <li>
+      <div className="navLinkRow">
+      <a href={sectionRedirect}><span className={`navItemLabel ${specificNavSpan}`} onClick={onClick}>{navItemText}</span></a>
+      <a href={sectionRedirect} onClick={onClick}><img className="navIcon" src={imgSrc} alt={altText} /></a>
+      </div>
+    </li>
+  )
+}
 
 const MobileMenu = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const closeMenu = () => {
+      document.body.style.overflow = "auto";
+      setIsOpen(false);
+    }
+
     return(
-        <div className="fixed inset-0 bg-[#445A29] flex flex-col justify-center items-center mainButton">
-            <Button
-            variant = 'close'
-            />
-            <div className="flex flex-col items-center mobile-links">
-                <a href="#hero">HOME</a>
-                <a href="#about">ABOUT</a>
-                <a href="#projects">PROJECTS</a>
-                <a href="#contact">CONTACT</a>
-            </div>
-            <Line className="line1"/>
-            <Line className="line2"/>
-            <Square/>
-            <img src="/flowerbg-removed.png" className="flowers"></img>
-            <h3 className="mobile-initials">LN</h3>
-        </div>
+
+        <div className="mobileMenu">
+        <button className="menuButton" onClick={() => setIsOpen(!isOpen)}>
+          <img
+            src={isOpen ? 'dist/xIcon.png' : 'dist/hamburgerMenu.png'}
+            alt="Menu Toggle"
+            className={`menuIcon ${isOpen ? 'rotate' : ''}`}
+          />
+        </button>
+  
+        <nav className={`nav ${isOpen ? 'open' : ''}`}>
+          <ul className="navUl">
+            <NavItem navItemText="About" sectionRedirect="#about" imgSrc="dist/personIcon.png" altText="person icon" onClick={closeMenu}/>
+            <NavItem navItemText="Projects" sectionRedirect="#projects" imgSrc="dist/star.png" altText="star icon" specificNavSpan="projectSpan" onClick={closeMenu}/>
+            <NavItem navItemText="Contact" sectionRedirect="#contact" imgSrc="dist/mail.png" altText="envelope icon" specificNavSpan="contactSpan" onClick={closeMenu}/>
+          </ul>
+        </nav>
+      </div>
+
+
     )
 }
 

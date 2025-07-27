@@ -67,7 +67,7 @@ p.fromMe {
   }
 
   p.fromMe::after {
-    background-color: #A8B7A2;
+    background-color: #DFDDD1;
     border-bottom-left-radius: 0.5rem;
     right: -40px;
     transform:translate(-30px, -2px);
@@ -109,7 +109,7 @@ p.fromMe {
   }
   
   p.fromThem::after {
-    background-color: #A8B7A2;
+    background-color: #DFDDD1;
     border-bottom-right-radius: 0.5rem;
     left: 20px;
     transform: translate(-30px, -2px);
@@ -174,7 +174,7 @@ div.fromThem.bubbleForm {
     left: 20px;
     height: 1rem;
     width: 10px;
-    background-color: #A8B7A2;
+    background-color: #DFDDD1;
     border-bottom-right-radius: 0.5rem;
     transform: translate(-30px, -2px);
   }

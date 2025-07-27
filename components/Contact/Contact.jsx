@@ -1,5 +1,5 @@
 import styles from "./Contact.module.css"
-import Button from "../Button"
+// import Button from "../Button"
 import { useMenu } from "../Navbar/MenuContext";
 
 const Contact = () => {
@@ -8,11 +8,11 @@ const Contact = () => {
 
     return(
         <section className={styles.contactSection} id="contact">
-            <Button 
+            {/* <Button 
             style={{backgroundColor: '#445A29'}}
             className="aboutNavButton"
             onClick={toggleMenu}
-            />
+            /> */}
             <h2 className={styles.contactHeader}>CONTACT</h2>
 
             <div className={styles.messageContainer}>

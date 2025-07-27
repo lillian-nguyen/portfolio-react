@@ -1,10 +1,10 @@
 import {React, useState} from 'react';
+import Header from '../components/Header/Header';
 import Hero from '/components/Hero/Hero.jsx'
 import MobileMenu from '../components/Navbar/MobileMenu';
 import { About } from '../components/About/About';
 import { Projects } from '../components/Projects/Projects';
 import { Contact } from '../components/Contact/Contact';
-import Button from '../components/Button';
 import { MenuProvider, useMenu } from '../components/Navbar/MenuContext';
 
 const App = () => {
@@ -26,21 +26,14 @@ const MainLayout = () => {
     const { isMenuOpen, toggleMenu } = useMenu();;
     return (
         <>
-           {/* Floating Menu Button (visible on all pages) */}
-           <Button
-           variant={isMenuOpen ? 'close' : 'hamburger'}
-           onClick={toggleMenu}
-           className="fixed top-4 right-4 z-50"
-       />
-
-       {/* Mobile menu rendered conditionally */}
-       {isMenuOpen && <MobileMenu onClose={toggleMenu} />}
-
-       <Hero />
-       <About />
-       <Projects />
-       <Contact/>
-       </>
+            <Header/>
+            <main>
+            <Hero />
+            <About />
+            <Projects />
+            <Contact/>
+            </main>
+        </>
     )
 }
 
