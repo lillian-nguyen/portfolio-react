@@ -38,14 +38,15 @@
 }
 
 .projectsContainer h4{
-    font-family: "Playfair Display", serif;
-    letter-spacing: 0.3rem;
-    font-size: 2.3rem;
+    font-family: "SanFrancisco";
+    font-weight: bold;
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
     color: #473c32;
     text-align: center;
     margin-top: 2rem;
 }
-
+    
 /* Add spacing eblow last header if project collapsed */
 .lastHeaderPadding{
     padding-bottom: 6rem;
