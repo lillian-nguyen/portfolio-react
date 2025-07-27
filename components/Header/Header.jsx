@@ -5,7 +5,7 @@ const Header = () => {
     return(
         <header>
             <a href="/">
-                <img src="public/logo-clear1.png" className="homeLogo" alt="logo" />
+                <img src="/logo-clear.png" className="homeLogo" alt="logo" />
             </a>
             <MobileMenu/>
         </header>
