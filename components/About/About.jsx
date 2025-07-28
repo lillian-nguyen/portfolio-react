@@ -47,7 +47,7 @@ const smiskiImages = {
 
 const polaroidPics = {
     'SOFTWARE ENGINEER': [{
-        polaroidImgSrc: '/mountainSelfie.png', alt: 'selfie with dog'
+        polaroidImgSrc: '/mountainSelfie.png', alt: 'selfie on mountain'
     }], 
     'FOODIE': [
         { polaroidImgSrc: '/comTam.png', alt: 'Vietnamese broken rice dish'},
@@ -65,10 +65,10 @@ const polaroidPics = {
 
 const aboutThemeTexts = {
     'SOFTWARE ENGINEER': {
-        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. I strive to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
+        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. I strive to bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
     },
     'FOODIE': {
-        bioText: "Food is one of my favorite ways to explore culture and connection - both of which hold a special place in my heart as a Vietnamese American. Although I'm a (self-proclaimed) star baker, learning to cook has been more of a slow burn. Regardless, the creativity and comfort that comes from playing with food makes me happy."
+        bioText: "I love the creativity and comfort that comes from playing with food. I'm a (self-proclaimed) star baker on a sourdough and cooking journey. I'm always happy to collect new recipes or advice if you have any!"
     },
     'SIDE QUEST ENTHUSIAST': {
         bioText: "Probably reading, baking, or collecting smiskis. I also run, travel, and take too many flower pics."
@@ -145,7 +145,7 @@ return(
                     </div>
 
                     <div className={`${styles.overlayContainer} ${overlayVisible ? styles.makeVisible : ''}`}>
-                        <p>{aboutThemeTexts[activeTitle]?.bioText}</p>
+                        <p className={styles.bioText}>{aboutThemeTexts[activeTitle]?.bioText}</p>
                     </div>
 
                     <div className={styles.inactiveAboutButtons}>
