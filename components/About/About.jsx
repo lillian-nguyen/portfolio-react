@@ -1,6 +1,6 @@
 import styles from "./About.module.css"
 import { Marquee } from "../Marquee";
-import {useState} from "react";
+import {useState, useEffect } from "react";
 import { useMenu } from "../Navbar/MenuContext";
 
 const codeIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNEMjg1MUEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik04Ljc1IDYuNUwzLjI1IDEybDUuNSA1LjVtNi41LTExbDUuNSA1LjVsLTUuNSA1LjUiLz48L3N2Zz4='
@@ -46,29 +46,32 @@ const smiskiImages = {
 }
 
 const polaroidPics = {
-    'SOFTWARE ENGINEER': {
-        polaroidImgSrc: 'https://images.unsplash.com/photo-1656680632373-e2aec264296b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'computer screens'
-    }, 
-    'FOODIE': {
-        polaroidImgSrc: '/caolau.jpg',
-        alt: 'Vietnamese Cao Lau dish'
-    }, 
-    'SIDE QUEST ENTHUSIAST': {
-        polaroidImgSrc: '/lanterns.jpg',
-        alt: 'multiple lines of lanterns'
-    }
+    'SOFTWARE ENGINEER': [{
+        polaroidImgSrc: '/mountainSelfie.png', alt: 'selfie with dog'
+    }], 
+    'FOODIE': [
+        { polaroidImgSrc: '/comTam.png', alt: 'Vietnamese broken rice dish'},
+        { polaroidImgSrc: '/Naks.png', alt: 'Filipino chicken, egg, and rice'},
+        { polaroidImgSrc: '/potatoScoops.png', alt: 'scoops of Korean mashed potatoes'},
+        { polaroidImgSrc: '/pho.png', alt: 'bowl of Pho'}
+    ], 
+    'SIDE QUEST ENTHUSIAST': [
+        { polaroidImgSrc: '/mountainView.png', alt: 'top view of mountain and fields in Vietnam' }, 
+        { polaroidImgSrc: '/pinkFlowers.png', alt: 'pink flowers' },
+        { polaroidImgSrc: '/eggTarts.png', alt: 'egg tarts'},
+        { polaroidImgSrc: '/medal.png', alt: 'selfie with running medal' }
+    ]
 }
 
 const aboutThemeTexts = {
     'SOFTWARE ENGINEER': {
-        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. My goal is to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
+        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. I strive to help bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
     },
     'FOODIE': {
         bioText: "Food is one of my favorite ways to explore culture and connection - both of which hold a special place in my heart as a Vietnamese American. Although I'm a (self-proclaimed) star baker, learning to cook has been more of a slow burn. Regardless, the creativity and comfort that comes from playing with food makes me happy."
     },
     'SIDE QUEST ENTHUSIAST': {
-        bioText: "I find joy in everyday things. Reading, writing, and running keep me grounded, while other hobbies keep life interesting. I love collecting Smiskis, crocheting, and learning languages. There's so much more to explore - and I'm probably already curious about it!"
+        bioText: "Probably reading, baking, or collecting smiskis. I also run, travel, and take too many flower pics."
     }
 }
 
@@ -76,15 +79,24 @@ const About = () => {
     const [currentItems, setCurrentItems] = useState(sweCurrents);
     const [activeTitle, setActiveTitle] = useState('SOFTWARE ENGINEER');
     const [activeSmiskiImages, setActiveSmiskiImages] = useState(smiskiImages['SOFTWARE ENGINEER']);
-    const [activePolaroidPic, setActivePolaroidPic] = useState(polaroidPics['SOFTWARE ENGINEER']);
+    // const [activePolaroidPic, setActivePolaroidPic] = useState(polaroidPics['SOFTWARE ENGINEER']);
+    const [polaroidIndex, setPolaroidIndex] = useState(0);
     const [isRightArrowShown, setIsRightArrowShown] = useState(true);
     const [overlayVisible, setOverlayVisible] = useState(false);
-   
 
     
     const toggleArrow = () => {
         setIsRightArrowShown(!isRightArrowShown)
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setPolaroidIndex(prev => (prev + 1) % polaroidPics[activeTitle].length);
+        }, 3000); // change photo every 3 seconds
+    
+        return () => clearInterval(interval); // clear interval when unmounting or category changes
+    }, [activeTitle]);
+    
 
     const {toggleMenu} = useMenu();
 
@@ -143,7 +155,8 @@ return(
                             setCurrentItems(sweCurrents);
                             setActiveTitle('SOFTWARE ENGINEER');
                             setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER']);
-                            setActivePolaroidPic(polaroidPics['SOFTWARE ENGINEER'])
+                            // setActivePolaroidPic(polaroidPics['SOFTWARE ENGINEER'])
+                            setPolaroidIndex(0);
                         }}>SOFTWARE ENGINEER</button>
                         <button id={styles.theme1}  
                         className={activeTitle === 'FOODIE' ? `${styles.hideThemeButton}` : ''}
@@ -151,7 +164,8 @@ return(
                             setCurrentItems(foodieCurrents);
                             setActiveTitle('FOODIE');
                             setActiveSmiskiImages(smiskiImages['FOODIE']);    
-                            setActivePolaroidPic(polaroidPics['FOODIE'])
+                            // setActivePolaroidPic(polaroidPics['FOODIE'])
+                            setPolaroidIndex(0);
                         }}>FOODIE</button>
                         <button id={styles.theme2}
                         className={activeTitle === 'SIDE QUEST ENTHUSIAST' ? `${styles.hideThemeButton}` : ''}
@@ -159,7 +173,8 @@ return(
                             setCurrentItems(sqeCurrents);
                             setActiveTitle('SIDE QUEST ENTHUSIAST');
                             setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
-                            setActivePolaroidPic(polaroidPics['SIDE QUEST ENTHUSIAST']);
+                            // setActivePolaroidPic(polaroidPics['SIDE QUEST ENTHUSIAST']);
+                            setPolaroidIndex(0);
                             }}>SIDE QUEST ENTHUSIAST</button>
                     </div>
                 </div>
@@ -169,7 +184,13 @@ return(
 
         <div className={styles.polaroidWrapper}>
             <img className={`${styles.smiski} ${styles[activeSmiskiImages.className]}`} src={activeSmiskiImages.imgSrc} alt={activeSmiskiImages.alt} />
-            <img className={styles.aboutImg} src={activePolaroidPic.polaroidImgSrc} alt="" />
+            {/* <img className={styles.aboutImg} src={activePolaroidPic.polaroidImgSrc} alt="" /> */}
+            <img
+                className={styles.aboutImg}
+                src={polaroidPics[activeTitle][polaroidIndex].polaroidImgSrc}
+                alt={polaroidPics[activeTitle][polaroidIndex].alt}
+            />
+
             <img className={styles.polaroid} src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2dzZWp0YzlnemV2bTVtdG55Mjkxa3Vrd3h1dHE5bWtkbDV3OWtxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t8nUMbu4NHNFQUKTq5/giphy.gif" alt="" />
         </div>
         

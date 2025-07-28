@@ -18,7 +18,6 @@
 .aboutHeader{
         display: flex;
         justify-content: center;
-        font-family: "Playfair Display", serif;
         font-family: "Open Sans", sans-serif;
         font-size: 2.5rem;
         border: none;
@@ -75,6 +74,8 @@
     border-radius: 1rem;
     /* background-color: rgba(217,217,217, 0.97); */
     background-color: #afa39d;
+    background-color: rgb(233,223,209);
+    /* background-color: rgb(110,88,69); */
     border: 2px ridge #322d26;
     z-index: 1;
     visibility: hidden;
@@ -134,17 +135,19 @@
     margin-top: 2rem;
     padding-bottom: 2.5rem;
     width: 65%;
+    font-family: "Open Sans", sans-serif;
 }
 
 #theme0, #theme1, #theme2{
-    box-shadow: 3px 4px 2px white;
+    /* box-shadow: 3px 4px 2px #534a41; */
+    box-shadow: 3px 4px 2px #534a41;
 }
 
 .themeOptions button{
-    background-color: #534a41;
+    background-color: rgb(110,88,69);
     padding: 0.8rem 0.7rem;
     border-radius: 0.3rem;
-    color: white;
+    color: rgb(233,223,209);
     font-size: 1.6rem;
 }
 
@@ -203,7 +206,7 @@
 }
 
 .currently{
-    font-family: "Playfair Display", serif;
+    font-family: "Merriweather", serif;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
