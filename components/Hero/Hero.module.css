@@ -7,18 +7,18 @@
     line-height: 0.9;
   }
   
-  .heroBio{
+.heroBio{
     margin-left: 15%;
     margin-top: 2%;
   }
   
-  .heroBio h4{
+.heroBio h4{
     font-family: "Open Sans", sans-serif;
     font-size: 1.6rem;
     color: #514439;
   }
   
-  .heroBio p{
+.heroBio p{
     font-family: "Merriweather", serif;
     font-size: 1.7rem;
     color: #2C3424;
@@ -26,27 +26,33 @@
     margin-top: 3%;
   }
   
-  .heroBio span{
+.heroBio span{
     font-weight: bold;
     color: #445A29;
   }
   
   /* hero section - bottom img */
-  .circleContainer{
-    position: absolute;
-    top: 0;
-    left: -14%;
+
+.heroContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .blobWrapper {
+.blobWrapper {
     width: 96%;
     max-width: 400px;
     margin: 0 auto;
     z-index: -1;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
   
-  .blob {
+.blob {
     display: block;
     position: relative;
     left: 0.6rem;
@@ -54,46 +60,34 @@
     }
   
 
-  .BlobOutline{
-    position: absolute;
-    width: 28rem;
-    height: 25rem;
-    top: 3rem;
-    left: 1rem;
-    z-index: -1;
-    transform: rotate(-1deg);
-  }
+.BlobOutline{
+      position: absolute;
+      /* width: 28rem; */
+      /* height: 25rem; */
+      /* top: 3rem;
+      left: 1rem; */
+      z-index: -1;
+      transform: rotate(-1deg);
+      top: 0;
+      left: 0.5rem;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
   
-  .selfieContainer{
-    position: relative;
-    margin-top: 1rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.selfieContainer{
+      position: relative;
+      max-width: 27rem;
+      aspect-ratio: 1/0.95;
+      top: 1rem;
+      margin: 1rem auto 3rem auto;
+      /* aspect-ratio: 1/1; */
+      width: 100%;
+    }
 
   /* media queries */
 
-  @media (min-width: 356px){
-    .BlobOutline{
-      width: 28rem;
-      height: 25.5rem;
-      top: 3rem;
-      left: 3rem;
-    }
-
-    .circleContainer{
-      top: 2rem;
-      left: -12%;
-    }
-
-    .selfieContainer{
-      margin-top: 0;
-    }
-  }
-
-  @media (min-width: 381px){
+  /*@media (min-width: 381px){
     .BlobOutline{
       width: 28rem;
       height: 27rem;
@@ -425,4 +419,4 @@
     .circleContainer{
       left: 33.8%;
     }
-  }
+  } */
