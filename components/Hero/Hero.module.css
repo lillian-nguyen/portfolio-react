@@ -56,9 +56,6 @@
 
   .BlobOutline{
     position: absolute;
-    /* bottom: 29rem;
-    left: 1rem; */
-    /* width="280" height="250" */
     width: 28rem;
     height: 25rem;
     top: 3rem;
@@ -105,7 +102,7 @@
     }
 
     .circleContainer{
-      left: -8%;
+      left: -7.5%;
     }
   }
 
@@ -120,6 +117,18 @@
     .circleContainer{
       top: 3rem;
       left: -6%;
+    }
+
+    .heroHeader{
+      letter-spacing: 0.2rem;
+    }
+
+    .heroBio h4{
+      font-size: 2rem;
+    }
+
+    .heroBio p{
+      font-size: 2rem;
     }
   }
 
@@ -159,6 +168,13 @@
     }
   }
 
+  @media (min-width: 530px){
+    .heroHeader{
+      width: 88%;
+      font-size: 6.2rem;
+    }
+  }
+
   @media (min-width: 551px){
     .BlobOutline{
       left: 8.8rem;
@@ -182,12 +198,27 @@
       top: 4rem;
       left: 8.5%;
     }
+
+    .heroHeader{
+      font-size: 6.1rem;
+    }
+
+    .heroBio{
+      margin-left: 18.5%;
+      margin-top: 2%;
+    }
+
+    .heroBio h4{
+      font-size: 2.1rem;
+    }
+    
+    .heroBio p{
+      font-size: 2rem;
+    }
   }
 
   @media (min-width: 676px){
     .BlobOutline{
-      /* width: 31rem;
-      height: 75rem; */
       top: -16.5rem;
       left: 17.5rem;
     }
@@ -196,9 +227,18 @@
       top: 4.8rem;
       left: 13%;
     }
+
+    .heroBio h4{
+      font-size: 2.3rem;
+      margin-top: -0.3rem;
+    }
+
+    .heroBio p{
+      font-size: 2.2rem;
+    }
   }
 
-    @media (min-width: 786px){
+  @media (min-width: 786px){
     .BlobOutline{
       left: 22.5rem;
     }
@@ -209,58 +249,74 @@
     }
 
     .heroBio{
-      margin-left: 0;
+      width: 80%;
+      text-align: center;
     }
 
     .heroBio h4{
-      font-size: 2.2rem;
-      text-align: center;
+      margin-left: -9rem;
     }
-    
-    .heroBio p{
-      font-size: 2.2rem;
-      width: 70%;
-      margin: 0 auto;
-      text-align: center;
-      margin-top: 3%;
+
+    .heroBio p {
+      width: 84%;
     }
   }
 
-  @media (min-width: 906px){
+  @media (min-width: 875px){
     .BlobOutline{
-      left: 30rem;
+      left: 27.5rem;
     }
 
     .circleContainer{
-      top: 4.8rem;
-      left: 23.5%;
+      left: 21.7%;
+    }
+
+    .heroBio{
+      margin-left: 16rem;
+      text-align: center;
+    }
+
+    .heroBio h4{
+      margin-left: -9.5rem;
+      margin-top: -1rem;
+    }
+
+    .heroBio p {
+      width: 84%;
+      margin-top: 1rem;
     }
   }
 
-  @media (min-width: 961px){
+  @media (min-width: 943px){
     .BlobOutline{
-      left: 32rem;
+      left: 31.5rem;
     }
 
     .circleContainer{
-      top: 5rem;
       left: 24%;
     }
-    
-    .heroBio p{
-      width: 60%;
+
+    .heroBio p {
+      width: 70%;
+      margin-left: 6rem;
     }
   }
 
-  @media (min-width: 1026px){
+  @media (min-width: 1015px){
+    .BlobOutline{
+      left: 35rem;
+    }
+
     .circleContainer{
-      left: 22%;
-    }
-
-    .heroBio p{
-      width: 55%;
+      left: 26%;
     }
   }
+
+  @media (min-width: 1077px){
+    /* shift cirlce container */
+  }
+
+  /*
 
   @media (min-width: 1076px){
     .BlobOutline{
@@ -294,4 +350,4 @@
     .circleContainer{
       left: 29%;
     }
-  }
+  } */

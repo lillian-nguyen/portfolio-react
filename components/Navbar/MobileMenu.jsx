@@ -19,7 +19,6 @@ const MobileMenu = () => {
     }
 
     return(
-
         <div className="mobileMenu">
         <button className="menuButton" onClick={() => setIsOpen(!isOpen)}>
           <img
@@ -37,8 +36,6 @@ const MobileMenu = () => {
           </ul>
         </nav>
       </div>
-
-
     )
 }
 
