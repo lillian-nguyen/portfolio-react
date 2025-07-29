@@ -72,6 +72,8 @@ body {
 /* hamburger menu mobile */
 
 header{
+  display: flex;
+  align-items: center;
   position: fixed;
   background-color: #f5f5f5;
   height: 8rem;
@@ -190,6 +192,25 @@ a {
   font-size: 1.6rem;
 }
 
+main{
+  padding-top: 9rem;
+}
+
+.desktopLinks{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  width: 95%;
+}
+
+.desktopLinks a{
+  color: #2C3424;
+  /* font-family: "Barlow Condensed", sans-serif; */
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.1rem;
+  font-size: 2.7rem;
+}
+
 @keyframes navItemIn {
 from {
   opacity: 0;
@@ -201,23 +222,133 @@ to {
 }
 }
 
-@media (min-width: 441px){
+@media (min-width: 401px){
+  .marqueeItem p {
+    font-size: 2.5rem;
+  }
 
+  .sparkle{
+    scale: 0.9;
+  }
+
+  .nav.open {
+    transform: translateY(-0.3rem) translateX(-23.8rem);
+    height: 22rem;
+    width: 30rem;
+  }
+
+  .navItemLabel{
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 420px){
+  .nav.open {
+    transform: translateY(-0.3rem) translateX(-25.8rem);
+    width: 31.3rem;
+  }
+}
+
+@media (min-width: 470px){
+  .nav.open {
+    transform: translateY(-0.3rem) translateX(-27.9rem);
+    width: 33.5rem;
+  }
+
+  .navItemLabel{
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 441px){
   .marqueeItem{
     margin-top: 1rem;
   }
+}
 
-  .marqueeItem p{
-    font-size: 1.9rem;
+@media (min-width: 501px){
+  .nav.open {
+    transform: translateY(-0.3rem) translateX(-29.9rem);
+    width: 35.5rem;
+  }
+
+  .navItemLabel{
+    font-size: 2.2rem;
+  }
+
+  .navLinkRow{
+    column-gap: 3.3rem;
   }
 }
 
 @media (min-width: 551px){
   .marqueeItem p {
-    font-size: 2.1rem;
+    font-size: 2.7rem;
+  }
+
+  .nav.open {
+    transform: translateY(-0.3rem) translateX(-32.6rem);
+    width: 38rem;
+  }
+
+  .navItemLabel{
+    font-size: 2.4rem;
+  }
+
+  .navLinkRow{
+    column-gap: 3.7rem;
   }
 }
 
-main{
-  padding-top: 9rem;
+@media (min-width: 601px){
+  .nav.open {
+    transform: translateY(-0.7rem) translateX(-39.5rem);
+    width: 45rem;
+  }
+
+  .navLinkRow{
+    column-gap: 4rem;
+  }
+}
+
+@media (min-width: 611px){
+  .nav.open {
+    transform: translateY(-1rem) translateX(-49rem);
+    width: 55rem;
+    height: 25rem;
+  }
+
+  .navItemLabel{
+    font-size: 2.7rem;
+  }
+
+  .navLinkRow{
+    column-gap: 5rem;
+  }
+
+  .navUl{
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 676px){
+  header{
+    background: #445A29;
+  }
+
+  .desktopLinks a{
+    color: white;
+  }
+}
+
+@media (min-width: 875px){
+  .marqueeItem p {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1111px){
+  .marqueeItem p {
+    font-size: 3.3rem;
+  }
 }

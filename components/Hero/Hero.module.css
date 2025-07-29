@@ -1,24 +1,31 @@
+.heroContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90dvh;
+}
+
 .heroHeader{
     text-align: center;
     margin: 0 auto;
-    margin-top: 5%;
+    /* margin-top: 0%; */
     font-family: "Playfair Display", serif;
     font-size: 6rem;
     line-height: 0.9;
   }
   
-  .heroBio{
+.heroBio{
     margin-left: 15%;
     margin-top: 2%;
   }
   
-  .heroBio h4{
+.heroBio h4{
     font-family: "Open Sans", sans-serif;
     font-size: 1.6rem;
     color: #514439;
   }
   
-  .heroBio p{
+.heroBio p{
     font-family: "Merriweather", serif;
     font-size: 1.7rem;
     color: #2C3424;
@@ -26,27 +33,27 @@
     margin-top: 3%;
   }
   
-  .heroBio span{
+.heroBio span{
     font-weight: bold;
     color: #445A29;
   }
   
   /* hero section - bottom img */
-  .circleContainer{
-    position: absolute;
-    top: 0;
-    left: -14%;
-  }
 
-  .blobWrapper {
+.blobWrapper {
     width: 96%;
     max-width: 400px;
     margin: 0 auto;
     z-index: -1;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
   
-  .blob {
+.blob {
     display: block;
     position: relative;
     left: 0.6rem;
@@ -54,86 +61,31 @@
     }
   
 
-  .BlobOutline{
-    position: absolute;
-    /* bottom: 29rem;
-    left: 1rem; */
-    /* width="280" height="250" */
-    width: 28rem;
-    height: 25rem;
-    top: 3rem;
-    left: 1rem;
-    z-index: -1;
-    transform: rotate(-1deg);
-  }
+.BlobOutline{
+      position: absolute;
+      z-index: -1;
+      transform: rotate(-1deg);
+      top: 0;
+      left: 0.5rem;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
   
-  .selfieContainer{
-    position: relative;
-    margin-top: 1rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.selfieContainer{
+      position: relative;
+      max-width: 27rem;
+      aspect-ratio: 1/0.95;
+      top: 1rem;
+      margin: 1rem auto 3rem auto;
+      width: 100%;
+    }
 
   /* media queries */
 
-  @media (min-width: 356px){
-    .BlobOutline{
-      width: 28rem;
-      height: 25.5rem;
-      top: 3rem;
-      left: 3rem;
-    }
-
-    .circleContainer{
-      top: 2rem;
-      left: -12%;
-    }
-
-    .selfieContainer{
-      margin-top: 0;
-    }
-  }
-
-  @media (min-width: 381px){
-    .BlobOutline{
-      width: 28rem;
-      height: 27rem;
-      top: 4rem;
-      left: 4.6rem;
-    }
-
-    .circleContainer{
-      left: -8%;
-    }
-  }
-
   @media (min-width: 401px){
-    .BlobOutline{
-      width: 29rem;
-      height: 30rem;
-      top: 4rem;
-      left: 4.6rem;
-    }
-
-    .circleContainer{
-      top: 3rem;
-      left: -6%;
-    }
-  }
-
-  @media (min-width: 441px){
-    .BlobOutline{
-      width: 30rem;
-      height: 33rem;
-      top: 4rem;
-      left: 6.5rem;
-    }
-
-    .circleContainer{
-      top: 6rem;
-      left: -5.8%;
+    .heroHeader{
+      letter-spacing: 0.2rem;
     }
 
     .heroBio h4{
@@ -141,157 +93,141 @@
     }
 
     .heroBio p{
-      font-size: 2.1rem;
+      font-size: 2rem;
+    }
+
+    .selfieContainer{
+      max-width: 29rem;
     }
   }
 
-  @media (min-width: 501px){
-    .BlobOutline{
-      width: 31rem;
-      height: 69rem;
-      top: -13rem;
-      left: 8rem;
-    }
-
-    .circleContainer{
-      top: 6rem;
-      left: -2%;
+  @media (min-width: 530px){
+    .heroHeader{
+      width: 88%;
+      font-size: 6.2rem;
     }
   }
 
   @media (min-width: 551px){
-    .BlobOutline{
-      left: 8.8rem;
-    }
-
-    .circleContainer{
-      top: 6rem;
-      left: 0.8%;
-    }
-  }
-
-  @media (min-width: 601px){
-    .BlobOutline{
-      width: 31rem;
-      height: 75rem;
-      top: -16rem;
-      left: 12.8rem;
-    }
-
-    .circleContainer{
-      top: 4rem;
-      left: 8.5%;
-    }
-  }
-
-  @media (min-width: 676px){
-    .BlobOutline{
-      /* width: 31rem;
-      height: 75rem; */
-      top: -16.5rem;
-      left: 17.5rem;
-    }
-
-    .circleContainer{
-      top: 4.8rem;
-      left: 13%;
-    }
-  }
-
-    @media (min-width: 786px){
-    .BlobOutline{
-      left: 22.5rem;
-    }
-
-    .circleContainer{
-      top: 4.8rem;
-      left: 17%;
-    }
-
     .heroBio{
-      margin-left: 0;
+      margin-left: 12%;
+      text-align: center;
+    }
+    
+    .heroBio h4{
+      width: 85%;
+    }
+
+    .heroBio p {
+      margin-top: 0.7rem;
+    }
+
+    .selfieContainer{
+      margin-top: 2rem;
+    }
+  }
+
+  @media (min-width: 628px){
+    .heroBio p {
+      width: 85%;
+    }
+  }
+
+  @media (min-width: 715px){
+    .heroBio h4{
+      font-size: 2.3rem;
+    }
+
+    .heroBio p{
+      font-size: 2.2rem;
+    }
+
+    .selfieContainer{
+      max-width: 32rem;
+    }
+  }
+
+  @media (min-width: 788px){
+    .heroBio h4{
+      font-size: 2.5rem;
+    }
+
+    .heroBio p{
+      font-size: 2.3rem;
+      width: 75%;
+      margin-left: 4rem;
+    }
+  }
+
+  @media (min-width: 932px){
+    .heroHeader{
+      font-size: 6.3rem;
     }
 
     .heroBio h4{
-      font-size: 2.2rem;
-      text-align: center;
+      font-size: 2.7rem;
     }
-    
+
     .heroBio p{
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       width: 70%;
-      margin: 0 auto;
-      text-align: center;
-      margin-top: 3%;
+      margin-left: 7rem;
     }
   }
 
-  @media (min-width: 906px){
-    .BlobOutline{
-      left: 30rem;
+  @media (min-width: 1155px){
+    .heroHeader{
+      font-size: 6.7rem;
     }
 
-    .circleContainer{
-      top: 4.8rem;
-      left: 23.5%;
-    }
-  }
-
-  @media (min-width: 961px){
-    .BlobOutline{
-      left: 32rem;
+    .heroBio h4{
+      font-size: 2.9rem;
     }
 
-    .circleContainer{
-      top: 5rem;
-      left: 24%;
-    }
-    
     .heroBio p{
+      font-size: 2.8rem;
+      width: 65%;
+      margin-left: 10rem;
+    }
+
+    .selfieContainer{
+      max-width: 36rem;
+    }
+  }
+
+  @media (min-width: 1392px){
+    .heroBio h4{
+      font-size: 3rem;
+    }
+
+    .heroBio p{
+      font-size: 2.9rem;
       width: 60%;
+      margin-left: 15rem;
     }
   }
 
-  @media (min-width: 1026px){
-    .circleContainer{
-      left: 22%;
-    }
-
-    .heroBio p{
-      width: 55%;
-    }
-  }
-
-  @media (min-width: 1076px){
-    .BlobOutline{
-      left: 38.5rem;
-    }
-
-    .circleContainer{
-      left: 27.5%;
-    }
-  }
-
-  @media (min-width: 1126px){
-    .BlobOutline{
-      left: 40.5rem;
-    }
-
-    .circleContainer{
-      left: 28%;
-    }
-
+  @media (min-width: 1560px){
     .heroBio p{
       width: 50%;
+      margin-left: 23rem;
+    }
+
+    .selfieContainer{
+      max-width: 40rem;
     }
   }
 
-  @media (min-width: 1171px){
-    .BlobOutline{
-      left: 42.5rem;
+  @media (min-width: 1724px){
+    .heroBio p{
+      width: 45%;
+      margin-left: 31rem;
     }
+  }
 
-    .circleContainer{
-      left: 29%;
+  @media (min-width: 1935px){
+    .heroBio p{
+      width: 40%;
+      margin-left: 40rem;
     }
   }
