@@ -79,7 +79,6 @@ const About = () => {
     const [currentItems, setCurrentItems] = useState(sweCurrents);
     const [activeTitle, setActiveTitle] = useState('SOFTWARE ENGINEER');
     const [activeSmiskiImages, setActiveSmiskiImages] = useState(smiskiImages['SOFTWARE ENGINEER']);
-    // const [activePolaroidPic, setActivePolaroidPic] = useState(polaroidPics['SOFTWARE ENGINEER']);
     const [polaroidIndex, setPolaroidIndex] = useState(0);
     const [isRightArrowShown, setIsRightArrowShown] = useState(true);
     const [overlayVisible, setOverlayVisible] = useState(false);
@@ -107,7 +106,7 @@ return(
        
        <section className={styles.aboutContainer}>
 
-       <section className={styles.currently}>
+            <section className={styles.currently}>
                 <div>
                     <h4>CURRENTLY</h4>
                     <Marquee
@@ -116,13 +115,14 @@ return(
                 
             </section>
 
-        <section className={styles.themeContainerWrapper}>
-        <section className={styles.themeContainer}>
-                <h4>Hi, I'm Lillian - your friendly neighborhood </h4>
+            <div className={styles.themeAndPolaroidWrapper}>
+            <section className={styles.themeContainerWrapper}>
+                <section className={styles.themeContainer}>
+                    <h4>Hi, I'm Lillian - your friendly neighborhood </h4>
 
-                <div className={styles.themeOptions}>
-                    <div className={styles.titleAndArrow}
-                    onClick={toggleArrow}>
+                    <div className={styles.themeOptions}>
+                        <div className={styles.titleAndArrow}
+                        onClick={toggleArrow}>
                         <p id="activeTheme" className={styles.activeAboutText}>{activeTitle}</p>
                         <img id="rightArrow" className={`${styles.rightArrow} ${isRightArrowShown ? '' : styles.hideVisibility}`}
                         
@@ -155,7 +155,6 @@ return(
                             setCurrentItems(sweCurrents);
                             setActiveTitle('SOFTWARE ENGINEER');
                             setActiveSmiskiImages(smiskiImages['SOFTWARE ENGINEER']);
-                            // setActivePolaroidPic(polaroidPics['SOFTWARE ENGINEER'])
                             setPolaroidIndex(0);
                         }}>SOFTWARE ENGINEER</button>
                         <button id={styles.theme1}  
@@ -164,7 +163,6 @@ return(
                             setCurrentItems(foodieCurrents);
                             setActiveTitle('FOODIE');
                             setActiveSmiskiImages(smiskiImages['FOODIE']);    
-                            // setActivePolaroidPic(polaroidPics['FOODIE'])
                             setPolaroidIndex(0);
                         }}>FOODIE</button>
                         <button id={styles.theme2}
@@ -173,18 +171,16 @@ return(
                             setCurrentItems(sqeCurrents);
                             setActiveTitle('SIDE QUEST ENTHUSIAST');
                             setActiveSmiskiImages(smiskiImages['SIDE QUEST ENTHUSIAST']);
-                            // setActivePolaroidPic(polaroidPics['SIDE QUEST ENTHUSIAST']);
                             setPolaroidIndex(0);
                             }}>SIDE QUEST ENTHUSIAST</button>
                     </div>
-                </div>
-            </section>
+                    </div>
+                </section>
         </section>
         
 
         <div className={styles.polaroidWrapper}>
             <img className={`${styles.smiski} ${styles[activeSmiskiImages.className]}`} src={activeSmiskiImages.imgSrc} alt={activeSmiskiImages.alt} />
-            {/* <img className={styles.aboutImg} src={activePolaroidPic.polaroidImgSrc} alt="" /> */}
             <img
                 className={styles.aboutImg}
                 src={polaroidPics[activeTitle][polaroidIndex].polaroidImgSrc}
@@ -192,9 +188,12 @@ return(
             />
 
             <img className={styles.polaroid} src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2dzZWp0YzlnemV2bTVtdG55Mjkxa3Vrd3h1dHE5bWtkbDV3OWtxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t8nUMbu4NHNFQUKTq5/giphy.gif" alt="" />
+            <div className={styles.polaroid}></div>
         </div>
+            </div>
+            
         
-    </section>
+        </section>
     </section>
     );
 }
