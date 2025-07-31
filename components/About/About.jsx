@@ -65,7 +65,7 @@ const polaroidPics = {
 
 const aboutThemeTexts = {
     'SOFTWARE ENGINEER': {
-        bioText: "I'm a software engineer with a healthcare background and soft spot for human-centered design. I strive to bridge the gap between tech and the people who use it. Whether it's writing code or shaping user experiences, I'm focused on making technology work better for people, not just around them."
+        bioText: "I have a healthcare background and soft spot for human-centered design. My goal is to bridge the gap between tech and the people who use it; I'm excited about making technology work better for people, not just around them."
     },
     'FOODIE': {
         bioText: "I love the creativity and comfort that comes from playing with food. I'm a (self-proclaimed) star baker on a sourdough and cooking journey. I'm always happy to collect new recipes or advice if you have any!"
@@ -116,7 +116,7 @@ return(
             </section>
 
             <div className={styles.themeAndPolaroidWrapper}>
-            <section className={styles.themeContainerWrapper}>
+                <section className={styles.themeContainerWrapper}>
                 <section className={styles.themeContainer}>
                     <h4>Hi, I'm Lillian - your friendly neighborhood </h4>
 
@@ -181,14 +181,14 @@ return(
 
         <div className={styles.polaroidWrapper}>
             <img className={`${styles.smiski} ${styles[activeSmiskiImages.className]}`} src={activeSmiskiImages.imgSrc} alt={activeSmiskiImages.alt} />
-            <img
-                className={styles.aboutImg}
-                src={polaroidPics[activeTitle][polaroidIndex].polaroidImgSrc}
-                alt={polaroidPics[activeTitle][polaroidIndex].alt}
-            />
-
-            <img className={styles.polaroid} src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2dzZWp0YzlnemV2bTVtdG55Mjkxa3Vrd3h1dHE5bWtkbDV3OWtxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t8nUMbu4NHNFQUKTq5/giphy.gif" alt="" />
-            <div className={styles.polaroid}></div>
+           
+            <div className={styles.polaroid}>
+                <img
+                    className={styles.aboutImg}
+                    src={polaroidPics[activeTitle][polaroidIndex].polaroidImgSrc}
+                    alt={polaroidPics[activeTitle][polaroidIndex].alt}
+                />
+            </div>
         </div>
             </div>
             
