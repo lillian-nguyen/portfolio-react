@@ -121,20 +121,26 @@
 .titleAndArrow{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
 }
 
 .rightArrow, .leftArrow{
     position: absolute;
-    top: -40%;
-    left: calc(55% + 9rem);
+    top: 50%;
+    /* transform considers arrow's height to center it relative to the div */
+    transform: translateY(-50%); 
     z-index: 2;
 }
 
 .leftArrow{
-    left: calc(25.5% - 9rem);
-    top: -38%;
+    /* left: calc(25.5% - 9rem); */
+    left: -3rem;
+}
+
+.rightArrow{
+    right: -3rem;
 }
 
 .inactiveAboutButtons{
@@ -255,6 +261,13 @@
     font-family: "Barlow Condensed", sans-serif;
     padding-top: 1rem;
     font-size: 2.2rem;
+}
+
+@media (min-width: 350px){
+    .smiskiPeeking{
+        margin-top:-11rem;
+        scale: 0.65;
+    }
 }
 
 /* @media (min-width: 376px){
