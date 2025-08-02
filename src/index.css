@@ -39,7 +39,7 @@ body {
 .marqueeItem {
   display: flex;
   align-items: center;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 .sparkle{

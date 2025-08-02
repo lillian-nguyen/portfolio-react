@@ -13,13 +13,18 @@
         transparent 80px,
         rgba(255, 255, 255, 0.3) 83px
       );
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 }
 
 .aboutHeader{
         display: flex;
         justify-content: center;
         font-family: "Open Sans", sans-serif;
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         border: none;
         padding-top: 3rem;
         padding-bottom: 0;
@@ -40,14 +45,14 @@
 }
 
 .themeContainerWrapper{
-    width: 88%;
+    width: 93%;
     margin: 0 auto;
 }
 
 .themeContainer{
     position: relative;
     background-color: rgba(217,217,217, 0.75);
-    border: 2px ridge #2C3424;
+    border: 1px ridge #2C3424;
     border-radius: 1rem;
     margin-top: 2rem;
     padding-top: 1.4rem;
@@ -55,12 +60,20 @@
 
 .themeContainer h4{
     font-family: "Playfair Display", serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #2C3424;
     margin: 0 auto;
     /* margin-top: 1.8rem; */
     padding-bottom: 1.2rem;
     width: 80%;
+}
+
+.themeAndPolaroidWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 93%;
+    margin: 0 auto;
 }
 
 .overlayContainer{
@@ -72,10 +85,8 @@
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    /* background-color: rgba(217,217,217, 0.97); */
-    background-color: #afa39d;
+    /* background-color: #afa39d; */
     background-color: rgb(233,223,209);
-    /* background-color: rgb(110,88,69); */
     border: 2px ridge #322d26;
     z-index: 1;
     visibility: hidden;
@@ -83,7 +94,7 @@
 
 .overlayContainer p{
     font-family: "Open Sans", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #322d26;
     width: 80%;
     line-height: 1.8rem;
@@ -98,7 +109,7 @@
 }
 
 .activeAboutText{
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #445A29;
     margin: 0 auto;
     padding-bottom: 0.3rem;
@@ -110,21 +121,26 @@
 .titleAndArrow{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
-    /* border: 1px solid red; */
 }
 
 .rightArrow, .leftArrow{
     position: absolute;
-    top: -40%;
-    left: calc(55% + 9rem);
+    top: 50%;
+    /* transform considers arrow's height to center it relative to the div */
+    transform: translateY(-50%); 
     z-index: 2;
 }
 
 .leftArrow{
-    left: calc(25.5% - 9rem);
-    top: -38%;
+    /* left: calc(25.5% - 9rem); */
+    left: -3rem;
+}
+
+.rightArrow{
+    right: -3rem;
 }
 
 .inactiveAboutButtons{
@@ -140,7 +156,6 @@
 }
 
 #theme0, #theme1, #theme2{
-    /* box-shadow: 3px 4px 2px #534a41; */
     box-shadow: 3px 4px 2px #534a41;
 }
 
@@ -158,34 +173,61 @@
 
 /* image/polaroid */
 
-.polaroidWrapper{
+  .polaroidWrapper {
     position: relative;
-    top: 3.8rem;
-    width: 100%;
-    aspect-ratio: 3/4;
-}
+    width: 40rem;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .polaroid {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    width: 82%;
+    height: 80%;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25); /* subtle polaroid shadow */
+    transform: translate(-50%, -50%);
+  }
+  
+  .polaroidWrapper img {
+    position: absolute;
+    z-index: 2;
+    border-radius: 0.5rem;
+    top: 1rem;
+    left: 1rem;
+    object-fit: cover;
+    width: 90%;
+    height: 75%;
+  }
 
 .smiski{
     position: absolute;
-    z-index: 2;
+    z-index: 3;
+    scale: 0.6;
 }
 
 .smiskiResearching {
-    top: -3%;
-    top: 20%;
-    left: 13%;
-    scale: 0.6;
+    margin-left: 7rem;
+    margin-top: 14.3rem;
 }
 
 .smiskiPeeking{
-    scale: 0.6;
-    top: -33%;
+    margin-top: -10rem;
+    margin-left: 0.5rem;
 }
 
 .smiskiReading{
-    scale: 0.9;
-    top: 35%;
-    left: -13%;
+    margin-top: 15.5rem;
+    margin-left: -5rem;
 }
 
 .hideThemeButton{
@@ -201,18 +243,13 @@
     object-fit: cover;
 }
 
-.polaroid{
-    position: absolute;
-    z-index: 1;
-}
-
 .currently{
     font-family: "Merriweather", serif;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.4);
-    width: 88%;
+    width: 92%;
     position: relative;
     top: 1rem;
     border-radius: 0.3rem;
@@ -223,17 +260,17 @@
 .currently h4{
     font-family: "Barlow Condensed", sans-serif;
     padding-top: 1rem;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 
-.currently span{
-    width: 60%;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    font-size: 1.3rem;
+@media (min-width: 350px){
+    .smiskiPeeking{
+        margin-top:-11rem;
+        scale: 0.65;
+    }
 }
 
-@media (min-width: 376px){
+/* @media (min-width: 376px){
     .leftArrow{
         left: calc(25.5% - 10rem);
     }
@@ -260,52 +297,6 @@
 
     .rightArrow{
         left: calc(63% + 11.3rem); 
-    }
-
-    .themeContainer h4{
-        margin-top: 1.5rem;
-    }
-
-    .themeContainer{
-        border-radius: 1rem;
-        margin-top: 5rem;
-        padding-top: 1.4rem;
-        height: 28rem;
-    }
-
-    .overlayContainer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
-
-    .overlayContainer p{
-        font-size: 1.5rem;
-    }
-
-    .smiskiResearching {
-        top: 22%;
-        left: 18%;
-        scale: 0.5;
-    }
-    
-    .smiskiPeeking{
-        scale: 0.5;
-    }
-    
-    .smiskiReading{
-        scale: 0.8;
-        top: 36%;
-        left: -16%;
-    }
-
-    .polaroidWrapper{
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
     }
 }
 
@@ -337,24 +328,6 @@
     .rightArrow{
         left: calc(72.5% + 11.3rem); 
     }
-
-    .themeContainer h4{
-        font-size: 2.3rem;
-        width: 80%;
-    }
-
-    .activeAboutText{
-        font-size: 2.5rem;
-    }
-
-    .themeOptions button{
-        padding: 0.8rem 0.7rem;
-        font-size: 1.8rem;
-    }
-
-    .polaroidWrapper{
-        top: 9rem;
-    }
 }
 
 @media (min-width: 675px){
@@ -364,35 +337,6 @@
 
     .rightArrow{
         left: calc(77% + 11.3rem); 
-    }
-
-    .themeContainer h4{
-        font-size: 2.3rem;
-        width: 80%;
-    }
-
-    .activeAboutText{
-        font-size: 2.5rem;
-    }
-
-    .themeOptions button{
-        padding: 0.8rem 0.7rem;
-        font-size: 1.8rem;
-    }
-
-    .polaroidWrapper{
-        top: 9rem;
-    }
-
-    .aboutImg{
-        top: 8%;
-        left: 18%;
-        width: 59%;
-        height: 41.5%;
-    }
-
-    .smiskiPeeking{
-        top: -30%;
     }
 }
 
@@ -404,88 +348,11 @@
     .rightArrow{
         left: calc(78% + 11.3rem); 
     }
-
-    .themeContainer h4{
-        font-size: 2.3rem;
-        width: 80%;
-    }
-
-    .activeAboutText{
-        font-size: 2.5rem;
-    }
-
-    .aboutImg{
-        top: 7.8%;
-        left: 17.7%;
-        width: 56.7%;
-        height: 41%;
-    }
-
-    .smiskiReading{
-        scale: 0.7;
-        top: 33%;
-        left: -18%;
-    }
-}
-
-@media (min-width: 721px){
-    .aboutImg{
-        top: 8.1%;
-        left: 16%;
-        width: 56%;
-        height: 38%;
-    }
-
-    .polaroidWrapper{
-        margin: 0 auto;
-        margin-left: 4rem;
-    }
-
-    .smiskiResearching {
-        top: 20%;
-    }
-
-    .smiskiReading{
-        top: 29%;
-        left: -18%;
-    }
-}
-
-@media (min-width: 743px){
-    .aboutImg{
-        top: 7.5%;
-        left: 15.7%;
-        width: 54%;
-        height: 37%;
-    }
-
-    .smiskiPeeking{
-        top: -28%;
-    }
-
-    .smiskiReading{
-        top: 28%;
-    }
 }
 
 @media (min-width: 768px){
     .rightArrow{
         left: calc(80% + 11.3rem); 
-    }
-    
-    .aboutImg{
-        top: 7.5%;
-        left: 15.7%;
-        width: 51.6%;
-        height: 35.7%;
-    }
-
-    .smiskiReading{
-        top: 25%;
-    }
-
-    .polaroidWrapper{
-        margin-left: 6.5rem;
     }
 }
 
@@ -497,39 +364,6 @@
     .rightArrow{
         left: calc(80% + 11.3rem); 
     }
-    
-    .aboutImg{
-        top: 7.1%;
-        left: 14.3%;
-        width: 50.5%;
-        height: 34.5%;
-    }
-
-    .smiskiReading{
-        top: 26%;
-        scale: 0.6;
-    }
-
-    .smiskiPeeking{
-        top: -26%;
-    }
-
-    .polaroidWrapper{
-        margin-left: 7.5rem;
-    }
-}
-
-@media (min-width: 816px){
-    .aboutImg{
-        top: 7.1%;
-        left: 14.4%;
-        width: 48.2%;
-        height: 34.5%;
-    }
-
-    .smiskiResearching {
-        top: 18%;
-    }
 }
 
 @media (min-width: 845px){
@@ -539,72 +373,6 @@
 
     .rightArrow{
         left: calc(82% + 11.3rem); 
-    }
-    
-    .aboutImg{
-        top: 6.8%;
-        left: 13.5%;
-        width: 47%;
-        height: 32%;
-    }
-
-    .smiskiPeeking{
-        top: -24%;
-    }
-
-    .smiskiReading{
-        top: 24.5%;
-    }
-}
-
-@media (min-width: 873px){
-    .aboutImg{
-        top: 6.3%;
-        left: 13%;
-        width: 45.5%;
-        height: 31.4%;
-    }
-    
-    .polaroidWrapper{
-        margin-left: 12rem;
-    }
-}
-
-@media (min-width: 903px){
-    .aboutImg{
-        top: 5.5%;
-        left: 13.5%;
-        width: 43%;
-        height: 31%;
-    }
-
-    .polaroidWrapper{
-        margin-left: 15rem;
-    }
-
-    .smiskiReading{
-        top: 22.5%;
-    }
-
-    .smiskiPeeking{
-        top: -23%;
-    }
-
-    .smiskiResearching {
-        top: 16%;
-    }
-}
-
-@media (min-width: 936px){
-    .aboutImg{
-        top: 5.1%;
-        left: 13.1%;
-        width: 41.4%;
-        height: 29.8%;
-    }
-
-    .smiskiPeeking{
-        top: -22%;
     }
 }
 
@@ -616,53 +384,8 @@
     .rightArrow{
         left: calc(84% + 11.3rem); 
     }
-    
-    .aboutImg{
-        top: 4.8%;
-        left: 12.5%;
-        width: 40.3%;
-        height: 28.9%;
-    }
-
-    .smiskiReading{
-        top: 21%;
-    }
-
-    .smiskiResearching {
-        top: 15%;
-        left: 15%;
-    }
 }
 
-@media (min-width: 1001px){
-    .aboutImg{
-        left: 11.5%;
-        width: 39.6%;
-        height: 28%;
-    }
-
-    .smiskiReading{
-        top: 20%;
-    }
-
-    .smiskiResearching {
-        top: 14%;
-        left: 14%;
-    }
-
-    .smiskiPeeking{
-        top: -20%;
-    }
-}
-
-@media (min-width: 1034px){
-    .aboutImg{
-        top: 4.7%;
-        left: 11.4%;
-        width: 38%;
-        height: 27%;
-    }
-}
 
 @media (min-width: 1070px){
     .leftArrow{
@@ -672,67 +395,6 @@
     .rightArrow{
         left: calc(86% + 11.3rem); 
     }
-    
-    .aboutImg{
-        top: 4.5%;
-        left: 10.6%;
-        width: 37.2%;
-        height: 26.5%;
-    }
-
-    .smiskiReading{
-        top: 19%;
-    }
-
-    .smiskiPeeking{
-        top: -19%;
-    }
-
-    .polaroidWrapper{
-        margin-left: 18rem;
-    }
 }
 
-@media (min-width: 1105px){
-    .aboutImg{
-        top: 4.2%;
-        left: 10%;
-        width: 36.2%;
-        height: 26%;
-    }
-
-    .polaroidWrapper{
-        margin-left: 20rem;
-    }
-}
-
-@media (min-width: 1145px){
-    .aboutImg{
-        top: 4.1%;
-        left: 10.1%;
-        width: 34.5%;
-        height: 24.6%;
-    }
-
-    .smiskiPeeking{
-        top: -18%;
-    }
-
-    .smiskiReading{
-        top: 18%;
-    }
-
-    .smiskiResearching {
-        top: 12.8%;
-        left: 12%;
-    }
-}
-
-@media (min-width: 1183px){
-    .aboutImg{
-        top: 4%;
-        left: 9.5%;
-        width: 33.7%;
-        height: 24%;
-    }
-}
+} */
