@@ -65,13 +65,13 @@ const polaroidPics = {
 
 const aboutThemeTexts = {
     'SOFTWARE ENGINEER': {
-        bioText: "I have a healthcare background and soft spot for human-centered design. My goal is to bridge the gap between tech and the people who use it; I'm excited about making technology work better for people, not just around them."
+        bioText: "With a background in healthcare and soft spot for human-centered design, my goal is to bridge the gap between tech and the people who use it. I'm excited about making technology work better for people, not just around them."
     },
     'FOODIE': {
-        bioText: "I love the creativity and comfort that comes from playing with food. I'm a (self-proclaimed) star baker on a sourdough and cooking journey. I'm always happy to collect new recipes or advice if you have any!"
+        bioText: "Star baker who is on a simultaneous cooking journey. Currently (and indefinitely) collecting sourdough recipes and pizza tour suggestions."
     },
     'SIDE QUEST ENTHUSIAST': {
-        bioText: "Probably reading, baking, or collecting smiskis. I also run, travel, and take too many flower pics."
+        bioText: "Avid baker, smiski collector, a flower-picture-taker. I'm also a novice runner, broadway appreciator, and traveler."
     }
 }
 
