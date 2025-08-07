@@ -6,7 +6,8 @@ import styles from "./Projects.module.css"
 const Projects = () => {
     const [isHeaderClicked, setIsHeaderClicked] = useState({
         'VENTURE WEAVERS': false,
-        'ELFGORITHM': false
+        'ELFGORITHM': false,
+        'TARRANT COUNTY BREASTFEEDING COALITION': false
     });
 
     const toggleProjectVisibility = (title) => {
@@ -42,7 +43,6 @@ const Projects = () => {
             />
             
             <h4
-            className={`${!isHeaderClicked['VENTURE WEAVERS'] ? styles.lastHeaderPadding : ''}`}
             onClick={() => {
                 toggleProjectVisibility('VENTURE WEAVERS');
             }}
@@ -53,6 +53,20 @@ const Projects = () => {
             tech= {['HTML', 'CSS', 'JavaScript']}
             customClass={`${styles.ventureWeavers} ${isHeaderClicked['VENTURE WEAVERS'] ? '' : styles.hideProjectInfo}`}
             website="https://ventureweaversconsulting.com/"
+            />
+
+            <h4
+            className={`${!isHeaderClicked['TARRANT COOUNTY BREASTFEEDING COALITION'] ? styles.lastHeaderPadding : ''}`}
+            onClick={() => {
+                toggleProjectVisibility('TARRANT COUNTY BREASTFEEDING COALITION');
+            }}
+            >TARRANT COUNTY BREASTFEEDING COALITION</h4>
+            <IndividualProject
+            imgSrc="/tcobco.mp4"
+            projectBio="Welcoming and comprehensive resources site for Tarrant County Breastfeeding Coalition (TCoBCo), a grassroots organization that serves lactating individuals, their families, and those who care for them."
+            tech= {['HTML', 'CSS', 'JavaScript', 'Wordpress']}
+            customClass={`${styles.tarrant} ${isHeaderClicked['TARRANT COUNTY BREASTFEEDING COALITION'] ? '' : styles.hideProjectInfo}`}
+            website="https://tarrantbreastfeeding.org/"
             />
             </div>
         </div>
