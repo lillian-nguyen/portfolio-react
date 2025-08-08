@@ -89,15 +89,65 @@ const About = () => {
     }
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setPolaroidIndex(prev => (prev + 1) % polaroidPics[activeTitle].length);
-        }, 3000); // change photo every 3 seconds
+        // function to check and set interval only on large screens
+        const startCarousel = () => {
+            if (window.innerWidth > 600) {
+                return null;
+            }
     
-        return () => clearInterval(interval); // clear interval when unmounting or category changes
+            return setInterval(() => {
+                setPolaroidIndex(prev => (prev + 1) % polaroidPics[activeTitle].length);
+            }, 3000);
+        };
+    
+        let interval = startCarousel();
+    
+        // re-check on window resize
+        const handleResize = () => {
+            if (interval) {
+                clearInterval(interval);
+                interval = null;
+            }
+            interval = startCarousel();
+        };
+    
+        window.addEventListener("resize", handleResize);
+    
+        return () => {
+            if (interval) clearInterval(interval);
+            window.removeEventListener("resize", handleResize);
+        };
     }, [activeTitle]);
     
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+useEffect(() => {
+  const handleResize = () => setWindowWidth(window.innerWidth);
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
 
     const {toggleMenu} = useMenu();
+
+    const Polaroid = ({ smiskiImage, polaroidImage, polaroidClass, style }) => {
+        return (
+            <div className={`${styles.polaroidWrapper} ${styles[polaroidClass]}`} style={style}>
+                <img
+                    className={`${styles.smiski} ${styles[smiskiImage.className]}`}
+                    src={smiskiImage.imgSrc}
+                    alt={smiskiImage.alt}
+                />
+    
+                <div className={styles.polaroid}>
+                    <img
+                        className={styles.aboutImg}
+                        src={polaroidImage.polaroidImgSrc}
+                        alt={polaroidImage.alt}
+                    />
+                </div>
+            </div>
+        );
+    };
 
 return(
     <section className={styles.AboutSection} id="about">
@@ -132,7 +182,7 @@ return(
                            setIsRightArrowShown(false);
                             
                         }}
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiM0NDNCMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik00IDEyaDE1Ljg3OW0tNi4xMjkgNi43NWw1LjY5LTUuNjljLjI5Mi0uMjkyLjQzOS0uNjc2LjQzOS0xLjA2TTEzLjc1IDUuMjVsNS42OSA1LjY5Yy4yOTIuMjkyLjQzOS42NzYuNDM5IDEuMDYiLz48L3N2Zz4=" alt="right arrow" />
+                        src="/right-arrow.png" alt="right arrow" />
 
                         <img className={`${styles.leftArrow} ${isRightArrowShown ? styles.hideVisibility : ''}`} 
                         
@@ -141,7 +191,7 @@ return(
                             setIsRightArrowShown(true);
                         }}
 
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzUzNGE0MSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTIwIDEySDQuMTIxbTYuMTI5IDYuNzVsLTUuNjktNS42OUExLjUgMS41IDAgMCAxIDQuMTIyIDEybTYuMTI5LTYuNzVsLTUuNjkgNS42OUExLjUgMS41IDAgMCAwIDQuMTIyIDEyIiAvPgo8L3N2Zz4=" alt="left arrow" />
+                        src="/left-arrow.png" />
                     </div>
 
                     <div className={`${styles.overlayContainer} ${overlayVisible ? styles.makeVisible : ''}`}>
@@ -176,20 +226,15 @@ return(
                     </div>
                     </div>
                 </section>
-        </section>
-        
+                </section>
 
-        <div className={styles.polaroidWrapper}>
-            <img className={`${styles.smiski} ${styles[activeSmiskiImages.className]}`} src={activeSmiskiImages.imgSrc} alt={activeSmiskiImages.alt} />
-           
-            <div className={styles.polaroid}>
-                <img
-                    className={styles.aboutImg}
-                    src={polaroidPics[activeTitle][polaroidIndex].polaroidImgSrc}
-                    alt={polaroidPics[activeTitle][polaroidIndex].alt}
+                <Polaroid
+                smiskiImage={activeSmiskiImages}
+                polaroidImage={polaroidPics[activeTitle][polaroidIndex]}
+                polaroidClass='smallerPolaroid'
+                style={{display: windowWidth >= 600 ? 'none' : 'block'}}
                 />
-            </div>
-        </div>
+
             </div>
             
         

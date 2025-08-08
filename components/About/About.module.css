@@ -132,10 +132,10 @@
     /* transform considers arrow's height to center it relative to the div */
     transform: translateY(-50%); 
     z-index: 2;
+    width: 5.5rem;
 }
 
 .leftArrow{
-    /* left: calc(25.5% - 9rem); */
     left: -3rem;
 }
 
@@ -180,7 +180,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    max-width: 85%;
     margin-bottom: 2rem;
   }
   
@@ -263,6 +263,10 @@
     font-size: 2.2rem;
 }
 
+/* .smallerPolaroid{
+    width: 30rem;
+} */
+
 @media (min-width: 350px){
     .smiskiPeeking{
         margin-top:-11rem;
@@ -282,55 +286,111 @@
     }
 }
 
-/* @media (min-width: 376px){
+@media (min-width: 385px){
+    .rightArrow, .leftArrow{
+        transform: translateY(-0%); 
+        width: 6rem;
+    }
+    
     .leftArrow{
-        left: calc(25.5% - 10rem);
+        left: -4rem;
+    }
+    
+    .rightArrow{
+        right: -4rem;
     }
 
-    .rightArrow{
-        left: calc(55% + 11.3rem); 
+    .polaroidWrapper {
+        margin-top: 1.5rem;
+      }
+
+    .polaroidWrapper img {
+        top: 1.3rem;
+        left: 1.2rem;
+        width: 88%;
+        height: 72%;
+      }
+
+    .smiskiPeeking{
+        margin-top:-9.7rem;
+        scale: 0.7;
+    }
+
+    .smiskiReading{
+        scale: 0.8;
+        margin-top: 15rem;
+        margin-left: -7.3rem;
+    }
+    
+    .smiskiResearching {
+        scale: 0.8;
+        margin-left: 8rem;
+        margin-top: 13.8rem;
+    }
+
+    .activeAboutText{
+        font-size: 2.4rem;
+    }
+
+    .overlayContainer p{
+        font-size: 1.7rem;
+        line-height: 2rem;
     }
 }
 
-@media (min-width: 407px){
+@media (min-width: 477px){
+    .aboutHeader{
+        font-size: 3.8rem;
+    }
     .leftArrow{
-        left: calc(20% - 10rem);
+        left: -4rem;
+    }
+    
+    .rightArrow{
+        right: -4rem;
     }
 
-    .rightArrow{
-        left: calc(58% + 11.3rem); 
+    .polaroidWrapper img {
+        left: 1.4rem;
+        width: 89%;
+        height: 73%;
+    }
+
+    .smiskiPeeking{
+        margin-top:-12rem;
+    }
+
+    .smiskiReading{
+        scale: 0.75;
+        margin-top: 19rem;
+        margin-left: -8rem;
+    }
+    
+    .smiskiResearching {
+        scale: 0.75;
+        margin-left: 9.5rem;
+        margin-top: 17.8rem;
+    }
+
+    .currently h4{
+        font-size: 2.6rem;
+    }
+
+    .themeContainer h4{
+        font-size: 2.4rem;
     }
 }
 
-@media (min-width: 431px){
-    .leftArrow{
-        left: calc(19% - 10rem);
-    }
-
-    .rightArrow{
-        left: calc(63% + 11.3rem); 
+@media (min-width: 600px){
+    .rightArrow, .leftArrow{
+        width: 7rem;
+        margin-top: -1rem;
     }
 }
 
-@media (min-width: 491px){
-    .leftArrow{
-        left: calc(15.5% - 10rem);
-    }
+/* 
 
-    .rightArrow{
-        left: calc(69% + 11.3rem); 
-    }
-}
 
-@media (min-width: 576px){
-    .leftArrow{
-        left: calc(13.5% - 10rem);
-    }
-
-    .rightArrow{
-        left: calc(72.5% + 11.3rem); 
-    }
-}
 
 @media (min-width: 656px){
     .leftArrow{
