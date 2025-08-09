@@ -41,8 +41,20 @@ const Projects = () => {
             customClass={`${styles.elfgorithm} ${isHeaderClicked['ELFGORITHM'] ? '' : styles.hideProjectInfo}`}
             code="https://github.com/LetsGetTechnical/elecretanta"
             />
-            
             <h4
+            onClick={() => {
+                toggleProjectVisibility('TARRANT COUNTY BREASTFEEDING COALITION');
+            }}
+            >48in48: TCoBCo</h4>
+            <IndividualProject
+            imgSrc="/tcobco.mp4"
+            projectBio="Welcoming and comprehensive resources site for Tarrant County Breastfeeding Coalition (TCoBCo), a grassroots organization that serves lactating individuals, their families, and those who care for them."
+            tech= {['HTML', 'CSS', 'JavaScript', 'Wordpress']}
+            customClass={`${styles.tarrant} ${isHeaderClicked['TARRANT COUNTY BREASTFEEDING COALITION'] ? '' : styles.hideProjectInfo}`}
+            website="https://tarrantbreastfeeding.org/"
+            />      
+            <h4
+            className={`${!isHeaderClicked['VENTURE WEAVERS'] ? styles.lastHeaderPadding : ''}`}
             onClick={() => {
                 toggleProjectVisibility('VENTURE WEAVERS');
             }}
@@ -55,19 +67,7 @@ const Projects = () => {
             website="https://ventureweaversconsulting.com/"
             />
 
-            <h4
-            className={`${!isHeaderClicked['TARRANT COOUNTY BREASTFEEDING COALITION'] ? styles.lastHeaderPadding : ''}`}
-            onClick={() => {
-                toggleProjectVisibility('TARRANT COUNTY BREASTFEEDING COALITION');
-            }}
-            >TARRANT COUNTY BREASTFEEDING COALITION</h4>
-            <IndividualProject
-            imgSrc="/tcobco.mp4"
-            projectBio="Welcoming and comprehensive resources site for Tarrant County Breastfeeding Coalition (TCoBCo), a grassroots organization that serves lactating individuals, their families, and those who care for them."
-            tech= {['HTML', 'CSS', 'JavaScript', 'Wordpress']}
-            customClass={`${styles.tarrant} ${isHeaderClicked['TARRANT COUNTY BREASTFEEDING COALITION'] ? '' : styles.hideProjectInfo}`}
-            website="https://tarrantbreastfeeding.org/"
-            />
+
             </div>
         </div>
     );

@@ -8,7 +8,7 @@
    margin-top: 3%;
    text-align: center;
    font-family: "Merriweather", serif;
-   font-size: 1.4rem;
+   font-size: 1.6rem;
    width: 90%;
    color: #2C3424;
 }
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     font-family: "Open Sans", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     border: none;
     padding-top: 3rem;
     padding-bottom: 0;
@@ -27,6 +27,7 @@
 
 .projectsContainer{
     padding-bottom: 1.5rem;
+    margin-top: 3rem;
 }
 
 .projectMedia{
@@ -38,17 +39,19 @@
 .projectsContainer h4{
     font-family: "SanFrancisco";
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     letter-spacing: 0.1rem;
     color: #473c32;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
+}
+
+.projectsContainer h4:hover{
+    cursor: pointer;
 }
     
-/* Add spacing eblow last header if project collapsed */
 .lastHeaderPadding{
     padding-bottom: 6rem;
-    /* transition: padding-bottom 0.3s ease; */
 }
 
 .bioAndTags{
@@ -86,7 +89,7 @@
 }
 
 .siteLinks{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .projectBio{
@@ -124,69 +127,76 @@
     }
 }
 
-@media (min-width: 591px){
-    .projectSection h3{
-        width: 78%;
-     }
-}
-
-@media (min-width: 650px){
-    .projectSection h3{
-        font-size: 1.8rem;
-     }
-
-     .projectsContainer h4{
-        font-size: 2.7rem;
-    }
-    
-    .projectBio{
-        font-size: 1.8rem;
+@media (min-width: 477px){
+    .projectsHeader{
+        font-size: 3.8rem;
     }
 
-    .techTag, .sourceTag{
-        font-size: 1.5rem;
-    } 
-}
-
-@media (min-width: 810px){
     .projectSection h3{
-        font-size: 2rem;
-        width: 65%;
-     }
+        font-size: 1.9rem;
+    }
 
-     .projectsContainer h4{
+    .projectsContainer h4{
         font-size: 2.9rem;
     }
-    
+}
+
+@media (min-width: 591px){
+    .projectSection h3{
+        width: 80%;
+        font-size: 2rem;
+    }
+
     .projectBio{
         font-size: 1.9rem;
+        width: 84%;
     }
 
     .techTag, .sourceTag{
         font-size: 1.6rem;
-    } 
+    }
+
+    .projectMedia{
+        width: 75%;
+    }
 }
 
-@media (min-width: 1068px){
-    .projectSection h3{
-        font-size: 2.4rem;
-        width: 65%;
-     }
-
-     .projectsContainer h4{
-        font-size: 3.3rem;
-        letter-spacing: 0.5rem;
-    }
-    
+@media (min-width: 810px){
     .projectBio{
+        font-size: 2rem;
+    }
+
+    .projectSection h3{
+        width: 70%;
         font-size: 2.2rem;
+    }
+
+    .projectsContainer h4{
+        font-size: 3.2rem;
+    }
+}
+
+@media (min-width: 1132px){
+    .projectBio{
+        font-size: 2.3rem;
     }
 
     .techTag, .sourceTag{
         font-size: 1.8rem;
-    } 
+    }
 
-    .techTagContainer, .siteLinks{
-        width: 75%;
+    .projectSection h3{
+        width: 60%;
+        font-size: 2.5rem;
+    }
+
+    .projectsContainer h4{
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1620px){
+    .projectSection h3{
+        width: 45%;
     }
 }
