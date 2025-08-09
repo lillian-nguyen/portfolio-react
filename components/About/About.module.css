@@ -63,7 +63,6 @@
     font-size: 2.2rem;
     color: #2C3424;
     margin: 0 auto;
-    /* margin-top: 1.8rem; */
     padding-bottom: 1.2rem;
     width: 80%;
 }
@@ -85,7 +84,6 @@
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    /* background-color: #afa39d; */
     background-color: rgb(233,223,209);
     border: 2px ridge #322d26;
     z-index: 1;
@@ -194,7 +192,7 @@
     height: 80%;
     background-color: white;
     border-radius: 0.5rem;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25); /* subtle polaroid shadow */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* subtle polaroid shadow */
     transform: translate(-50%, -50%);
   }
   
