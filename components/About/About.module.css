@@ -263,10 +263,6 @@
     font-size: 2.2rem;
 }
 
-/* .smallerPolaroid{
-    width: 30rem;
-} */
-
 @media (min-width: 350px){
     .smiskiPeeking{
         margin-top:-11rem;
@@ -386,87 +382,173 @@
         width: 7rem;
         margin-top: -1rem;
     }
-}
 
-/* 
-
-
-
-@media (min-width: 656px){
-    .leftArrow{
-        left: calc(13.5% - 10rem);
+    .themeAndPolaroidWrapper{
+        display: flex;
+        margin: 0;
     }
 
-    .rightArrow{
-        left: calc(72.5% + 11.3rem); 
+    .foodie4{
+        transform: rotate(-8deg);
+        left: -8rem;
+        top: -1rem;
     }
-}
-
-@media (min-width: 675px){
-    .leftArrow{
-        left: calc(12% - 10rem);
+    
+    .foodie3{
+        top: -38rem;
+        left: 15rem;
+        z-index: 1;
+        transform: rotate(10deg)
     }
-
-    .rightArrow{
-        left: calc(77% + 11.3rem); 
+    
+    .foodie2{
+        z-index: 2;
+        transform: rotate(-4deg);
+        top: -77rem;
+        left: -1rem;
     }
-}
-
-@media (min-width: 696px){
-    .leftArrow{
-        left: calc(10.8% - 10rem);
+    
+    .foodie1{
+        z-index: 3;
+        top: -112rem;
+        left: 9rem;
+        transform: rotate(3deg)
     }
-
-    .rightArrow{
-        left: calc(78% + 11.3rem); 
-    }
-}
-
-@media (min-width: 768px){
-    .rightArrow{
-        left: calc(80% + 11.3rem); 
-    }
-}
-
-@media (min-width: 796px){
-    .leftArrow{
-        left: calc(10% - 10rem);
+    
+    .polaroidWrapper:hover{
+        z-index: 10;
     }
 
-    .rightArrow{
-        left: calc(80% + 11.3rem); 
-    }
-}
-
-@media (min-width: 845px){
-    .leftArrow{
-        left: calc(9% - 10rem);
+    .polaroidLayer {
+        position: relative;   
+        max-width: 60rem;  
+        margin: 0 auto;
+        height: 42rem;
+        margin-bottom: 5rem;
     }
 
-    .rightArrow{
-        left: calc(82% + 11.3rem); 
-    }
-}
-
-@media (min-width: 968px){
-    .leftArrow{
-        left: calc(8% - 10rem);
+    .polaroidWrapper {
+        width: 33rem;
+        margin-bottom: 2rem;
     }
 
-    .rightArrow{
-        left: calc(84% + 11.3rem); 
-    }
-}
-
-
-@media (min-width: 1070px){
-    .leftArrow{
-        left: calc(7.5% - 10rem);
+    .themeOptions button{
+        padding: 1rem 0.9rem;
+        border-radius: 0.3rem;
+        color: rgb(233,223,209);
+        font-size: 1.8rem;
     }
 
-    .rightArrow{
-        left: calc(86% + 11.3rem); 
+    .themeContainer h4{
+        font-size: 2.4rem;
+        padding-bottom: 1.2rem;
+        width: 83%;
+    }
+
+    .activeAboutText{
+        font-size: 2.6rem;
+    }
+
+    .overlayContainer p{
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+    .themeContainerWrapper{
+        margin-left: 3rem;
     }
 }
 
-} */
+@media (min-width: 700px){
+    .themeContainerWrapper{
+        width: 88%;
+        margin: 0 auto;
+    }
+
+    .themeContainer{
+        margin-left: 3rem;
+    }
+}
+
+@media (min-width: 853px){
+    .themeContainer h4{
+        padding-top: 2rem;
+    }
+
+    .inactiveAboutButtons{
+        row-gap: 1.3rem;
+        padding-bottom: 4rem;
+    }
+
+    .foodie4{
+        transform: rotate(9deg);
+        left: -16rem;
+        top: -1rem;
+    }
+    
+    .foodie3{
+        top: -39rem;
+        left: 19rem;
+        z-index: 1;
+        transform: rotate(17deg)
+    }
+    
+    .foodie2{
+        z-index: 2;
+        transform: rotate(-4deg);
+        top: -77rem;
+        left: -2rem;
+    }
+    
+    .foodie1{
+        z-index: 3;
+        top: -110rem;
+        left: 12rem;
+        transform: rotate(3deg)
+    }
+
+    .overlayContainer p{
+        width: 75%;
+    }
+
+    #theme0, #theme1, #theme2{
+        padding: 1.2rem 0;
+        margin: 0 auto;
+        width: 69%;
+    }
+}
+
+@media (min-width: 1019px){
+    .themeContainerWrapper{
+        width: 83%;
+    }
+
+    .themeContainer{
+        margin-left: 3rem;
+    }
+
+    .themeContainer h4{
+        font-size: 2.7rem;
+    }
+
+    .activeAboutText{
+        font-size: 2.9rem;
+    }
+
+    #theme0, #theme1, #theme2{
+        width: 63%;
+    }
+    
+}
+
+@media (min-width: 1165px){
+    .themeContainerWrapper{
+        width: 70%;
+    }
+}
+
+@media (min-width: 1512px){
+    #theme0, #theme1, #theme2{
+        width: 58%;
+    }
+}

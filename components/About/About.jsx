@@ -46,9 +46,12 @@ const smiskiImages = {
 }
 
 const polaroidPics = {
-    'SOFTWARE ENGINEER': [{
-        polaroidImgSrc: '/mountainSelfie.png', alt: 'selfie on mountain'
-    }], 
+    'SOFTWARE ENGINEER': [
+        { polaroidImgSrc: '/mountainSelfie.png', alt: 'selfie on mountain'},
+        { polaroidImgSrc: '/laptopFlowers.png', alt: 'flowers next to laptop with code'},
+        { polaroidImgSrc: '/matcha.png', alt: 'matcha next to laptop'},
+        { polaroidImgSrc: '/aodai.png', alt: 'selfie in traditional Vietnamese dress'}
+], 
     'FOODIE': [
         { polaroidImgSrc: '/comTam.png', alt: 'Vietnamese broken rice dish'},
         { polaroidImgSrc: '/Naks.png', alt: 'Filipino chicken, egg, and rice'},
@@ -129,14 +132,16 @@ useEffect(() => {
 
     const {toggleMenu} = useMenu();
 
-    const Polaroid = ({ smiskiImage, polaroidImage, polaroidClass, style }) => {
+    const Polaroid = ({ smiskiImage, polaroidImage, className = '', polaroidClass, style }) => {
         return (
             <div className={`${styles.polaroidWrapper} ${styles[polaroidClass]}`} style={style}>
+            {smiskiImage && (
                 <img
-                    className={`${styles.smiski} ${styles[smiskiImage.className]}`}
-                    src={smiskiImage.imgSrc}
-                    alt={smiskiImage.alt}
+                className={`${styles.smiski} ${styles[smiskiImage.className]}`}
+                src={smiskiImage.imgSrc}
+                alt={smiskiImage.alt}
                 />
+            )}
     
                 <div className={styles.polaroid}>
                     <img
@@ -234,6 +239,72 @@ return(
                 polaroidClass='smallerPolaroid'
                 style={{display: windowWidth >= 600 ? 'none' : 'block'}}
                 />
+
+                <div className={styles.polaroidLayer}>
+                    {activeTitle === 'SOFTWARE ENGINEER' && windowWidth >= 600 && (
+                        <div className={styles.foodiePhotoContainer}>
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SOFTWARE ENGINEER'][3]}
+                            polaroidClass="foodie4"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SOFTWARE ENGINEER'][2]}
+                            polaroidClass="foodie3"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SOFTWARE ENGINEER'][1]}
+                            polaroidClass="foodie2"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SOFTWARE ENGINEER'][0]}
+                            polaroidClass="foodie1"
+                            />
+                        </div>
+                    )}
+
+                    {activeTitle === 'FOODIE' && windowWidth >= 600 && (
+                        <div className={styles.foodiePhotoContainer}>
+                            <Polaroid
+                            polaroidImage = {polaroidPics['FOODIE'][3]}
+                            polaroidClass="foodie4"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['FOODIE'][2]}
+                            polaroidClass="foodie3"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['FOODIE'][1]}
+                            polaroidClass="foodie2"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['FOODIE'][0]}
+                            polaroidClass="foodie1"
+                            />
+                        </div>
+                    )}
+
+                    {activeTitle === 'SIDE QUEST ENTHUSIAST' && windowWidth >= 600 && (
+                        <div className={styles.foodiePhotoContainer}>
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SIDE QUEST ENTHUSIAST'][3]}
+                            polaroidClass="foodie4"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SIDE QUEST ENTHUSIAST'][2]}
+                            polaroidClass="foodie3"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SIDE QUEST ENTHUSIAST'][1]}
+                            polaroidClass="foodie2"
+                            />
+                            <Polaroid
+                            polaroidImage = {polaroidPics['SIDE QUEST ENTHUSIAST'][0]}
+                            polaroidClass="foodie1"
+                            />
+                        </div>
+                    )}
+                </div>
+
 
             </div>
             
