@@ -8,7 +8,7 @@
    margin-top: 3%;
    text-align: center;
    font-family: "Merriweather", serif;
-   font-size: 1.4rem;
+   font-size: 1.6rem;
    width: 90%;
    color: #2C3424;
 }
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     font-family: "Open Sans", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     border: none;
     padding-top: 3rem;
     padding-bottom: 0;
@@ -106,7 +106,13 @@
     display: none;
 }
 
-@media (min-width: 425px){
+@media (min-width: 477px){
+    .projectsHeader{
+        font-size: 3.8rem;
+    }
+}
+
+/* @media (min-width: 425px){
     .projectSection h3{
         font-size: 1.7rem;
      }
@@ -189,4 +195,4 @@
     .techTagContainer, .siteLinks{
         width: 75%;
     }
-}
+} */
