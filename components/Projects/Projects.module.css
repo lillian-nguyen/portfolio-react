@@ -139,80 +139,64 @@
     .projectsContainer h4{
         font-size: 2.9rem;
     }
-
-    @media (min-width: 591px){
-        .projectSection h3{
-            width: 80%;
-            font-size: 2rem;
-        }
-    }
-
-    .projectBio{
-        font-size: 1.7rem;
-        width: 84%;
-    }
-
 }
 
-/* 
-
-@media (min-width: 650px){
+@media (min-width: 591px){
     .projectSection h3{
-        font-size: 1.8rem;
-     }
-
-     .projectsContainer h4{
-        font-size: 2.7rem;
-    }
-    
-    .projectBio{
-        font-size: 1.8rem;
-    }
-
-    .techTag, .sourceTag{
-        font-size: 1.5rem;
-    } 
-}
-
-@media (min-width: 810px){
-    .projectSection h3{
+        width: 80%;
         font-size: 2rem;
-        width: 65%;
-     }
-
-     .projectsContainer h4{
-        font-size: 2.9rem;
     }
-    
+
     .projectBio{
         font-size: 1.9rem;
+        width: 84%;
     }
 
     .techTag, .sourceTag{
         font-size: 1.6rem;
-    } 
+    }
+
+    .projectMedia{
+        width: 75%;
+    }
 }
 
-@media (min-width: 1068px){
-    .projectSection h3{
-        font-size: 2.4rem;
-        width: 65%;
-     }
-
-     .projectsContainer h4{
-        font-size: 3.3rem;
-        letter-spacing: 0.5rem;
-    }
-    
+@media (min-width: 810px){
     .projectBio{
+        font-size: 2rem;
+    }
+
+    .projectSection h3{
+        width: 70%;
         font-size: 2.2rem;
+    }
+
+    .projectsContainer h4{
+        font-size: 3.2rem;
+    }
+}
+
+@media (min-width: 1132px){
+    .projectBio{
+        font-size: 2.3rem;
     }
 
     .techTag, .sourceTag{
         font-size: 1.8rem;
-    } 
-
-    .techTagContainer, .siteLinks{
-        width: 75%;
     }
-} */
+
+    .projectSection h3{
+        width: 60%;
+        font-size: 2.5rem;
+    }
+
+    .projectsContainer h4{
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1620px){
+    .projectSection h3{
+        width: 45%;
+    }
+}

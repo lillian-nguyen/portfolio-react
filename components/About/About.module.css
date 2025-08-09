@@ -267,6 +267,7 @@
 .foodiePhotoContainer{
     position: relative;
     height: 50rem;
+    width: 100%;
 }
 
 .foodie1, .foodie2, .foodie3, .foodie4{
@@ -425,14 +426,6 @@
     
     .polaroidWrapper:hover{
         z-index: 10;
-    }
-
-    .polaroidLayer {
-        position: relative;   
-        max-width: 60rem;  
-        margin: 0 auto;
-        height: 42rem;
-        margin-bottom: 5rem;
     }
 
     .polaroidWrapper {

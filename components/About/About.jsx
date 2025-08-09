@@ -237,10 +237,9 @@ return(
                 smiskiImage={activeSmiskiImages}
                 polaroidImage={polaroidPics[activeTitle][polaroidIndex]}
                 polaroidClass='smallerPolaroid'
-                style={{display: windowWidth >= 600 ? 'none' : 'block'}}
+                style={{display: windowWidth > 599 ? 'none' : 'block'}}
                 />
 
-                {/* <div className={styles.polaroidLayer}> */}
                     {activeTitle === 'SOFTWARE ENGINEER' && windowWidth >= 600 && (
                         <div className={styles.foodiePhotoContainer}>
                             <Polaroid
