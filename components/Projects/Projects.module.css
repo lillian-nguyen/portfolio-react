@@ -27,6 +27,7 @@
 
 .projectsContainer{
     padding-bottom: 1.5rem;
+    margin-top: 3rem;
 }
 
 .projectMedia{
@@ -38,17 +39,15 @@
 .projectsContainer h4{
     font-family: "SanFrancisco";
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     letter-spacing: 0.1rem;
     color: #473c32;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
 }
     
-/* Add spacing eblow last header if project collapsed */
 .lastHeaderPadding{
     padding-bottom: 6rem;
-    /* transition: padding-bottom 0.3s ease; */
 }
 
 .bioAndTags{
@@ -86,7 +85,7 @@
 }
 
 .siteLinks{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .projectBio{
@@ -106,13 +105,7 @@
     display: none;
 }
 
-@media (min-width: 477px){
-    .projectsHeader{
-        font-size: 3.8rem;
-    }
-}
-
-/* @media (min-width: 425px){
+@media (min-width: 425px){
     .projectSection h3{
         font-size: 1.7rem;
      }
@@ -130,11 +123,34 @@
     }
 }
 
-@media (min-width: 591px){
+@media (min-width: 477px){
+    .projectsHeader{
+        font-size: 3.8rem;
+    }
+
     .projectSection h3{
-        width: 78%;
-     }
+        font-size: 1.9rem;
+    }
+
+    .projectsContainer h4{
+        font-size: 2.9rem;
+    }
+
+    @media (min-width: 591px){
+        .projectSection h3{
+            width: 80%;
+            font-size: 2rem;
+        }
+    }
+
+    .projectBio{
+        font-size: 1.7rem;
+        width: 84%;
+    }
+
 }
+
+/* 
 
 @media (min-width: 650px){
     .projectSection h3{

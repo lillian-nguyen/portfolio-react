@@ -54,7 +54,7 @@ const Projects = () => {
             website="https://tarrantbreastfeeding.org/"
             />      
             <h4
-            className={`${!isHeaderClicked['TARRANT COOUNTY BREASTFEEDING COALITION'] ? styles.lastHeaderPadding : ''}`}
+            className={`${!isHeaderClicked['VENTURE WEAVERS'] ? styles.lastHeaderPadding : ''}`}
             onClick={() => {
                 toggleProjectVisibility('VENTURE WEAVERS');
             }}
