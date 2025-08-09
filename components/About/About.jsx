@@ -240,7 +240,7 @@ return(
                 style={{display: windowWidth >= 600 ? 'none' : 'block'}}
                 />
 
-                <div className={styles.polaroidLayer}>
+                {/* <div className={styles.polaroidLayer}> */}
                     {activeTitle === 'SOFTWARE ENGINEER' && windowWidth >= 600 && (
                         <div className={styles.foodiePhotoContainer}>
                             <Polaroid
@@ -303,7 +303,7 @@ return(
                             />
                         </div>
                     )}
-                </div>
+              
 
 
             </div>

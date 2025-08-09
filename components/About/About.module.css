@@ -69,6 +69,7 @@
 }
 
 .themeAndPolaroidWrapper{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -263,6 +264,15 @@
     font-size: 2.2rem;
 }
 
+.foodiePhotoContainer{
+    position: relative;
+    height: 50rem;
+}
+
+.foodie1, .foodie2, .foodie3, .foodie4{
+    position: absolute;
+}
+
 @media (min-width: 350px){
     .smiskiPeeking{
         margin-top:-11rem;
@@ -389,31 +399,29 @@
     }
 
     .foodie4{
-        transform: rotate(-8deg);
-        left: -8rem;
-        top: -1rem;
+        transform: rotate(-3deg);
+        left: 2%;
+        top: -5%;
     }
-    
+
     .foodie3{
-        top: -38rem;
-        left: 15rem;
         z-index: 1;
-        transform: rotate(10deg)
+        transform: rotate(10deg);
+        left: 43%;
     }
-    
+
     .foodie2{
         z-index: 2;
-        transform: rotate(-4deg);
-        top: -77rem;
-        left: -1rem;
+        transform: rotate(-10deg);
+        top: 12%;
     }
-    
+
     .foodie1{
         z-index: 3;
-        top: -112rem;
-        left: 9rem;
-        transform: rotate(3deg)
-    }
+        transform: rotate(3deg);
+        left: 24%;
+        top: 17%;
+    }  
     
     .polaroidWrapper:hover{
         z-index: 10;
@@ -428,7 +436,7 @@
     }
 
     .polaroidWrapper {
-        width: 33rem;
+        width: 28rem;
         margin-bottom: 2rem;
     }
 
@@ -468,6 +476,25 @@
     .themeContainer{
         margin-left: 3rem;
     }
+
+    .foodie4{
+        left: 17%;
+        top: -5%;
+    }
+
+    .foodie3{
+        left: 48%;
+    }
+
+    .foodie2{
+        top: 12%;
+        left: 5%;
+    }
+
+    .foodie1{
+        left: 27%;
+        top: 15%;
+    }  
 }
 
 @media (min-width: 853px){
@@ -480,31 +507,8 @@
         padding-bottom: 4rem;
     }
 
-    .foodie4{
-        transform: rotate(9deg);
-        left: -16rem;
-        top: -1rem;
-    }
-    
-    .foodie3{
-        top: -39rem;
-        left: 19rem;
-        z-index: 1;
-        transform: rotate(17deg)
-    }
-    
-    .foodie2{
-        z-index: 2;
-        transform: rotate(-4deg);
-        top: -77rem;
-        left: -2rem;
-    }
-    
-    .foodie1{
-        z-index: 3;
-        top: -110rem;
-        left: 12rem;
-        transform: rotate(3deg)
+    .foodiePhotoContainer{
+        width: 87%;
     }
 
     .overlayContainer p{
@@ -539,16 +543,48 @@
         width: 63%;
     }
     
+    .foodiePhotoContainer{
+        width: 80%;
+    }
 }
 
 @media (min-width: 1165px){
     .themeContainerWrapper{
         width: 70%;
     }
+
+    .foodiePhotoContainer{
+        width: 73%;
+        height: 57rem;
+    }
+
+    .polaroidWrapper {
+        width: 33rem;
+    }
+    
 }
 
 @media (min-width: 1512px){
     #theme0, #theme1, #theme2{
         width: 58%;
     }
+
+    .foodie4{
+        left: 28%;
+        top: -7%;
+    }
+
+    .foodie3{
+        left: 55%;
+    }
+
+    .foodie2{
+        top: 12%;
+        left: 15%;
+    }
+
+    .foodie1{
+        left: 37%;
+        top: 15%;
+    }  
 }
