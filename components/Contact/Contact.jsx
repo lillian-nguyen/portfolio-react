@@ -11,11 +11,11 @@ const Contact = () => {
 
             <div className={styles.messageContainer}>
                 <div className={styles.imessage}>
-                    <p className={`${styles.fromMe} ${styles.noBottomMargin}`}>Thanks for stopping by! Anything else you'd like to know?</p>
+                    <p className={`${styles.fromMe} ${styles.longerTexts} ${styles.noBottomMargin}`}>Thanks for stopping by! Anything else you'd like to know?</p>
                     
                     <p className={`${styles.fromThem} ${styles.marginBottom1} ${styles.marginTop1}`}>What socials are you on?</p>
                     
-                    <p className={`${styles.fromMe} ${styles.noBottomMargin}`}>Happy to connect! Click an icon to take a look:</p>
+                    <p className={`${styles.fromMe} ${styles.longerTexts} ${styles.noBottomMargin}`}>Happy to connect! Click an icon to take a look:</p>
                     <p className={`${styles.fromMe} ${styles.noTail}`}>
                         <a target="_blank" rel="noopener noref" href="https://www.linkedin.com/in/ldv-nguyen/">
                         <img className={styles.contactIcons} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjRjlFQkM3IiBkPSJNNi45NCA1YTIgMiAwIDEgMS00LS4wMDJhMiAyIDAgMCAxIDQgLjAwMk03IDguNDhIM1YyMWg0em02LjMyIDBIOS4zNFYyMWgzLjk0di02LjU3YzAtMy42NiA0Ljc3LTQgNC43NyAwVjIxSDIydi03LjkzYzAtNi4xNy03LjA2LTUuOTQtOC43Mi0yLjkxeiIvPjwvc3ZnPg=="/>
@@ -34,7 +34,7 @@ const Contact = () => {
 
                     <p className={`${styles.fromThem} ${styles.marginBottom1} ${styles.marginTop1}`}>I still have questions or comments.</p>
 
-                    <p className={`${styles.fromMe}`}>Feel free to leave a note below - whether it's feedback, a freelance inquiry, or a quick hello, I'd love to hear from you!</p>
+                    <p className={`${styles.fromMe} ${styles.longerTexts}`}>Feel free to leave a note below - whether it's feedback, a freelance inquiry, or a quick hello, I'd love to hear from you!</p>
 
                     <div className={`${styles.fromThem} ${styles.bubbleForm} ${styles.marginBottom1} ${styles.marginTop1}`}>
                         <form name="contact"
