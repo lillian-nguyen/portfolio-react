@@ -1,12 +1,8 @@
-/* .contactSection{
-  background-color: #A3B18A;
-} */
-
 .contactHeader{
     display: flex;
     justify-content: center;
     font-family: "Open Sans", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     border: none;
     padding-top: 3rem;
     padding-bottom: 0;
@@ -18,17 +14,14 @@
     margin: 0 auto;
     margin-top: 2%;
     /* max-width: 600px; */
-    padding: 1rem;
 }
 
 .imessage {
-    /* background-color: #fff; */
-    /* border: 1px solid #e5e5ea; */
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
     font-family: "SanFrancisco";
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin: 0 auto 1rem;
     /* max-width: 600px; */
     padding: 0.5rem 1.5rem;
@@ -93,6 +86,7 @@ p.fromMe {
     align-items: flex-start;
     background-color: #F9EBC7;
     color: #473c32;
+    font-size: 1.5rem;
   }
 
   p.fromThem {
@@ -113,15 +107,6 @@ p.fromMe {
     transform: translate(-30px, -2px);
     width: 10px;
   }
-  
-  /* p[class^="from-"].emoji {
-    background: none;
-    font-size: 2.5rem;
-  }
-  
-  p[class^="from-"].emoji::before {
-    content: none;
-  } */
   
   .noTail::before {
     display: none;
@@ -150,7 +135,6 @@ div.fromThem.bubbleForm {
     padding: 0.75rem 1rem;
     position: relative;
     word-wrap: break-word;
-    font-size: 1.25rem;
   }
   
   /* Add a chat tail to the div version */
@@ -191,25 +175,6 @@ div.fromThem.bubbleForm {
       url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
   }
   
-  .container {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 1rem;
-  }
-  
-  h1 {
-    font-weight: normal;
-    margin-bottom: 0.5rem;
-  }
-  
-  h2 {
-    border-bottom: 1px solid #e5e5ea;
-    color: #666;
-    font-weight: normal;
-    margin-top: 0;
-    padding-bottom: 1.5rem;
-  }
-  
   /* form */
   
   .contactForm {
@@ -225,7 +190,7 @@ div.fromThem.bubbleForm {
     border-radius: 10px;
     padding: 0.5rem 0.75rem;
     font-family: inherit;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-top: 0.25rem;
     box-sizing: border-box;
   }
@@ -253,7 +218,7 @@ div.fromThem.bubbleForm {
     resize: vertical;
     min-height: 80px;
     font-family: inherit;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.4;
   }
 
@@ -270,46 +235,172 @@ div.fromThem.bubbleForm {
     border-radius: 1.4rem;
     margin-top: 1rem;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   
-  @media (min-width: 320px) {
-    body {
-      margin: 0 0.5rem;
-    }
-  
-    .container {
-      padding: 0.5rem;
-    }
-  
+  @media (min-width: 420px){
     .imessage {
-      font-size: 1.5rem;
-      margin: 0 auto 1rem;
-      /* max-width: 600px; */
-      max-width: 53rem;
-      padding: 0.25rem 0.875rem;
-    }
-  
-    .imessage p {
-      margin: 0.5rem 0;
+      font-size: 1.6rem;
+      width: 95%;
+      padding: 1rem 0.8rem;
     }
 
-    .contactForm input[type="text"],
-    .contactForm input[type="email"] {
-      padding: 0.8rem 0.75rem;
-      font-size: 1.5rem;
-      margin-top: 0.25rem;
+    .imessage p{
+      padding: 1.1rem 1rem;
+    }
+
+    p.fromThem {
+      padding: 1.1rem 1rem;
+      font-size: 1.6rem;
     }
   }
 
-  @media (min-width: 451px){
+  @media (min-width: 477px){
+    .contactHeader{
+      font-size: 3.8rem;
+    }
+
+    .imessage {
+      font-size: 1.6rem;
+      padding: 1rem 0.8rem;
+    }
+
+    p.fromThem {
+      font-size: 1.6rem;
+    }
+
+    .longerTexts{
+      width: 60%;
+    }
+  }
+
+  @media (min-width: 535px){
     .imessage {
       font-size: 1.8rem;
     }
+
+    p.fromThem {
+      font-size: 1.8rem;
+    }
+
+  .contactForm input[type="text"],
+  .contactForm input[type="email"]{
+    font-size: 1.8rem;
   }
-  
-  @media (min-width: 625px){
-    .imessage{
-      width: 100%;
+
+  label{
+    font-size: 1.7rem;
+  }
+
+  .contactForm button{
+    font-size: 1.7rem;
+  }
+  }
+
+  @media (min-width: 712px){
+    .imessage {
+      font-size: 1.9rem;
+    }
+
+    .imessage p{
+      padding: 1.3rem 2rem;
+    }
+
+    p.fromThem {
+      font-size: 1.9rem;
+    }
+
+    .contactForm input[type="text"],
+  .contactForm input[type="email"]{
+    font-size: 1.9rem;
+  }
+
+  .contactForm button{
+    font-size: 1.8rem;
+  }
+
+  .longerTexts{
+    width: 55%;
+  }
+
+  .imessage div.fromThem.bubbleForm:last-child{
+    max-width: 70%;
+  }
+  }
+
+  @media (min-width: 938px){
+    .imessage {
+      font-size: 2rem;
+    }
+
+    p.fromThem {
+      font-size: 2rem;
+    }
+
+    .contactForm input[type="text"],
+  .contactForm input[type="email"]{
+    font-size: 2rem;
+  }
+
+  .contactForm button{
+    font-size: 1.9rem;
+  }
+
+  .longerTexts{
+    width: 45%;
+  }
+
+  .imessage div.fromThem.bubbleForm:last-child{
+    max-width: 60%;
+  }
+  }
+
+  @media (min-width: 1205px){
+    .longerTexts{
+      width: 35%;
+    }
+
+    .imessage {
+      font-size: 2.2rem;
+    }
+
+    p.fromThem {
+      font-size: 2.2rem;
+    }
+
+    .contactForm input[type="text"],
+  .contactForm input[type="email"]{
+    font-size: 2.1rem;
+  }
+
+  .contactForm button{
+    font-size: 2rem;
+  }
+
+  .imessage div.fromThem.bubbleForm:last-child{
+    max-width: 55%;
+  }
+  }
+
+  @media (min-width: 1470px){
+    .imessage {
+      font-size: 2.4rem;
+    }
+
+    p.fromThem {
+      font-size: 2.4rem;
+    }
+
+    .contactForm input[type="text"],
+  .contactForm input[type="email"]{
+    font-size: 2.4rem;
+  }
+
+  .contactForm button{
+    font-size: 2.2rem;
+  }
+
+    .imessage div.fromThem.bubbleForm:last-child{
+      max-width: 48%;
     }
   }
