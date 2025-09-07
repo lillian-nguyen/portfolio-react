@@ -51,7 +51,6 @@ const BlobImage = () => {
   };
 
 const HeroContent = () => {
-
     const {toggleMenu} = useMenu();
 
     return(

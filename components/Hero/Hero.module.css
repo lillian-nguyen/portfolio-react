@@ -8,10 +8,13 @@
 .heroHeader{
     text-align: center;
     margin: 0 auto;
-    /* margin-top: 0%; */
+    padding-bottom: 1rem;
     font-family: "Playfair Display", serif;
     font-size: 6rem;
     line-height: 0.9;
+    text-shadow: 
+      1px 1px 0 white,
+      1px 2px 0 white;
   }
   
 .heroBio{
@@ -21,14 +24,15 @@
   
 .heroBio h4{
     font-family: "Open Sans", sans-serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #514439;
   }
   
 .heroBio p{
     font-family: "Merriweather", serif;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #2C3424;
+    /* line-height: 2.3rem; */
     width: 90%;
     margin-top: 3%;
   }
@@ -76,7 +80,7 @@
       position: relative;
       max-width: 27rem;
       aspect-ratio: 1/0.95;
-      top: 1rem;
+      top: 1.7rem;
       margin: 1rem auto 3rem auto;
       width: 100%;
     }

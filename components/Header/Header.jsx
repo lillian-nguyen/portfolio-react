@@ -26,7 +26,7 @@ const Header = () => {
     return (
         <header>
             <a href="/">
-                <img src={isDesktop? `/Logo_dark.png` : `/logo-clear.png`} className="homeLogo" alt="logo" />
+                <img src='/Logo_dark.png' className="homeLogo" alt="logo" />
             </a>
             {isDesktop? (
                 <DesktopMenu/>) : (<MobileMenu/>)}
