@@ -1,7 +1,6 @@
 import styles from "./About.module.css"
 import { Marquee } from "../Marquee";
 import {useState, useEffect } from "react";
-import { useMenu } from "../Navbar/MenuContext";
 
 const codeIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNEMjg1MUEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik04Ljc1IDYuNUwzLjI1IDEybDUuNSA1LjVtNi41LTExbDUuNSA1LjVsLTUuNSA1LjUiLz48L3N2Zz4='
 
@@ -129,8 +128,6 @@ useEffect(() => {
   window.addEventListener('resize', handleResize);
   return () => window.removeEventListener('resize', handleResize);
 }, []);
-
-    const {toggleMenu} = useMenu();
 
     const Polaroid = ({ smiskiImage, polaroidImage, className = '', polaroidClass, style }) => {
         return (

@@ -66,6 +66,7 @@ const HeroContent = () => {
         <section className={styles.selfieContainer}>
             <BlobImage/>
             <WhiteOutline/>
+            <img src="/fedWBlurDark.png" className={styles.fedText}/>
         </section>
         </section>
     )
